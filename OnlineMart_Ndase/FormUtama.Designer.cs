@@ -66,6 +66,7 @@ namespace OnlineMart_Ndase
             // menuStripPegawai
             // 
             this.menuStripPegawai.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuStripPegawai.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStripPegawai.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStripPegawai.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.pengaturanToolStripMenuItem,
@@ -73,8 +74,8 @@ namespace OnlineMart_Ndase
             this.keluarToolStripMenuItemPegawai});
             this.menuStripPegawai.Location = new System.Drawing.Point(0, 0);
             this.menuStripPegawai.Name = "menuStripPegawai";
-            this.menuStripPegawai.Padding = new System.Windows.Forms.Padding(4, 1, 0, 1);
-            this.menuStripPegawai.Size = new System.Drawing.Size(800, 24);
+            this.menuStripPegawai.Padding = new System.Windows.Forms.Padding(6, 2, 0, 2);
+            this.menuStripPegawai.Size = new System.Drawing.Size(1200, 37);
             this.menuStripPegawai.TabIndex = 1;
             this.menuStripPegawai.Text = "menuStrip1";
             this.menuStripPegawai.Visible = false;
@@ -90,14 +91,14 @@ namespace OnlineMart_Ndase
             this.hadiahToolStripMenuItem});
             this.pengaturanToolStripMenuItem.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pengaturanToolStripMenuItem.Name = "pengaturanToolStripMenuItem";
-            this.pengaturanToolStripMenuItem.Size = new System.Drawing.Size(91, 22);
+            this.pengaturanToolStripMenuItem.Size = new System.Drawing.Size(128, 33);
             this.pengaturanToolStripMenuItem.Text = "Pengaturan";
             // 
             // cabangToolStripMenuItem
             // 
             this.cabangToolStripMenuItem.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cabangToolStripMenuItem.Name = "cabangToolStripMenuItem";
-            this.cabangToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.cabangToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.cabangToolStripMenuItem.Text = "Cabang";
             this.cabangToolStripMenuItem.Click += new System.EventHandler(this.cabangToolStripMenuItem_Click);
             // 
@@ -105,7 +106,7 @@ namespace OnlineMart_Ndase
             // 
             this.kategoriToolStripMenuItem.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kategoriToolStripMenuItem.Name = "kategoriToolStripMenuItem";
-            this.kategoriToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.kategoriToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.kategoriToolStripMenuItem.Text = "Kategori";
             this.kategoriToolStripMenuItem.Click += new System.EventHandler(this.kategoriToolStripMenuItem_Click);
             // 
@@ -113,7 +114,7 @@ namespace OnlineMart_Ndase
             // 
             this.barangToolStripMenuItem.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.barangToolStripMenuItem.Name = "barangToolStripMenuItem";
-            this.barangToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.barangToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.barangToolStripMenuItem.Text = "Barang";
             this.barangToolStripMenuItem.Click += new System.EventHandler(this.barangToolStripMenuItem_Click);
             // 
@@ -121,7 +122,7 @@ namespace OnlineMart_Ndase
             // 
             this.metodePembayaranToolStripMenuItem.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.metodePembayaranToolStripMenuItem.Name = "metodePembayaranToolStripMenuItem";
-            this.metodePembayaranToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.metodePembayaranToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.metodePembayaranToolStripMenuItem.Text = "Metode Pembayaran";
             this.metodePembayaranToolStripMenuItem.Click += new System.EventHandler(this.metodePembayaranToolStripMenuItem_Click);
             // 
@@ -129,7 +130,7 @@ namespace OnlineMart_Ndase
             // 
             this.promoToolStripMenuItem.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.promoToolStripMenuItem.Name = "promoToolStripMenuItem";
-            this.promoToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.promoToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.promoToolStripMenuItem.Text = "Promo";
             this.promoToolStripMenuItem.Click += new System.EventHandler(this.promoToolStripMenuItem_Click);
             // 
@@ -137,7 +138,7 @@ namespace OnlineMart_Ndase
             // 
             this.hadiahToolStripMenuItem.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.hadiahToolStripMenuItem.Name = "hadiahToolStripMenuItem";
-            this.hadiahToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.hadiahToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.hadiahToolStripMenuItem.Text = "Hadiah";
             this.hadiahToolStripMenuItem.Click += new System.EventHandler(this.hadiahToolStripMenuItem_Click);
             // 
@@ -148,14 +149,14 @@ namespace OnlineMart_Ndase
             this.penjualanOMASaldoToolStripMenuItem});
             this.rekapToolStripMenuItem.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rekapToolStripMenuItem.Name = "rekapToolStripMenuItem";
-            this.rekapToolStripMenuItem.Size = new System.Drawing.Size(58, 22);
+            this.rekapToolStripMenuItem.Size = new System.Drawing.Size(81, 33);
             this.rekapToolStripMenuItem.Text = "Rekap";
             // 
             // penjualanBarangToolStripMenuItem
             // 
             this.penjualanBarangToolStripMenuItem.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.penjualanBarangToolStripMenuItem.Name = "penjualanBarangToolStripMenuItem";
-            this.penjualanBarangToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
+            this.penjualanBarangToolStripMenuItem.Size = new System.Drawing.Size(279, 34);
             this.penjualanBarangToolStripMenuItem.Text = "Penjualan Barang";
             this.penjualanBarangToolStripMenuItem.Click += new System.EventHandler(this.penjualanBarangToolStripMenuItem_Click);
             // 
@@ -163,7 +164,7 @@ namespace OnlineMart_Ndase
             // 
             this.penjualanOMASaldoToolStripMenuItem.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.penjualanOMASaldoToolStripMenuItem.Name = "penjualanOMASaldoToolStripMenuItem";
-            this.penjualanOMASaldoToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
+            this.penjualanOMASaldoToolStripMenuItem.Size = new System.Drawing.Size(279, 34);
             this.penjualanOMASaldoToolStripMenuItem.Text = "Penjualan OMA Saldo";
             this.penjualanOMASaldoToolStripMenuItem.Click += new System.EventHandler(this.penjualanOMASaldoToolStripMenuItem_Click);
             // 
@@ -171,13 +172,14 @@ namespace OnlineMart_Ndase
             // 
             this.keluarToolStripMenuItemPegawai.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.keluarToolStripMenuItemPegawai.Name = "keluarToolStripMenuItemPegawai";
-            this.keluarToolStripMenuItemPegawai.Size = new System.Drawing.Size(57, 22);
+            this.keluarToolStripMenuItemPegawai.Size = new System.Drawing.Size(83, 33);
             this.keluarToolStripMenuItemPegawai.Text = "Keluar";
             this.keluarToolStripMenuItemPegawai.Click += new System.EventHandler(this.keluarToolStripMenuItemPegawai_Click);
             // 
             // menuStripKurir
             // 
             this.menuStripKurir.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuStripKurir.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStripKurir.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStripKurir.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.daftarPengirimanToolStripMenuItem,
@@ -185,8 +187,8 @@ namespace OnlineMart_Ndase
             this.keluarToolStripMenuItemKurir});
             this.menuStripKurir.Location = new System.Drawing.Point(0, 0);
             this.menuStripKurir.Name = "menuStripKurir";
-            this.menuStripKurir.Padding = new System.Windows.Forms.Padding(4, 1, 0, 1);
-            this.menuStripKurir.Size = new System.Drawing.Size(800, 24);
+            this.menuStripKurir.Padding = new System.Windows.Forms.Padding(6, 2, 0, 2);
+            this.menuStripKurir.Size = new System.Drawing.Size(1200, 37);
             this.menuStripKurir.TabIndex = 2;
             this.menuStripKurir.Text = "menuStrip1";
             this.menuStripKurir.Visible = false;
@@ -195,27 +197,28 @@ namespace OnlineMart_Ndase
             // 
             this.daftarPengirimanToolStripMenuItem.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.daftarPengirimanToolStripMenuItem.Name = "daftarPengirimanToolStripMenuItem";
-            this.daftarPengirimanToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
+            this.daftarPengirimanToolStripMenuItem.Size = new System.Drawing.Size(188, 33);
             this.daftarPengirimanToolStripMenuItem.Text = "Daftar Pengiriman";
             this.daftarPengirimanToolStripMenuItem.Click += new System.EventHandler(this.daftarPengirimanToolStripMenuItem_Click);
             // 
             // rekapPendapatanToolStripMenuItem
             // 
             this.rekapPendapatanToolStripMenuItem.Name = "rekapPendapatanToolStripMenuItem";
-            this.rekapPendapatanToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
+            this.rekapPendapatanToolStripMenuItem.Size = new System.Drawing.Size(193, 33);
             this.rekapPendapatanToolStripMenuItem.Text = "Rekap Pendapatan";
             this.rekapPendapatanToolStripMenuItem.Click += new System.EventHandler(this.rekapPendapatanToolStripMenuItem_Click);
             // 
             // keluarToolStripMenuItemKurir
             // 
             this.keluarToolStripMenuItemKurir.Name = "keluarToolStripMenuItemKurir";
-            this.keluarToolStripMenuItemKurir.Size = new System.Drawing.Size(57, 19);
+            this.keluarToolStripMenuItemKurir.Size = new System.Drawing.Size(83, 33);
             this.keluarToolStripMenuItemKurir.Text = "Keluar";
             this.keluarToolStripMenuItemKurir.Click += new System.EventHandler(this.keluarToolStripMenuItemKurir_Click);
             // 
             // menuStripKonsumen
             // 
             this.menuStripKonsumen.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuStripKonsumen.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStripKonsumen.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStripKonsumen.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.belanjaToolStripMenuItem,
@@ -223,8 +226,8 @@ namespace OnlineMart_Ndase
             this.keluarToolStripMenuItemKonsumen});
             this.menuStripKonsumen.Location = new System.Drawing.Point(0, 0);
             this.menuStripKonsumen.Name = "menuStripKonsumen";
-            this.menuStripKonsumen.Padding = new System.Windows.Forms.Padding(4, 1, 0, 1);
-            this.menuStripKonsumen.Size = new System.Drawing.Size(800, 24);
+            this.menuStripKonsumen.Padding = new System.Windows.Forms.Padding(6, 2, 0, 2);
+            this.menuStripKonsumen.Size = new System.Drawing.Size(1200, 32);
             this.menuStripKonsumen.TabIndex = 3;
             this.menuStripKonsumen.Text = "menuStrip1";
             this.menuStripKonsumen.Visible = false;
@@ -237,36 +240,40 @@ namespace OnlineMart_Ndase
             this.keranjangToolStripMenuItem,
             this.checkoutToolStripMenuItem});
             this.belanjaToolStripMenuItem.Name = "belanjaToolStripMenuItem";
-            this.belanjaToolStripMenuItem.Size = new System.Drawing.Size(63, 22);
+            this.belanjaToolStripMenuItem.Size = new System.Drawing.Size(93, 28);
             this.belanjaToolStripMenuItem.Text = "Belanja";
             // 
             // barangKonsumenToolStripMenuItem
             // 
             this.barangKonsumenToolStripMenuItem.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.barangKonsumenToolStripMenuItem.Name = "barangKonsumenToolStripMenuItem";
-            this.barangKonsumenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.barangKonsumenToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.barangKonsumenToolStripMenuItem.Text = "Barang";
+            this.barangKonsumenToolStripMenuItem.Click += new System.EventHandler(this.barangKonsumenToolStripMenuItem_Click);
             // 
             // dealsToolStripMenuItem
             // 
             this.dealsToolStripMenuItem.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dealsToolStripMenuItem.Name = "dealsToolStripMenuItem";
-            this.dealsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.dealsToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.dealsToolStripMenuItem.Text = "Deals";
+            this.dealsToolStripMenuItem.Click += new System.EventHandler(this.dealsToolStripMenuItem_Click);
             // 
             // keranjangToolStripMenuItem
             // 
             this.keranjangToolStripMenuItem.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.keranjangToolStripMenuItem.Name = "keranjangToolStripMenuItem";
-            this.keranjangToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.keranjangToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.keranjangToolStripMenuItem.Text = "Keranjang";
+            this.keranjangToolStripMenuItem.Click += new System.EventHandler(this.keranjangToolStripMenuItem_Click);
             // 
             // checkoutToolStripMenuItem
             // 
             this.checkoutToolStripMenuItem.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkoutToolStripMenuItem.Name = "checkoutToolStripMenuItem";
-            this.checkoutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.checkoutToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.checkoutToolStripMenuItem.Text = "Checkout";
+            this.checkoutToolStripMenuItem.Click += new System.EventHandler(this.checkoutToolStripMenuItem_Click);
             // 
             // akunToolStripMenuItem
             // 
@@ -277,14 +284,14 @@ namespace OnlineMart_Ndase
             this.isiSaldoToolStripMenuItem,
             this.profilToolStripMenuItem});
             this.akunToolStripMenuItem.Name = "akunToolStripMenuItem";
-            this.akunToolStripMenuItem.Size = new System.Drawing.Size(51, 22);
+            this.akunToolStripMenuItem.Size = new System.Drawing.Size(70, 28);
             this.akunToolStripMenuItem.Text = "Akun";
             // 
             // riwayatTransaksiToolStripMenuItem
             // 
             this.riwayatTransaksiToolStripMenuItem.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.riwayatTransaksiToolStripMenuItem.Name = "riwayatTransaksiToolStripMenuItem";
-            this.riwayatTransaksiToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.riwayatTransaksiToolStripMenuItem.Size = new System.Drawing.Size(251, 34);
             this.riwayatTransaksiToolStripMenuItem.Text = "Riwayat Transaksi";
             this.riwayatTransaksiToolStripMenuItem.Click += new System.EventHandler(this.riwayatTransaksiToolStripMenuItem_Click);
             // 
@@ -292,21 +299,23 @@ namespace OnlineMart_Ndase
             // 
             this.cekPesananToolStripMenuItem.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cekPesananToolStripMenuItem.Name = "cekPesananToolStripMenuItem";
-            this.cekPesananToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cekPesananToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.cekPesananToolStripMenuItem.Text = "Cek Pesanan";
+            this.cekPesananToolStripMenuItem.Click += new System.EventHandler(this.cekPesananToolStripMenuItem_Click);
             // 
             // cetakNotaToolStripMenuItem
             // 
             this.cetakNotaToolStripMenuItem.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cetakNotaToolStripMenuItem.Name = "cetakNotaToolStripMenuItem";
-            this.cetakNotaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cetakNotaToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.cetakNotaToolStripMenuItem.Text = "Cetak Nota";
+            this.cetakNotaToolStripMenuItem.Click += new System.EventHandler(this.cetakNotaToolStripMenuItem_Click);
             // 
             // isiSaldoToolStripMenuItem
             // 
             this.isiSaldoToolStripMenuItem.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.isiSaldoToolStripMenuItem.Name = "isiSaldoToolStripMenuItem";
-            this.isiSaldoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.isiSaldoToolStripMenuItem.Size = new System.Drawing.Size(251, 34);
             this.isiSaldoToolStripMenuItem.Text = "Isi Saldo";
             this.isiSaldoToolStripMenuItem.Click += new System.EventHandler(this.isiSaldoToolStripMenuItem_Click);
             // 
@@ -314,25 +323,26 @@ namespace OnlineMart_Ndase
             // 
             this.profilToolStripMenuItem.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.profilToolStripMenuItem.Name = "profilToolStripMenuItem";
-            this.profilToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.profilToolStripMenuItem.Size = new System.Drawing.Size(251, 34);
             this.profilToolStripMenuItem.Text = "Profil";
             this.profilToolStripMenuItem.Click += new System.EventHandler(this.profilToolStripMenuItem_Click);
             // 
             // keluarToolStripMenuItemKonsumen
             // 
             this.keluarToolStripMenuItemKonsumen.Name = "keluarToolStripMenuItemKonsumen";
-            this.keluarToolStripMenuItemKonsumen.Size = new System.Drawing.Size(57, 22);
+            this.keluarToolStripMenuItemKonsumen.Size = new System.Drawing.Size(83, 28);
             this.keluarToolStripMenuItemKonsumen.Text = "Keluar";
             this.keluarToolStripMenuItemKonsumen.Click += new System.EventHandler(this.keluarToolStripMenuItemKonsumen_Click);
             // 
             // FormUtama
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.menuStripKonsumen);
+            this.ClientSize = new System.Drawing.Size(1200, 692);
             this.Controls.Add(this.menuStripKurir);
+            this.Controls.Add(this.menuStripKonsumen);
             this.Controls.Add(this.menuStripPegawai);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FormUtama";
             this.Text = "OMA! The Application for Online Mart";
             this.Load += new System.EventHandler(this.FormUtama_Load);

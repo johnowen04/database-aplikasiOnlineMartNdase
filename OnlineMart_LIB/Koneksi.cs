@@ -27,7 +27,7 @@ namespace OnlineMart_LIB
             string DbUsername = settingsSection.Settings.Get("DbUsername").Value.ValueXml.InnerText;
             string DbPassword = settingsSection.Settings.Get("DbPassword").Value.ValueXml.InnerText;
 
-            string strCon = "server=" + DbServer + ";database=" + DbName + ";uid=" + DbUsername + ";password=" + DbPassword;
+            string strCon = "server=" + DbServer + ";database=" + DbName + ";uid=" + DbUsername + ";password=" + DbPassword +";SSL Mode=None";
 
             KoneksiDB = new MySqlConnection();
             KoneksiDB.ConnectionString = strCon;
