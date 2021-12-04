@@ -137,5 +137,53 @@ namespace OnlineMart_LIB
         {
             ListBarangOrder.Add(new BarangOrder(barang, jumlah, harga));
         }
+
+        public static List<Order> ReadData(string kriteria, string konsumenID)
+        {
+            string sql;
+                sql = "select o.id, o.tanggal_waktu, o.alamat_tujuan, o.ongkos_kirim, o.total_bayar, c.nama, d.nama, " +
+                    "p.id, p.nama, o.status, mp.nama from orders as o " +
+                    "inner join cabangs as c on o.cabangs_id = c.id " +
+                    "inner join drivers as d on o.drivers_id = d.id " +
+                    "inner join promos as p on o.promo_id = p.id " +
+                    "inner join metode_pembayarans as mp on o.metode_pembayaran_id = mp.id " +
+                    "where o.pelanggans_id = '" + konsumenID + "'";
+
+            MySqlDataReader hasil = Koneksi.JalankanPerintahQuery(sql);
+            List<Order> listOrder = new List<Order>();
+
+            while (hasil.Read() == true)
+            {
+                Order o = new Order();
+                o.Id = hasil.GetString(0);
+                o.Tanggal_Waktu = DateTime.Parse(hasil.GetString(1));
+                o.Alamat_Tujuan = hasil.GetString(2);
+                o.Ongkos_Kirim = float.Parse(hasil.GetString(3));
+                o.Total_Bayar = float.Parse(hasil.GetString(4));
+
+                Cabang c = new Cabang();
+                c.Nama = hasil.GetString(5);
+
+                Kurir ku = new Kurir();
+                ku.Nama = hasil.GetString(6);
+
+                Promo p = new Promo();
+                p.Id = int.Parse(hasil.GetString(7));
+                p.Nama = hasil.GetString(8);
+
+                o.Status = hasil.GetString(9);
+
+                MetodePembayaran mp = new MetodePembayaran();
+                mp.Nama = hasil.GetString(10);
+
+                o.Cabang = c;
+                o.Kurir = ku;
+                o.Promo = p;
+                o.MetodePembayaran = mp;
+
+                listOrder.Add(o);
+            }
+            return listOrder;
+        }
     }
 }

@@ -124,40 +124,6 @@ namespace OnlineMart_Ndase
             }
         }
 
-        private void cekPesananToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            Form form = Application.OpenForms["FormKonsumenCekPesanan"];
-
-            if (form == null)
-            {
-                FormKonsumenCekPesanan formKonsumenCekPesanan = new FormKonsumenCekPesanan();
-                formKonsumenCekPesanan.MdiParent = this;
-                formKonsumenCekPesanan.Show();
-            }
-            else
-            {
-                form.Show();
-                form.BringToFront();
-            }
-        }
-
-        private void cetakNotaToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            Form form = Application.OpenForms["FormKonsumenCetakNota"];
-
-            if (form == null)
-            {
-                FormKonsumenCetakNota formKonsumenCetakNota = new FormKonsumenCetakNota();
-                formKonsumenCetakNota.MdiParent = this;
-                formKonsumenCetakNota.Show();
-            }
-            else
-            {
-                form.Show();
-                form.BringToFront();
-            }
-        }
-
         private void isiSaldoToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             Form form = Application.OpenForms["FormKonsumenIsiSaldo"];

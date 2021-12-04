@@ -78,6 +78,12 @@
     <Compile Include="FormKonsumenCetakNota.Designer.cs">
       <DependentUpon>FormKonsumenCetakNota.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormKonsumenChat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormKonsumenChat.Designer.cs">
+      <DependentUpon>FormKonsumenChat.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormKonsumenCheckout.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -295,6 +301,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormKonsumenCetakNota.resx">
       <DependentUpon>FormKonsumenCetakNota.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormKonsumenChat.resx">
+      <DependentUpon>FormKonsumenChat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormKonsumenCheckout.resx">
       <DependentUpon>FormKonsumenCheckout.cs</DependentUpon>

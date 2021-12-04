@@ -40,13 +40,13 @@ namespace OnlineMart_LIB
             {
                 sql = "select p.nama, o.alamat_tujuan, (o.ongkos_kirim * 0.8) as komisi " +
                     "from orders as o inner join pelanggans as p on o.pelanggans_id=p.id" + 
-                    " where o.drivers_id=" + ku.Id;
+                    " where o.drivers_id = " + ku.Id;
             }
             else
             {
                 sql = "select p.nama, o.alamat_tujuan, (o.ongkos_kirim * 0.8) as komisi " +
                     "from orders as o inner join pelanggans as p on o.pelanggans_id=p.id " +
-                    "where o.drivers_id=" + ku.Id + " and kriteria like '%" + nilaiKriteria + "%'";
+                    "where " + kriteria + " like '%" + nilaiKriteria + "%' and o.drivers_id = " + ku.Id;
             }
 
             MySqlDataReader hasil = Koneksi.JalankanPerintahQuery(sql);
@@ -54,7 +54,7 @@ namespace OnlineMart_LIB
 
             while (hasil.Read() == true)
             {
-                Pengiriman p = new Pengiriman(hasil.GetString(0), hasil.GetString(1), hasil.GetFloat(2));
+                Pengiriman p = new Pengiriman(hasil.GetString(0), hasil.GetString(1), float.Parse(hasil.GetString(2)));
 
                 listPengiriman.Add(p);
             }

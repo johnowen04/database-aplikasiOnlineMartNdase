@@ -13,6 +13,8 @@ namespace OnlineMart_LIB
         private DateTime waktuIsi;
         private float saldo;
         private Konsumen konsumen;
+        private string bulan;
+        private double totalTransaksi;
 
         public RiwayatIsiSaldo()
         {
@@ -40,6 +42,55 @@ namespace OnlineMart_LIB
         public DateTime WaktuIsi { get => waktuIsi; set => waktuIsi = value; }
         public float Saldo { get => saldo; set => saldo = value; }
         public Konsumen Konsumen { get => konsumen; set => konsumen = value; }
+        public string Bulan { get => bulan; set => bulan = value; }
+        public double TotalTransaksi { get => totalTransaksi; set => totalTransaksi = value; }
+
+        static string ConvertMonth(string bulan)
+        {
+            string angka = "";
+
+            switch (bulan)
+            {
+                case "Januari":
+                    angka = "01";
+                    break;
+                case "Februari":
+                    angka = "02";
+                    break;
+                case "Maret":
+                    angka = "03";
+                    break;
+                case "April":
+                    angka = "04";
+                    break;
+                case "Mei":
+                    angka = "05";
+                    break;
+                case "Juni":
+                    angka = "06";
+                    break;
+                case "Juli":
+                    angka = "07";
+                    break;
+                case "Agustus":
+                    angka = "08";
+                    break;
+                case "September":
+                    angka = "09";
+                    break;
+                case "Oktober":
+                    angka = "10";
+                    break;
+                case "November":
+                    angka = "11";
+                    break;
+                case "Desember":
+                    angka = "12";
+                    break;
+            }
+
+            return angka;
+        }
 
         public static void CreateData(RiwayatIsiSaldo ris)
         {
@@ -49,31 +100,31 @@ namespace OnlineMart_LIB
             Koneksi.JalankanPerintahDML(sql);
         }
 
-        public static List<RiwayatIsiSaldo> ReadData() => ReadData("", "");
+        //public static List<RiwayatIsiSaldo> ReadData() => ReadData("", "");
 
-        public static List<RiwayatIsiSaldo> ReadData(string kriteria, string nilaiKriteria)
+        public static List<RiwayatIsiSaldo> ReadData(string kriteria, string bulan, string tahun)
         {
             string sql;
             if (kriteria == "")
             {
-                sql = "select ris.id, ris.waktu, ris.saldo, p.id, p.nama, p.email, p.password, p.telepon, p.saldo, p.poin " +
-                    "from riwayat_isi_saldos as ris inner join pelanggans as p";
+                sql = "select month(waktu), sum(isi_saldo) from riwayat_isi_saldos where year(waktu) = " + tahun;
             }
             else
             {
-                sql = "select ris.id, ris.waktu, ris.saldo, p.id, p.nama, p.email, p.password, p.telepon, p.saldo, p.poin " +
-                    "from riwayat_isi_saldos as ris inner join pelanggans as p " +
-                    "where " + kriteria + " like '%" + nilaiKriteria + "%'";
+                sql = "select month(waktu), sum(isi_saldo) from riwayat_isi_saldos where year(waktu) = '" + tahun + 
+                    "' and month(waktu) = '" + ConvertMonth(bulan) + "'";
             }
+
+            sql += " group by month(waktu)";
 
             MySqlDataReader hasil = Koneksi.JalankanPerintahQuery(sql);
             List<RiwayatIsiSaldo> listRiwayatIsiSaldo = new List<RiwayatIsiSaldo>();
 
             while (hasil.Read() == true)
             {
-                Konsumen k = new Konsumen(hasil.GetInt32(3), hasil.GetString(4), hasil.GetString(5), hasil.GetString(6), hasil.GetString(7), hasil.GetFloat(8), hasil.GetInt32(9));
-
-                RiwayatIsiSaldo ris = new RiwayatIsiSaldo(hasil.GetInt32(0), hasil.GetDateTime(1), hasil.GetInt32(2), k);
+                RiwayatIsiSaldo ris = new RiwayatIsiSaldo();
+                ris.Bulan = hasil.GetString(0);
+                ris.TotalTransaksi = hasil.GetDouble(1);
 
                 listRiwayatIsiSaldo.Add(ris);
             }

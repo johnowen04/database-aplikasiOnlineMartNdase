@@ -58,7 +58,9 @@
     <Compile Include="Promo.cs" />
     <Compile Include="Pegawai.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RekapPendapatanKurir.cs" />
     <Compile Include="RiwayatIsiSaldo.cs" />
+    <Compile Include="RiwayatPenjualanBarang.cs" />
     <Compile Include="StokBarang.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
