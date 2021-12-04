@@ -1,0 +1,17 @@
+
+Ndase OMA Onlen Mart
+Jl. Karangpilang
+No. Order = 20211112001
+Tanggal = 12/11/2021 09:54:54
+Pembeli = test - 0
+No. Telepon = 81263172381
+Kurir = John
+--------------------------------------------------
+Nama Barang               Jumlah   Harga  Sub Total 
+Handphone                   7 3.500.000 24.500.000 
+Ayam Goreng                10  15.000    150.000 
+--------------------------------------------------
+Total = 24.650.000
+--------------------------------------------------
+JANGAN KEMBALI BELANJA AJA DI SOPI
+==================================================

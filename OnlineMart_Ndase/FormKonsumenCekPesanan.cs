@@ -72,6 +72,7 @@ namespace OnlineMart_Ndase
         private void buttonCetakNota_Click(object sender, EventArgs e)
         {
             FormKonsumenCetakNota form = new FormKonsumenCetakNota();
+            form.noOrder = order.Id;
             form.ShowDialog();
         }
     }

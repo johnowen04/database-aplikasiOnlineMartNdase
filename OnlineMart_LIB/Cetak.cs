@@ -18,10 +18,10 @@ namespace OnlineMart_LIB
         #endregion
 
         #region CONSTRUCTORS
-        public Cetak(Font jenisFont, StreamReader fileCetak, float marginKiri, float marginKanan, float marginAtas, float marginBawah)
+        public Cetak(string namaFile, Font jenisFont, float marginKiri, float marginKanan, float marginAtas, float marginBawah)
         {
+            FileCetak = new StreamReader(namaFile);
             JenisFont = jenisFont;
-            FileCetak = fileCetak;
             MarginKiri = marginKiri;
             MarginKanan = marginKanan;
             MarginAtas = marginAtas;

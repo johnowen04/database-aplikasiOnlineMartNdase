@@ -147,6 +147,86 @@ namespace OnlineMart_LIB
             ListBarangOrder.Add(new BarangOrder(barang, jumlah, harga));
         }
 
+        public static List<Order> ReadData(string kriteria, string nilaiKriteria)
+        {
+            string sql;
+            if (kriteria == "")
+            {
+                sql = "select o.id, o.tanggal_waktu, o.alamat_tujuan, o.ongkos_kirim, o.total_bayar, c.nama, d.nama, pe.id, pe.nama, pe.telepon, p.id, p.nama, o.status, mp.nama " +
+                    "from orders as o " +
+                    "inner join cabangs as c on o.cabangs_id = c.id " +
+                    "inner join drivers as d on o.drivers_id = d.id " +
+                    "inner join pelanggans as pe on o.pelanggans_id = pe.id " +
+                    "inner join promos as p on o.promo_id = p.id " +
+                    "inner join metode_pembayarans as mp on o.metode_pembayaran_id = mp.id";
+            }
+            else
+            {
+                sql = "select o.id, o.tanggal_waktu, o.alamat_tujuan, o.ongkos_kirim, o.total_bayar, c.nama, d.nama, pe.id, pe.nama, pe.telepon, p.id, p.nama, o.status, mp.nama " +
+                    "from orders as o " +
+                    "inner join cabangs as c on o.cabangs_id = c.id " +
+                    "inner join drivers as d on o.drivers_id = d.id " +
+                    "inner join pelanggans as pe on o.pelanggans_id = pe.id " +
+                    "inner join promos as p on o.promo_id = p.id " +
+                    "inner join metode_pembayarans as mp on o.metode_pembayaran_id = mp.id " +
+                    "where " + kriteria + " like '%" + nilaiKriteria + "%'";
+            }
+
+            MySqlDataReader hasil = Koneksi.JalankanPerintahQuery(sql);
+            List<Order> listOrder = new List<Order>();
+
+            while (hasil.Read() == true)
+            {
+                Order o = new Order();
+                o.Id = hasil.GetString(0);
+                o.Tanggal_Waktu = DateTime.Parse(hasil.GetString(1));
+                o.Alamat_Tujuan = hasil.GetString(2);
+                o.Ongkos_Kirim = float.Parse(hasil.GetString(3));
+                o.Total_Bayar = float.Parse(hasil.GetString(4));
+
+                Cabang c = new Cabang();
+                c.Nama = hasil.GetString(5);
+
+                Kurir ku = new Kurir();
+                ku.Nama = hasil.GetString(6);
+
+                Konsumen ko = new Konsumen();
+                ko.Id = hasil.GetInt32(7);
+                ko.Nama = hasil.GetString(8);
+                ko.Telepon = hasil.GetString(9);
+
+                Promo p = new Promo();
+                p.Id = int.Parse(hasil.GetString(10));
+                p.Nama = hasil.GetString(11);
+
+                o.Status = hasil.GetString(12);
+
+                MetodePembayaran mp = new MetodePembayaran();
+                mp.Nama = hasil.GetString(13);
+
+                o.Cabang = c;
+                o.Kurir = ku;
+                o.Konsumen = ko;
+                o.Promo = p;
+                o.MetodePembayaran = mp;
+
+                string sql2 = "select barangs_id, jumlah, harga from barangs_orders where orders_id='" + o.Id + "'";
+                MySqlDataReader hasilDetil = Koneksi.JalankanPerintahQuery(sql2);
+
+                while (hasilDetil.Read())
+                {
+                    List<Barang> barang = Barang.ReadData("b.id", hasilDetil.GetString(0));
+                    int jumlah = hasilDetil.GetInt32(1);
+                    float harga = hasilDetil.GetFloat(2);
+
+                    o.TambahDetilBarang(barang[0], jumlah, harga);
+                }
+
+                listOrder.Add(o);
+            }
+            return listOrder;
+        }
+
         public static List<Order> ReadData(string konsumenID)
         {
             string sql = "select o.id, o.tanggal_waktu, o.alamat_tujuan, o.ongkos_kirim, o.total_bayar, c.nama, d.nama, " +
@@ -208,7 +288,7 @@ namespace OnlineMart_LIB
 
         public static void CetakDaftarOrder(string kriteria, string nilai, string namaFile, Font font)
         {
-            //List<Order> listOrder = ReadData(kriteria, nilai);
+            List<Order> listOrder = ReadData(kriteria, nilai);
 
             StreamWriter file = new StreamWriter(namaFile);
 
@@ -220,40 +300,50 @@ namespace OnlineMart_LIB
 
             file.WriteLine("Jl. Karangpilang"); // alamat junjun
 
-            //foreach (Order o in listOrder)
-            //{
-            //    file.WriteLine("No. Order = " + GenerateNoOrder());
-            //    file.WriteLine("Tanggal = " + o.Tanggal_Waktu);
-            //    file.WriteLine("Pembeli = " + o.Konsumen.Nama + " - " + o.Konsumen.Id);
-            //    //file.WriteLine("Alamat = " + o.Konsumen.AlamatTapiGakAdaCosTiapCekotHarusIsiAlamat);
-            //    file.WriteLine("No. Telepon = " + o.Konsumen.Telepon);
+            foreach (Order o in listOrder)
+            {
+                file.WriteLine("No. Order = " + o.Id);
+                file.WriteLine("Tanggal = " + o.Tanggal_Waktu);
+                file.WriteLine("Pembeli = " + o.Konsumen.Nama + " - " + o.Konsumen.Id);
+                file.WriteLine("No. Telepon = " + o.Konsumen.Telepon);
 
-            //    file.WriteLine("Kurir = " + o.Kurir.Nama);
+                file.WriteLine("Kurir = " + o.Kurir.Nama);
 
-            //    file.WriteLine("-".PadRight(50, pemisah));
-            //    double total = 0;
-            //    file.Write("Nama Barang".PadRight(25, ' ') + " ");
-            //    file.Write("Jumlah ");
-            //    file.Write("Harga".PadLeft(7, ' ') + " ");
-            //    file.Write("Sub Total".PadLeft(10, ' ') + " ");
-            //    file.WriteLine("");
+                file.WriteLine("-".PadRight(50, pemisah));
+                double total = 0;
+                file.Write("Nama Barang".PadRight(25, ' ') + " ");
+                file.Write("Jumlah ");
+                file.Write("Harga".PadLeft(7, ' ') + " ");
+                file.Write("Sub Total".PadLeft(10, ' ') + " ");
+                file.WriteLine("");
 
-            //    // TO JONO : KALO LILIANA ADA NOTA JUAL DETAIL KITA ADA APA. DARI CELLA KETON
-            //    //foreach ()
-            //    //{
+                //TO JONO : KALO LILIANA ADA NOTA JUAL DETAIL KITA ADA APA.DARI CELLA KETON
+                foreach (BarangOrder bo in o.ListBarangOrder)
+                {
+                    double subtotal = bo.Harga * bo.Jumlah;
+                    total += subtotal;
+                    string namaBarang = bo.Barang.Nama;
 
-            //    //}
+                    if (namaBarang.Length > 25)
+                        namaBarang = namaBarang.Substring(0, 25);
 
-            //    file.WriteLine("-".PadRight(50, pemisah));
-            //    file.WriteLine("Total = " + total.ToString("#,###").PadRight(10, ' '));
-            //    file.WriteLine("-".PadRight(50, pemisah));
-            //    file.WriteLine("JANGAN KEMBALI BELANJA AJA DI SOPI");
-            //    file.WriteLine("=".PadRight(50, '='));
-            //}
+                    file.Write(namaBarang.PadRight(25, ' ') + " ");
+                    file.Write(bo.Jumlah.ToString().PadLeft(3, ' ') + " ");
+                    file.Write(bo.Harga.ToString("#,###").PadLeft(7, ' ') + " ");
+                    file.Write(subtotal.ToString("#,###").PadLeft(10, ' ') + " ");
+                    file.WriteLine("");
+                }
+
+                file.WriteLine("-".PadRight(50, pemisah));
+                file.WriteLine("Total = " + total.ToString("#,###").PadRight(10, ' '));
+                file.WriteLine("-".PadRight(50, pemisah));
+                file.WriteLine("JANGAN KEMBALI BELANJA AJA DI SOPI");
+                file.WriteLine("=".PadRight(50, '='));
+            }
 
             file.Close();
-            //Cetak c = new Cetak(font, namaFile, 10, 9, 9, 9);
-            //c.CetakKePrinter();
+            Cetak c = new Cetak(namaFile, font, 10, 9, 9, 9);
+            c.CetakKePrinter();
         }
         #endregion
     }

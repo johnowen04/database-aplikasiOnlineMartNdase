@@ -13,6 +13,8 @@ namespace OnlineMart_Ndase
 {
     public partial class FormKonsumenCetakNota : Form
     {
+        public string noOrder = "";
+
         public FormKonsumenCetakNota()
         {
             InitializeComponent();
@@ -27,7 +29,7 @@ namespace OnlineMart_Ndase
         {
             try
             {
-                //Order.CetakDaftarOrder(kriteria, nilai, "daftarnota.txt", new Font("Courier New", 10));
+                Order.CetakDaftarOrder("o.id", noOrder, "daftarnota.txt", new Font("Courier New", 10));
 
                 MessageBox.Show("Nota berhasil dicetak terserah wes kata-katanya");
             }
@@ -36,6 +38,11 @@ namespace OnlineMart_Ndase
             {
                 MessageBox.Show("Cetak Nota gagal MAKA E BELI PRINTER SENG MAHAL DASAR KISMIN. \nPesan kesalahan : " + ex.Message);
             }
+        }
+
+        private void FormKonsumenCetakNota_Load(object sender, EventArgs e)
+        {
+            labelNoOrder.Text = noOrder;
         }
     }
 }
