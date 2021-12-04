@@ -15,6 +15,12 @@ namespace OnlineMart_LIB
         #endregion
 
         #region CONSTRUCTORS
+        public Kategori()
+        {
+            Id = 0;
+            Nama = "";
+        }
+
         public Kategori(int id, string nama)
         {
             Id = id;
@@ -32,52 +38,15 @@ namespace OnlineMart_LIB
         {
             string sql = "insert into kategoris (id, nama) values ('" + k.Id + "','" + k.Nama.Replace("'", "\\'") + "')";
 
-            int jumlahDataBerubah = Koneksi.JalankanPerintahDML(sql);
-            if(jumlahDataBerubah == 0)
-            {
-                return false;
-            }
-            else
-            {
-                return true;
-            }
+            return Koneksi.JalankanPerintahDML(sql) != 0;
         }
 
-        public static Boolean UpdateData(Kategori k)
-        {
-            string sql = "update kategoris set nama='" + k.Nama.Replace("'", "\\'") + "' where id='" + k.Id + "'";
-
-            int jumlahDataBerubah = Koneksi.JalankanPerintahDML(sql);
-            if (jumlahDataBerubah == 0)
-            {
-                return false;
-            }
-            else
-            {
-                return true;
-            }
-        }
-
-        public static Boolean DeleteData(string id)
-        {
-            string sql = "delete from kategoris where id='" + id + "'";
-
-            int jumlahDataBerubah = Koneksi.JalankanPerintahDML(sql);
-            if (jumlahDataBerubah == 0)
-            {
-                return false;
-            }
-            else
-            {
-                return true;
-            }
-        }
+        public static List<Kategori> ReadData() => ReadData("", "");
 
         public static List<Kategori> ReadData(string kriteria, string nilaiKriteria)
         {
-            string sql = "";
-
-            if(kriteria == "")
+            string sql;
+            if (kriteria == "")
             {
                 sql = "select * from kategoris";
             }
@@ -95,6 +64,20 @@ namespace OnlineMart_LIB
                 listKategori.Add(k);
             }
             return listKategori;
+        }
+
+        public static Boolean UpdateData(Kategori k)
+        {
+            string sql = "update kategoris set nama='" + k.Nama.Replace("'", "\\'") + "' where id='" + k.Id + "'";
+
+            return Koneksi.JalankanPerintahDML(sql) != 0;
+        }
+
+        public static Boolean DeleteData(string id)
+        {
+            string sql = "delete from kategoris where id='" + id + "'";
+
+            return Koneksi.JalankanPerintahDML(sql) != 0;
         }
 
         public override string ToString()

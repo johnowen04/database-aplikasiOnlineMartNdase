@@ -11,16 +11,24 @@ namespace OnlineMart_LIB
     {
         private int id;
         private DateTime waktuIsi;
-        private int saldo;
+        private float saldo;
         private Konsumen konsumen;
 
-        public RiwayatIsiSaldo(DateTime waktuIsi, int saldo, Konsumen konsumen)
+        public RiwayatIsiSaldo()
+        {
+            Id = 0;
+            WaktuIsi = DateTime.Now;
+            Saldo = 0;
+            Konsumen = null;
+        }
+
+        public RiwayatIsiSaldo(DateTime waktuIsi, float saldo, Konsumen konsumen)
         {
             WaktuIsi = waktuIsi;
             Saldo = saldo;
             Konsumen = konsumen;
         }
-        public RiwayatIsiSaldo(int id, DateTime waktuIsi, int saldo, Konsumen konsumen)
+        public RiwayatIsiSaldo(int id, DateTime waktuIsi, float saldo, Konsumen konsumen)
         {
             Id = id;
             WaktuIsi = waktuIsi;
@@ -30,7 +38,7 @@ namespace OnlineMart_LIB
 
         public int Id { get => id; set => id = value; }
         public DateTime WaktuIsi { get => waktuIsi; set => waktuIsi = value; }
-        public int Saldo { get => saldo; set => saldo = value; }
+        public float Saldo { get => saldo; set => saldo = value; }
         public Konsumen Konsumen { get => konsumen; set => konsumen = value; }
 
         public static Boolean CreateData(RiwayatIsiSaldo ris)
@@ -38,21 +46,14 @@ namespace OnlineMart_LIB
             string sql = "insert into riwayat_isi_saldos (waktu, isi_saldo, pelanggans_id) " +
                 "values (now(), " + ris.Saldo + "," + ris.Konsumen.Id + ")";
 
-            int jumlahDataBerubah = Koneksi.JalankanPerintahDML(sql);
-            if (jumlahDataBerubah == 0)
-            {
-                return false;
-            }
-            else
-            {
-                return true;
-            }
+            return Koneksi.JalankanPerintahDML(sql) != 0;
         }
+
+        public static List<RiwayatIsiSaldo> ReadData() => ReadData("", "");
 
         public static List<RiwayatIsiSaldo> ReadData(string kriteria, string nilaiKriteria)
         {
-            string sql = "";
-
+            string sql;
             if (kriteria == "")
             {
                 sql = "select ris.id, ris.waktu, ris.saldo, p.id, p.nama, p.email, p.password, p.telepon, p.saldo, p.poin " +

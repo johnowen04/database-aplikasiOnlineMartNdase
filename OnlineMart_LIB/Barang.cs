@@ -17,6 +17,15 @@ namespace OnlineMart_LIB
         #endregion
 
         #region CONSTRUCTORS
+
+        public Barang()
+        {
+            Id = 0;
+            Nama = "";
+            Harga = "";
+            Kategori = null;
+        }
+
         public Barang(int id, string nama, string harga, Kategori kategori)
         {
             Id = id;
@@ -46,18 +55,14 @@ namespace OnlineMart_LIB
             string sql = "insert into barangs (id, nama, harga, kategoris_id) values ('" + b.Id + "','" +
                 b.Nama.Replace("'", "\\'") + "','" + b.Harga + "','" + b.Kategori.Id + "')";
 
-            int jumlahDataBerubah = Koneksi.JalankanPerintahDML(sql);
-
-            if (jumlahDataBerubah == 0)
-                return false;
-            else
-                return true;
+            return Koneksi.JalankanPerintahDML(sql) != 0;
         }
+
+        public static List<Barang> ReadData() => ReadData("", "");
 
         public static List<Barang> ReadData(string kriteria, string nilaiKriteria)
         {
-            string sql = "";
-
+            string sql;
             if (kriteria == "")
             {
                 sql = "select b.id, b.nama, b.harga, k.id as kategori_id, k.nama as kategori_nama " +
@@ -89,25 +94,14 @@ namespace OnlineMart_LIB
             string sql = "update barangs set harga=" + b.Harga + ", kategoris_id=" + b.Kategori.Id + 
                 " where id=" + b.Id;
 
-            int jumlahDataBerubah = Koneksi.JalankanPerintahDML(sql);
-
-
-            if (jumlahDataBerubah == 0)
-                return false;
-            else
-                return true;
+            return Koneksi.JalankanPerintahDML(sql) != 0;
         }
 
         public static Boolean DeleteData(string id)
         {
             string sql = "delete from barangs where id='" + id + "'";
 
-            int jumlahDataBerubah = Koneksi.JalankanPerintahDML(sql);
-
-            if (jumlahDataBerubah == 0)
-                return false;
-            else
-                return true;
+            return Koneksi.JalankanPerintahDML(sql) != 0;
         }
         #endregion
     }

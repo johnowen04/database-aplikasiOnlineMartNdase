@@ -28,15 +28,19 @@ namespace OnlineMart_Ndase
             dataGridViewKeranjang.Columns.Add("Harga", "Harga Barang");
             dataGridViewKeranjang.Columns.Add("Kategori", "Kategori");
             dataGridViewKeranjang.Columns.Add("Cabang", "Cabang");
+            dataGridViewKeranjang.Columns.Add("Quantity", "Qty");
 
             dataGridViewKeranjang.Columns["Nama"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             dataGridViewKeranjang.Columns["Harga"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             dataGridViewKeranjang.Columns["Kategori"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             dataGridViewKeranjang.Columns["Cabang"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewKeranjang.Columns["Quantity"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
 
             dataGridViewKeranjang.Columns["Harga"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
-
             dataGridViewKeranjang.Columns["Harga"].DefaultCellStyle.Format = "#,###";
+
+            dataGridViewKeranjang.Columns["Quantity"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+            dataGridViewKeranjang.Columns["Quantity"].DefaultCellStyle.Format = "##";
 
             dataGridViewKeranjang.AllowUserToAddRows = false;
             dataGridViewKeranjang.ReadOnly = true;
@@ -46,12 +50,12 @@ namespace OnlineMart_Ndase
         {
             dataGridViewKeranjang.Rows.Clear();
 
-            if (formUtama.keranjang.Count > 0)
+            if (formUtama.ko.ListKeranjangBarang.Count > 0)
             {
-                foreach (CabangBarang cb in formUtama.keranjang)
+                foreach (KeranjangBarang kb in formUtama.ko.ListKeranjangBarang)
                 {
-                    dataGridViewKeranjang.Rows.Add(cb.Barang.Nama, cb.Barang.Harga,
-                        cb.Barang.Kategori.Nama, cb.Cabang.Nama);
+                    dataGridViewKeranjang.Rows.Add(kb.Barang.Nama, kb.Barang.Harga,
+                        kb.Barang.Kategori.Nama, kb.Cabang.Nama, kb.Quantity);
                 }
             }
             else

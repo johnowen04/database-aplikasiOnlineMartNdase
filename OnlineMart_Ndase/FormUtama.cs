@@ -18,7 +18,7 @@ namespace OnlineMart_Ndase
         public Pegawai pe;
         public string pengguna = "";
         FormMasuk formMasuk;
-        public List<CabangBarang> keranjang;
+        //public List<CabangBarang> keranjang;
 
         public FormUtama()
         {
@@ -40,8 +40,8 @@ namespace OnlineMart_Ndase
                 if(formMasuk.ShowDialog() == DialogResult.OK)
                 {
                     SetHakAkses();
-                    if (!(ko is null))
-                        keranjang = new List<CabangBarang>();
+                    //if (!(ko is null))
+                    //    keranjang = new List<CabangBarang>();
                 }
 
             }

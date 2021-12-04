@@ -24,10 +24,11 @@ namespace OnlineMart_LIB
         public string AlamatTujuan { get => alamatTujuan; set => alamatTujuan = value; }
         public int Komisi { get => komisi; set => komisi = value; }
 
+        public static List<Pengiriman> ReadData() => ReadData("", "");
+
         public static List<Pengiriman> ReadData(string kriteria, string nilaiKriteria)
         {
-            string sql = "";
-
+            string sql;
             if (kriteria == "")
             {
                 sql = "select p.nama, o.alamat_tujuan, (o.ongkos_kirim * 0.8) " +

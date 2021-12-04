@@ -36,18 +36,14 @@ namespace OnlineMart_LIB
             string sql = "insert into gifts (id, nama, jumlah_poin) " +
                 "values (" + h.Id + ",'" + h.Nama.Replace("'", "\\'") + "','" + h.JumlahPoin.ToString() + "')";
 
-            int jumlahDataBerubah = Koneksi.JalankanPerintahDML(sql);
-
-            if (jumlahDataBerubah == 0)
-                return false;
-            else
-                return true;
+            return Koneksi.JalankanPerintahDML(sql) != 0;
         }
+
+        public static List<Hadiah> ReadData() => ReadData("", "");
 
         public static List<Hadiah> ReadData(string kriteria, string nilaiKriteria)
         {
-            string sql = "";
-
+            string sql;
             if (kriteria == "")
             {
                 sql = "select * from gifts";
@@ -75,24 +71,14 @@ namespace OnlineMart_LIB
             string sql = "update gifts set nama=" + h.Nama + ", jumlah_poin=" + h.JumlahPoin.ToString() +
                 " where id=" + h.Id;
 
-            int jumlahDataBerubah = Koneksi.JalankanPerintahDML(sql);
-
-            if (jumlahDataBerubah == 0)
-                return false;
-            else
-                return true;
+            return Koneksi.JalankanPerintahDML(sql) != 0;
         }
 
         public static Boolean DeleteData(string id)
         {
             string sql = "delete from gifts where id='" + id + "'";
 
-            int jumlahDataBerubah = Koneksi.JalankanPerintahDML(sql);
-
-            if (jumlahDataBerubah == 0)
-                return false;
-            else
-                return true;
+            return Koneksi.JalankanPerintahDML(sql) != 0;
         }
         #endregion
     }

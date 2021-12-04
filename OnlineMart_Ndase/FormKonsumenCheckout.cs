@@ -53,15 +53,19 @@ namespace OnlineMart_Ndase
             dataGridViewBarang.Columns.Add("Harga", "Harga Barang");
             dataGridViewBarang.Columns.Add("Kategori", "Kategori");
             dataGridViewBarang.Columns.Add("Cabang", "Cabang");
+            dataGridViewBarang.Columns.Add("Quantity", "Qty");
 
             dataGridViewBarang.Columns["Nama"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             dataGridViewBarang.Columns["Harga"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             dataGridViewBarang.Columns["Kategori"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             dataGridViewBarang.Columns["Cabang"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewBarang.Columns["Quantity"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
 
             dataGridViewBarang.Columns["Harga"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
-
             dataGridViewBarang.Columns["Harga"].DefaultCellStyle.Format = "#,###";
+
+            dataGridViewBarang.Columns["Quantity"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+            dataGridViewBarang.Columns["Quantity"].DefaultCellStyle.Format = "##";
 
             dataGridViewBarang.AllowUserToAddRows = false;
             dataGridViewBarang.ReadOnly = true;
@@ -71,12 +75,12 @@ namespace OnlineMart_Ndase
         {
             dataGridViewBarang.Rows.Clear();
 
-            if (formKonsumenKeranjang.formUtama.keranjang.Count > 0)
+            if (formKonsumenKeranjang.formUtama.ko.ListKeranjangBarang.Count > 0)
             {
-                foreach (CabangBarang cb in formKonsumenKeranjang.formUtama.keranjang)
+                foreach (KeranjangBarang kb in formKonsumenKeranjang.formUtama.ko.ListKeranjangBarang)
                 {
-                    dataGridViewBarang.Rows.Add(cb.Barang.Nama, cb.Barang.Harga,
-                        cb.Barang.Kategori.Nama, cb.Cabang.Nama);
+                    dataGridViewBarang.Rows.Add(kb.Barang.Nama, kb.Barang.Harga,
+                        kb.Barang.Kategori.Nama, kb.Cabang.Nama, kb.Quantity);
                 }
             }
             else

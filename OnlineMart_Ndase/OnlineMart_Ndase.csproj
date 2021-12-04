@@ -120,6 +120,12 @@
     <Compile Include="FormKonsumenUbahProfil.Designer.cs">
       <DependentUpon>FormKonsumenUbahProfil.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormPegawaiDaftarBarangCabang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPegawaiDaftarBarangCabang.Designer.cs">
+      <DependentUpon>FormPegawaiDaftarBarangCabang.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormPegawaiDaftarHadiah.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -286,6 +292,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormKonsumenUbahProfil.resx">
       <DependentUpon>FormKonsumenUbahProfil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPegawaiDaftarBarangCabang.resx">
+      <DependentUpon>FormPegawaiDaftarBarangCabang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormPegawaiDaftarHadiah.resx">
       <DependentUpon>FormPegawaiDaftarHadiah.cs</DependentUpon>

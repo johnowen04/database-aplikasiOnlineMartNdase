@@ -14,6 +14,7 @@ namespace OnlineMart_Ndase
     public partial class FormKonsumenIsiSaldo : Form
     {
         FormUtama formUtama;
+
         public FormKonsumenIsiSaldo()
         {
             InitializeComponent();
@@ -29,20 +30,12 @@ namespace OnlineMart_Ndase
         {
             try
             {
-                RiwayatIsiSaldo ris = new RiwayatIsiSaldo(DateTime.Now, int.Parse(textBoxNominal.Text), formUtama.ko);
+                float nominal = float.Parse(textBoxNominal.Text);
 
-                Boolean hasil = RiwayatIsiSaldo.CreateData(ris);
-
-                if (hasil)
-                {
+                if (Konsumen.UpdateSaldo(nominal, formUtama.ko))
                     MessageBox.Show("Isi saldo berhasil.");
-                    //formUtama.ko.Saldo += ris.Saldo;
-                    Konsumen.UpdateSaldo(float.Parse(textBoxNominal.Text), formUtama.ko.Id);
-                }
                 else
-                {
-                    MessageBox.Show("Isi saldo gagal.");
-                }
+                    throw new ArgumentException("Isi saldo gagal.");
             }
             catch (Exception ex)
             {

@@ -52,9 +52,7 @@ namespace OnlineMart_LIB
         #region METHODS
         public static Kurir CekLogin(string username, string password)
         {
-            string sql = "";
-
-            sql = "select id, nama, email, username, password, telepon " +
+            string sql = "select id, nama, email, username, password, telepon " +
                     " from drivers " +
                     " where username='" + username + "' AND password = SHA2('" + password + "', 512)";
 

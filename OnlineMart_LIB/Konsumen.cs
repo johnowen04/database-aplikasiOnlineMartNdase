@@ -17,9 +17,23 @@ namespace OnlineMart_LIB
         private string telepon;
         private float saldo;
         private int poin;
+        private List<KeranjangBarang> listKeranjangBarang;
         #endregion
 
         #region CONSTRUCTORS
+
+        public Konsumen()
+        {
+            Id = 0;
+            Nama = "";
+            Email = "";
+            Password = "";
+            Telepon = "";
+            Saldo = 0.0f;
+            Poin = 0;
+            ListKeranjangBarang = new List<KeranjangBarang>();
+        }
+
         public Konsumen(string nama, string email, string password, string telepon, float saldo, int poin)
         {
             Id = 0;
@@ -29,6 +43,7 @@ namespace OnlineMart_LIB
             Telepon = telepon;
             Saldo = saldo;
             Poin = poin;
+            ListKeranjangBarang = new List<KeranjangBarang>();
         }
 
         public Konsumen(int id, string nama, string email, string password, string telepon, float saldo, int poin)
@@ -40,6 +55,7 @@ namespace OnlineMart_LIB
             Telepon = telepon;
             Saldo = saldo;
             Poin = poin;
+            ListKeranjangBarang = new List<KeranjangBarang>();
         }
         #endregion
 
@@ -51,16 +67,16 @@ namespace OnlineMart_LIB
         public string Telepon { get => telepon; set => telepon = value; }
         public float Saldo { get => saldo; set => saldo = value; }
         public int Poin { get => poin; set => poin = value; }
+        public List<KeranjangBarang> ListKeranjangBarang { get => listKeranjangBarang; private set => listKeranjangBarang = value; }
         #endregion
 
         #region METHODS
         public static Konsumen CekLogin(string email, string password)
         {
-            string sql = "";
-
+            string sql;
             sql = "select id, nama, email, password, telepon, saldo, poin " +
-                    " from pelanggans " +
-                    " where email='" + email + "' AND password = SHA2('" + password + "', 512)";
+                    "from pelanggans " +
+                    "where email='" + email + "' AND password = SHA2('" + password + "', 512)";
 
 
             MySqlDataReader hasil = Koneksi.JalankanPerintahQuery(sql);
@@ -83,37 +99,14 @@ namespace OnlineMart_LIB
                 k.Nama.Replace("'", "\\'") + "','" + k.Email +"', SHA2('" + k.Password +"', 512), '" + 
                 k.Telepon + "','" + k.Saldo + "','" + k.Poin + "')";
 
-            int jumlahDataBerubah = Koneksi.JalankanPerintahDML(sql);
-            if (jumlahDataBerubah == 0)
-            {
-                return false;
-            }
-            else
-            {
-                return true;
-            }
+            return Koneksi.JalankanPerintahDML(sql) != 0;
         }
 
-        public static Boolean UpdateData(Konsumen k)
-        {
-            string sql = "update pelanggans set nama='" + k.Nama.Replace("'", "\\'") + "', email='" + k.Email + "', telepon='" + 
-                k.Telepon + "' where id='" + k.Id + "'";
-
-            int jumlahDataBerubah = Koneksi.JalankanPerintahDML(sql);
-            if (jumlahDataBerubah == 0)
-            {
-                return false;
-            }
-            else
-            {
-                return true;
-            }
-        }
+        public static List<Konsumen> ReadData() => ReadData("", "");
 
         public static List<Konsumen> ReadData(string kriteria, string nilaiKriteria)
         {
-            string sql = "";
-
+            string sql;
             if (kriteria == "")
             {
                 sql = "select * from pelanggans";
@@ -128,23 +121,49 @@ namespace OnlineMart_LIB
 
             while (hasil.Read() == true)
             {
-                Konsumen k = new Konsumen(int.Parse(hasil.GetValue(0).ToString()), hasil.GetValue(1).ToString(),
-                    hasil.GetValue(2).ToString(), hasil.GetValue(3).ToString(), hasil.GetValue(4).ToString(),
-                    float.Parse(hasil.GetValue(5).ToString()), int.Parse(hasil.GetValue(6).ToString()));
+                Konsumen k = new Konsumen(hasil.GetInt32(0), hasil.GetString(1),
+                    hasil.GetString(2), hasil.GetString(3), hasil.GetString(4),
+                    hasil.GetFloat(5), hasil.GetInt32(6));
+
+                string sqlKeranjangBarang = "select cabangs_id, barangs_id, quantity from keranjangs_barangs where pelanggans_id='" + hasil.GetInt32(0) + "'";
+
+                MySqlDataReader hasilQueryKeranjang = Koneksi.JalankanPerintahQuery(sqlKeranjangBarang);
+                while (hasilQueryKeranjang.Read())
+                {
+                    List<Cabang> listCabang = Cabang.ReadData("c.id", hasilQueryKeranjang.GetInt32(0).ToString());
+                    List<Barang> listBarang = Barang.ReadData("b.id", hasilQueryKeranjang.GetInt32(1).ToString());
+                    int quantity = hasilQueryKeranjang.GetInt32(2);
+
+                    k.TambahBarangKeKeranjang(listCabang[0], listBarang[0], quantity);
+                }
 
                 listKonsumen.Add(k);
             }
             return listKonsumen;
         }
 
-        public static void UpdateSaldo(float jumlahSaldo, int id)
+        public static Boolean UpdateData(Konsumen k)
         {
-            string sql = "";
+            string sql = "update pelanggans set nama='" + k.Nama.Replace("'", "\\'") + "', email='" + k.Email + "', telepon='" + 
+                k.Telepon + "' where id='" + k.Id + "'";
 
-            sql = "update pelanggans set saldo=saldo+" + jumlahSaldo +
-                "where id=" + id;
+            return Koneksi.JalankanPerintahDML(sql) != 0;
+        }
 
-            Koneksi.JalankanPerintahDML(sql);
+        public static Boolean UpdateSaldo(float jumlahSaldo, Konsumen k)
+        {
+            string sql = "update pelanggans set saldo=saldo+" + jumlahSaldo +
+                "where id=" + k.Id;
+
+            if (Koneksi.JalankanPerintahDML(sql) != 0)
+                return RiwayatIsiSaldo.CreateData(new RiwayatIsiSaldo(DateTime.Now, jumlahSaldo, k));
+            
+            return false;
+        }
+
+        public void TambahBarangKeKeranjang(Cabang cabang, Barang barang, int quantity)
+        {
+            ListKeranjangBarang.Add(new KeranjangBarang(cabang, barang, quantity));
         }
         #endregion
     }

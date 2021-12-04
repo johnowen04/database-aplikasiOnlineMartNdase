@@ -63,8 +63,7 @@ namespace OnlineMart_LIB
 
         public static Pegawai CekLogin(string email, string password)
         {
-            string sql = "";
-
+            string sql;
             sql = "select id, nama, email, password, telepon from pegawais " +
                     " where email='" + email + "' AND password = SHA2('" + password + "', 512)";
 
@@ -82,10 +81,11 @@ namespace OnlineMart_LIB
             return null;
         }
 
+        public static List<Pegawai> ReadData() => ReadData("", "");
+
         public static List<Pegawai> ReadData(string kriteria, string nilaiKriteria)
         {
-            string sql = "";
-
+            string sql;
             if (kriteria == "")
             {
                 sql = "select * from pegawais";

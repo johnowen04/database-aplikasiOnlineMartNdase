@@ -53,10 +53,11 @@ namespace OnlineMart_LIB
                 return true;
         }
 
+        public static List<Promo> ReadData() => ReadData("", "");
+
         public static List<Promo> ReadData(string kriteria, string nilaiKriteria)
         {
-            string sql = "";
-
+            string sql;
             if (kriteria == "")
             {
                 sql = "select * from promos";

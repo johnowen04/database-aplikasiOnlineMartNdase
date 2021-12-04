@@ -43,6 +43,13 @@ namespace OnlineMart_Ndase
             buttonColumnHapus.UseColumnTextForButtonValue = true;
             dataGridViewDaftarCabang.Columns.Add(buttonColumnHapus);
 
+            DataGridViewButtonColumn buttonColumnLihatBarang = new DataGridViewButtonColumn();
+            buttonColumnLihatBarang.HeaderText = "Aksi";
+            buttonColumnLihatBarang.Text = "Lihat Barang";
+            buttonColumnLihatBarang.Name = "btnLihatBarangGrid";
+            buttonColumnLihatBarang.UseColumnTextForButtonValue = true;
+            dataGridViewDaftarCabang.Columns.Add(buttonColumnLihatBarang);
+
             dataGridViewDaftarCabang.Columns["Id"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             dataGridViewDaftarCabang.Columns["Nama"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             dataGridViewDaftarCabang.Columns["Alamat"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
@@ -72,23 +79,21 @@ namespace OnlineMart_Ndase
 
         private void dataGridViewDaftarCabang_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            string pId = dataGridViewDaftarCabang.CurrentRow.Cells["id"].Value.ToString();
-            string pNama = dataGridViewDaftarCabang.CurrentRow.Cells["nama"].Value.ToString();
-            string pAlamat = dataGridViewDaftarCabang.CurrentRow.Cells["alamat"].Value.ToString();
-            string pNamaPegawai = dataGridViewDaftarCabang.CurrentRow.Cells["pegawai"].Value.ToString();
+            string cId = dataGridViewDaftarCabang.CurrentRow.Cells["id"].Value.ToString();
+            string cNama = dataGridViewDaftarCabang.CurrentRow.Cells["nama"].Value.ToString();
+            string cAlamat = dataGridViewDaftarCabang.CurrentRow.Cells["alamat"].Value.ToString();
+            string cNamaPegawai = dataGridViewDaftarCabang.CurrentRow.Cells["pegawai"].Value.ToString();
 
             if (e.ColumnIndex == dataGridViewDaftarCabang.Columns["btnHapusGrid"].Index && e.RowIndex >= 0)
             {
-                DialogResult hasil = MessageBox.Show(this, "Apakah anda yakin ingin menghapus " + pId + "-" + pNama + "-" + pAlamat + "-" + pNamaPegawai + "?",
+                DialogResult hasil = MessageBox.Show(this, "Apakah anda yakin ingin menghapus " + cId + "-" + cNama + "-" + cAlamat + "-" + cNamaPegawai + "?",
                     "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                 if (hasil == DialogResult.Yes)
                 {
-                    Boolean hapus = Cabang.DeleteData(pId);
-                    if (hapus == true)
+                    if (Cabang.DeleteData(cId))
                     {
                         MessageBox.Show("Berhasil hapus data", "Informasi");
-
                         FormPegawaiDaftarCabang_Load(sender, e);
                     }
                     else
@@ -97,15 +102,29 @@ namespace OnlineMart_Ndase
                     }
                 }
             }
-            else
+            else if (e.ColumnIndex == dataGridViewDaftarCabang.Columns["btnUbahGrid"].Index && e.RowIndex >= 0)
             {
                 FormPegawaiUbahCabang form = new FormPegawaiUbahCabang();
                 form.Owner = this;
-                form.textBoxID.Text = pId;
-                form.textBoxNama.Text = pNama;
-                form.textBoxAlamat.Text = pAlamat;
-                form.comboBoxPegawai.Text = pNamaPegawai;
+                form.textBoxID.Text = cId;
+                form.textBoxNama.Text = cNama;
+                form.textBoxAlamat.Text = cAlamat;
+                form.comboBoxPegawai.Text = cNamaPegawai;
                 form.ShowDialog();
+                FormPegawaiDaftarCabang_Load(sender, e);
+            }
+            else
+            {
+                FormPegawaiDaftarBarangCabang form = new FormPegawaiDaftarBarangCabang();
+                form.Owner = this;
+                List<Cabang> cabangDipilih = Cabang.ReadData("c.id", cId);
+                if (cabangDipilih.Count == 1)
+                {
+                    form.labelTitle.Text = "Daftar Barang di Cabang " + cabangDipilih[0].Nama;
+                    form.cabang = cabangDipilih[0];
+                    form.ShowDialog();
+                }
+                FormPegawaiDaftarCabang_Load(sender, e);
             }
         }
 

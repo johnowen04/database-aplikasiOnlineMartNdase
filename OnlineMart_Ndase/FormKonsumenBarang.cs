@@ -13,9 +13,8 @@ namespace OnlineMart_Ndase
 {
     public partial class FormKonsumenBarang : Form
     {
-        private List<CabangBarang> listCabangBarang = new List<CabangBarang>();
-
         private FormUtama formUtama;
+        private List<Cabang> listCabang;
 
         public FormKonsumenBarang()
         {
@@ -29,6 +28,7 @@ namespace OnlineMart_Ndase
             dataGridViewBarang.Columns.Add("Nama", "Nama Barang");
             dataGridViewBarang.Columns.Add("Harga", "Harga Barang");
             dataGridViewBarang.Columns.Add("Kategori", "Kategori");
+            dataGridViewBarang.Columns.Add("Stok", "Stok");
             dataGridViewBarang.Columns.Add("Cabang", "Cabang");
 
             DataGridViewButtonColumn buttonColumnKeranjang = new DataGridViewButtonColumn();
@@ -41,11 +41,14 @@ namespace OnlineMart_Ndase
             dataGridViewBarang.Columns["Nama"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             dataGridViewBarang.Columns["Harga"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             dataGridViewBarang.Columns["Kategori"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewBarang.Columns["Stok"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             dataGridViewBarang.Columns["Cabang"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
 
             dataGridViewBarang.Columns["Harga"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
-
             dataGridViewBarang.Columns["Harga"].DefaultCellStyle.Format = "#,###";
+
+            dataGridViewBarang.Columns["Stok"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+            dataGridViewBarang.Columns["Stok"].DefaultCellStyle.Format = "##";
 
             dataGridViewBarang.AllowUserToAddRows = false;
             dataGridViewBarang.ReadOnly = true;
@@ -55,12 +58,15 @@ namespace OnlineMart_Ndase
         {
             dataGridViewBarang.Rows.Clear();
 
-            if (listCabangBarang.Count > 0)
+            if (listCabang.Count > 0)
             {
-                foreach (CabangBarang cb in listCabangBarang)
+                foreach (Cabang c in listCabang)
                 {
-                    dataGridViewBarang.Rows.Add(cb.Barang.Nama, cb.Barang.Harga, 
-                        cb.Barang.Kategori.Nama, cb.Cabang.Nama);
+                    foreach (StokBarang sb in c.ListStokBarang)
+                    {
+                        dataGridViewBarang.Rows.Add(sb.Barang.Nama,
+                        sb.Barang.Harga, sb.Barang.Kategori.Nama, sb.Stok, c.Nama);
+                    }
                 }
             }
             else
@@ -78,7 +84,7 @@ namespace OnlineMart_Ndase
         {
             formUtama = (FormUtama)this.MdiParent;
             FormatDataGrid();
-            listCabangBarang = CabangBarang.ReadData("", "");
+            listCabang = Cabang.ReadData("", "");
             TampilDataGrid();
         }
 
@@ -93,41 +99,24 @@ namespace OnlineMart_Ndase
 
                 if (e.ColumnIndex == dataGridViewBarang.Columns["btnKeranjangGrid"].Index && e.RowIndex >= 0)
                 {
-                    List<Barang> barangDipilih = Barang.ReadData("b.nama", pNamaBarang);
-                    List<Cabang> cabangBarangDipilih = Cabang.ReadData("c.nama", pCabang);
+                    Cabang cabangDipilih = listCabang.Find(cabang => cabang.Nama == pCabang);
+                    StokBarang stokBarangDipilih = cabangDipilih.ListStokBarang.Find(stokBarang => stokBarang.Barang.Nama == pNamaBarang);
 
-                    if (barangDipilih.Count > 0 && cabangBarangDipilih.Count > 0)
-                    { 
-                        CabangBarang barangMasukKeranjang = new CabangBarang(barangDipilih[0], cabangBarangDipilih[0], 1);
-
-                        List<CabangBarang> stokBarang = CabangBarang.ReadData("b.id", barangMasukKeranjang.Barang.Id.ToString());
-
-                        if (stokBarang.Count > 0)
-                        {
-                            if (stokBarang[0].Stok > 0)
-                            {
-                                formUtama.keranjang.Add(barangMasukKeranjang);
-                                MessageBox.Show("Barang dimasukkan ke keranjang nama barang:"
-                                    + barangMasukKeranjang.Barang.Nama);
-                            }
-                            else
-                            {
-                                MessageBox.Show("Stok barang tidak tersedia.", "Informasi");
-                            }
-                        }
-                        else
-                        {
-                            MessageBox.Show("Barang tidak tersedia di cabang manapun.", "Informasi");
-                        }
+                    if (formUtama.ko.ListKeranjangBarang.Find(kb => kb.Cabang.Nama == cabangDipilih.Nama && kb.Barang.Nama == stokBarangDipilih.Barang.Nama) != null)
+                    {
+                        formUtama.ko.ListKeranjangBarang.Find(kb => kb.Cabang.Nama == cabangDipilih.Nama && kb.Barang.Nama == stokBarangDipilih.Barang.Nama).Quantity += 1;
+                        //MessageBox.Show("Quantity barang berhasil ditambahkan nama barang:"
+                        //            + stokBarangDipilih.Barang.Nama
+                        //            + "; qty:" + formUtama.ko.ListKeranjangBarang.Find(kb => kb.Cabang.Nama == cabangDipilih.Nama && kb.Barang.Nama == stokBarangDipilih.Barang.Nama).Quantity);
                     }
                     else
                     {
-                        MessageBox.Show("Barang tidak ditemukan.", "Informasi");
+                        formUtama.ko.TambahBarangKeKeranjang(cabangDipilih, stokBarangDipilih.Barang, 1);
+                        //MessageBox.Show("Barang dimasukkan ke keranjang nama barang:"
+                        //            + stokBarangDipilih.Barang.Nama);
                     }
-                }
-                else
-                {
-                
+
+                    MessageBox.Show("Barang telah dimasukkan ke keranjang.", "Informasi");
                 }
             }
             catch (Exception ex)
@@ -143,18 +132,21 @@ namespace OnlineMart_Ndase
             switch (comboBoxCari.Text)
             {
                 case "Nama Barang":
-                    kriteria = "b.nama";
+                    //kriteria = "b.nama";
                     break;
                 case "Harga Barang":
-                    kriteria = "b.harga";
+                    //kriteria = "b.harga";
                     break;
                 case "Nama Kategori":
-                    kriteria = "k.nama";
+                    //kriteria = "k.nama";
                     break;
                 case "Nama Cabang":
                     kriteria = "c.nama";
                     break;
             }
+
+            listCabang = Cabang.ReadData(kriteria, textBoxCari.Text);
+            TampilDataGrid();
         }
     }
 }
