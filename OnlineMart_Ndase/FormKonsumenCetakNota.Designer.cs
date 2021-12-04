@@ -30,11 +30,11 @@ namespace OnlineMart_Ndase
         private void InitializeComponent()
         {
             this.panelRiwayatTransaksi = new System.Windows.Forms.Panel();
+            this.labelNoOrder = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.buttonKeluar = new System.Windows.Forms.Button();
-            this.linkLabelCetak = new System.Windows.Forms.LinkLabel();
-            this.labelNoOrder = new System.Windows.Forms.Label();
+            this.buttonCetak = new System.Windows.Forms.Button();
             this.panelRiwayatTransaksi.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -42,19 +42,28 @@ namespace OnlineMart_Ndase
             // 
             this.panelRiwayatTransaksi.BackColor = System.Drawing.Color.SeaShell;
             this.panelRiwayatTransaksi.Controls.Add(this.labelNoOrder);
-            this.panelRiwayatTransaksi.Controls.Add(this.linkLabelCetak);
             this.panelRiwayatTransaksi.Controls.Add(this.label2);
             this.panelRiwayatTransaksi.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panelRiwayatTransaksi.Location = new System.Drawing.Point(12, 56);
-            this.panelRiwayatTransaksi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelRiwayatTransaksi.Margin = new System.Windows.Forms.Padding(4);
             this.panelRiwayatTransaksi.Name = "panelRiwayatTransaksi";
-            this.panelRiwayatTransaksi.Size = new System.Drawing.Size(482, 178);
+            this.panelRiwayatTransaksi.Size = new System.Drawing.Size(274, 90);
             this.panelRiwayatTransaksi.TabIndex = 5;
+            // 
+            // labelNoOrder
+            // 
+            this.labelNoOrder.AutoSize = true;
+            this.labelNoOrder.Location = new System.Drawing.Point(129, 32);
+            this.labelNoOrder.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelNoOrder.Name = "labelNoOrder";
+            this.labelNoOrder.Size = new System.Drawing.Size(82, 21);
+            this.labelNoOrder.TabIndex = 10;
+            this.labelNoOrder.Text = "No. Order";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(58, 54);
+            this.label2.Location = new System.Drawing.Point(28, 32);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(93, 21);
@@ -69,18 +78,18 @@ namespace OnlineMart_Ndase
             this.label1.Location = new System.Drawing.Point(12, 7);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(482, 46);
+            this.label1.Size = new System.Drawing.Size(274, 46);
             this.label1.TabIndex = 4;
             this.label1.Text = "     Cetak Nota";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // buttonKeluar
             // 
-            this.buttonKeluar.BackColor = System.Drawing.Color.OrangeRed;
+            this.buttonKeluar.BackColor = System.Drawing.Color.WhiteSmoke;
             this.buttonKeluar.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonKeluar.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.buttonKeluar.Location = new System.Drawing.Point(361, 242);
-            this.buttonKeluar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonKeluar.ForeColor = System.Drawing.Color.OrangeRed;
+            this.buttonKeluar.Location = new System.Drawing.Point(153, 154);
+            this.buttonKeluar.Margin = new System.Windows.Forms.Padding(4);
             this.buttonKeluar.Name = "buttonKeluar";
             this.buttonKeluar.Size = new System.Drawing.Size(133, 46);
             this.buttonKeluar.TabIndex = 7;
@@ -88,33 +97,26 @@ namespace OnlineMart_Ndase
             this.buttonKeluar.UseVisualStyleBackColor = false;
             this.buttonKeluar.Click += new System.EventHandler(this.buttonKeluar_Click);
             // 
-            // linkLabelCetak
+            // buttonCetak
             // 
-            this.linkLabelCetak.AutoSize = true;
-            this.linkLabelCetak.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabelCetak.LinkColor = System.Drawing.Color.OrangeRed;
-            this.linkLabelCetak.Location = new System.Drawing.Point(159, 99);
-            this.linkLabelCetak.Name = "linkLabelCetak";
-            this.linkLabelCetak.Size = new System.Drawing.Size(92, 21);
-            this.linkLabelCetak.TabIndex = 9;
-            this.linkLabelCetak.TabStop = true;
-            this.linkLabelCetak.Text = "Cetak Nota";
-            // 
-            // labelNoOrder
-            // 
-            this.labelNoOrder.AutoSize = true;
-            this.labelNoOrder.Location = new System.Drawing.Point(159, 54);
-            this.labelNoOrder.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelNoOrder.Name = "labelNoOrder";
-            this.labelNoOrder.Size = new System.Drawing.Size(82, 21);
-            this.labelNoOrder.TabIndex = 10;
-            this.labelNoOrder.Text = "No. Order";
+            this.buttonCetak.BackColor = System.Drawing.Color.OrangeRed;
+            this.buttonCetak.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCetak.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.buttonCetak.Location = new System.Drawing.Point(12, 154);
+            this.buttonCetak.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonCetak.Name = "buttonCetak";
+            this.buttonCetak.Size = new System.Drawing.Size(133, 46);
+            this.buttonCetak.TabIndex = 8;
+            this.buttonCetak.Text = "&Cetak";
+            this.buttonCetak.UseVisualStyleBackColor = false;
+            this.buttonCetak.Click += new System.EventHandler(this.buttonCetak_Click);
             // 
             // FormKonsumenCetakNota
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(503, 296);
+            this.ClientSize = new System.Drawing.Size(299, 216);
+            this.Controls.Add(this.buttonCetak);
             this.Controls.Add(this.panelRiwayatTransaksi);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonKeluar);
@@ -133,6 +135,6 @@ namespace OnlineMart_Ndase
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button buttonKeluar;
         private System.Windows.Forms.Label labelNoOrder;
-        private System.Windows.Forms.LinkLabel linkLabelCetak;
+        private System.Windows.Forms.Button buttonCetak;
     }
 }

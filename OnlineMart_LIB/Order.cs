@@ -4,11 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
+using System.IO;
+using System.Drawing;
 
 namespace OnlineMart_LIB
 {
     public class Order
     {
+        #region FIELDS
         private string id;
         private DateTime tanggal_waktu;
         private string alamat_tujuan;
@@ -21,7 +24,9 @@ namespace OnlineMart_LIB
         private string status;
         private MetodePembayaran metodePembayaran;
         private List<BarangOrder> listBarangOrder;
+        #endregion
 
+        #region CONSTRUCTORS
         public Order()
         {
             Id = "";
@@ -54,7 +59,9 @@ namespace OnlineMart_LIB
             MetodePembayaran = metodePembayaran;
             ListBarangOrder = new List<BarangOrder>();
         }
+        #endregion
 
+        #region PROPERTIES
         public string Id { get => id; set => id = value; }
         public DateTime Tanggal_Waktu { get => tanggal_waktu; set => tanggal_waktu = value; }
         public string Alamat_Tujuan { get => alamat_tujuan; set => alamat_tujuan = value; }
@@ -67,7 +74,9 @@ namespace OnlineMart_LIB
         public string Status { get => status; set => status = value; }
         public MetodePembayaran MetodePembayaran { get => metodePembayaran; set => metodePembayaran = value; }
         public List<BarangOrder> ListBarangOrder { get => listBarangOrder; private set => listBarangOrder = value; }
+        #endregion
 
+        #region METHODS
         public static string GenerateNoOrder()
         {
             string sql = "select RIGHT(id, 3) as NoOrder" +
@@ -196,5 +205,56 @@ namespace OnlineMart_LIB
             }
             return listOrder;
         }
+
+        public static void CetakDaftarOrder(string kriteria, string nilai, string namaFile, Font font)
+        {
+            //List<Order> listOrder = ReadData(kriteria, nilai);
+
+            StreamWriter file = new StreamWriter(namaFile);
+
+            char pemisah = '-';
+
+            file.WriteLine("");
+
+            file.WriteLine("Ndase OMA Onlen Mart"); //nama toko ter estetok
+
+            file.WriteLine("Jl. Karangpilang"); // alamat junjun
+
+            //foreach (Order o in listOrder)
+            //{
+            //    file.WriteLine("No. Order = " + GenerateNoOrder());
+            //    file.WriteLine("Tanggal = " + o.Tanggal_Waktu);
+            //    file.WriteLine("Pembeli = " + o.Konsumen.Nama + " - " + o.Konsumen.Id);
+            //    //file.WriteLine("Alamat = " + o.Konsumen.AlamatTapiGakAdaCosTiapCekotHarusIsiAlamat);
+            //    file.WriteLine("No. Telepon = " + o.Konsumen.Telepon);
+
+            //    file.WriteLine("Kurir = " + o.Kurir.Nama);
+
+            //    file.WriteLine("-".PadRight(50, pemisah));
+            //    double total = 0;
+            //    file.Write("Nama Barang".PadRight(25, ' ') + " ");
+            //    file.Write("Jumlah ");
+            //    file.Write("Harga".PadLeft(7, ' ') + " ");
+            //    file.Write("Sub Total".PadLeft(10, ' ') + " ");
+            //    file.WriteLine("");
+
+            //    // TO JONO : KALO LILIANA ADA NOTA JUAL DETAIL KITA ADA APA. DARI CELLA KETON
+            //    //foreach ()
+            //    //{
+
+            //    //}
+
+            //    file.WriteLine("-".PadRight(50, pemisah));
+            //    file.WriteLine("Total = " + total.ToString("#,###").PadRight(10, ' '));
+            //    file.WriteLine("-".PadRight(50, pemisah));
+            //    file.WriteLine("JANGAN KEMBALI BELANJA AJA DI SOPI");
+            //    file.WriteLine("=".PadRight(50, '='));
+            //}
+
+            file.Close();
+            //Cetak c = new Cetak(font, namaFile, 10, 9, 9, 9);
+            //c.CetakKePrinter();
+        }
+        #endregion
     }
 }
