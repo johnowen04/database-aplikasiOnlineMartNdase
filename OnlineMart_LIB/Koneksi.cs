@@ -51,6 +51,7 @@ namespace OnlineMart_LIB
             {
                 KoneksiDB.Close();
             }
+
             KoneksiDB.Open();
         }
     }

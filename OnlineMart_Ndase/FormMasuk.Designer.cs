@@ -29,185 +29,192 @@ namespace OnlineMart_Ndase
         /// </summary>
         private void InitializeComponent()
         {
-            this.buttonMasuk = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.radioButtonKonsumen = new System.Windows.Forms.RadioButton();
-            this.radioButtonKurir = new System.Windows.Forms.RadioButton();
-            this.radioButtonPegawai = new System.Windows.Forms.RadioButton();
-            this.labelLoginInfo = new System.Windows.Forms.Label();
-            this.labelLoginPassword = new System.Windows.Forms.Label();
-            this.panelLoginInfo = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.linkLabelDaftar = new System.Windows.Forms.LinkLabel();
             this.textBoxPassword = new System.Windows.Forms.TextBox();
             this.textBoxLoginInfo = new System.Windows.Forms.TextBox();
-            this.linkLabelDaftar = new System.Windows.Forms.LinkLabel();
-            this.panelLoginInfo.SuspendLayout();
+            this.panelLogin = new System.Windows.Forms.Panel();
+            this.labelLoginInfo = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.radioButtonPegawai = new System.Windows.Forms.RadioButton();
+            this.radioButtonKurir = new System.Windows.Forms.RadioButton();
+            this.radioButtonKonsumen = new System.Windows.Forms.RadioButton();
+            this.buttonMasuk = new System.Windows.Forms.Button();
+            this.panelLogin.SuspendLayout();
             this.SuspendLayout();
             // 
-            // buttonMasuk
+            // label9
             // 
-            this.buttonMasuk.BackColor = System.Drawing.Color.OrangeRed;
-            this.buttonMasuk.Font = new System.Drawing.Font("Palatino Linotype", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonMasuk.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.buttonMasuk.Location = new System.Drawing.Point(39, 242);
-            this.buttonMasuk.Margin = new System.Windows.Forms.Padding(2);
-            this.buttonMasuk.Name = "buttonMasuk";
-            this.buttonMasuk.Size = new System.Drawing.Size(167, 39);
-            this.buttonMasuk.TabIndex = 0;
-            this.buttonMasuk.Text = "Masuk";
-            this.buttonMasuk.UseVisualStyleBackColor = false;
-            this.buttonMasuk.Click += new System.EventHandler(this.buttonMasuk_Click);
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(24, 26);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(268, 25);
+            this.label9.TabIndex = 0;
+            this.label9.Text = "Selamat Datang di OMA!";
             // 
-            // label1
+            // label7
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(34, 44);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(461, 33);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Selamat Datang Kembali di OMA!";
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(26, 79);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(100, 16);
+            this.label7.TabIndex = 2;
+            this.label7.Text = "Daftar sebagai :";
             // 
-            // label2
+            // linkLabelDaftar
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Tahoma", 16F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(35, 75);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(315, 27);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "The Application for Online Mart";
+            this.linkLabelDaftar.AutoSize = true;
+            this.linkLabelDaftar.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabelDaftar.LinkColor = System.Drawing.Color.OrangeRed;
+            this.linkLabelDaftar.Location = new System.Drawing.Point(26, 238);
+            this.linkLabelDaftar.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.linkLabelDaftar.Name = "linkLabelDaftar";
+            this.linkLabelDaftar.Size = new System.Drawing.Size(154, 14);
+            this.linkLabelDaftar.TabIndex = 8;
+            this.linkLabelDaftar.TabStop = true;
+            this.linkLabelDaftar.Text = "Belum punya akun ? Daftar";
+            // 
+            // textBoxPassword
+            // 
+            this.textBoxPassword.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxPassword.Location = new System.Drawing.Point(78, 38);
+            this.textBoxPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxPassword.Name = "textBoxPassword";
+            this.textBoxPassword.Size = new System.Drawing.Size(201, 23);
+            this.textBoxPassword.TabIndex = 3;
+            // 
+            // textBoxLoginInfo
+            // 
+            this.textBoxLoginInfo.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxLoginInfo.Location = new System.Drawing.Point(78, 11);
+            this.textBoxLoginInfo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxLoginInfo.Name = "textBoxLoginInfo";
+            this.textBoxLoginInfo.Size = new System.Drawing.Size(201, 23);
+            this.textBoxLoginInfo.TabIndex = 1;
+            // 
+            // panelLogin
+            // 
+            this.panelLogin.Controls.Add(this.textBoxPassword);
+            this.panelLogin.Controls.Add(this.textBoxLoginInfo);
+            this.panelLogin.Controls.Add(this.labelLoginInfo);
+            this.panelLogin.Controls.Add(this.label4);
+            this.panelLogin.Location = new System.Drawing.Point(29, 101);
+            this.panelLogin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelLogin.Name = "panelLogin";
+            this.panelLogin.Size = new System.Drawing.Size(290, 72);
+            this.panelLogin.TabIndex = 6;
+            // 
+            // labelLoginInfo
+            // 
+            this.labelLoginInfo.AutoSize = true;
+            this.labelLoginInfo.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelLoginInfo.Location = new System.Drawing.Point(-2, 14);
+            this.labelLoginInfo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelLoginInfo.Name = "labelLoginInfo";
+            this.labelLoginInfo.Size = new System.Drawing.Size(48, 16);
+            this.labelLoginInfo.TabIndex = 0;
+            this.labelLoginInfo.Text = "Email :";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(-2, 41);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(76, 16);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Kata sandi :";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(25, 51);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(232, 19);
+            this.label8.TabIndex = 1;
+            this.label8.Text = "The Application for Online Mart";
+            // 
+            // radioButtonPegawai
+            // 
+            this.radioButtonPegawai.AutoSize = true;
+            this.radioButtonPegawai.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonPegawai.Location = new System.Drawing.Point(276, 77);
+            this.radioButtonPegawai.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.radioButtonPegawai.Name = "radioButtonPegawai";
+            this.radioButtonPegawai.Size = new System.Drawing.Size(74, 20);
+            this.radioButtonPegawai.TabIndex = 5;
+            this.radioButtonPegawai.Text = "Pegawai";
+            this.radioButtonPegawai.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonKurir
+            // 
+            this.radioButtonKurir.AutoSize = true;
+            this.radioButtonKurir.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonKurir.Location = new System.Drawing.Point(219, 77);
+            this.radioButtonKurir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.radioButtonKurir.Name = "radioButtonKurir";
+            this.radioButtonKurir.Size = new System.Drawing.Size(53, 20);
+            this.radioButtonKurir.TabIndex = 4;
+            this.radioButtonKurir.Text = "Kurir";
+            this.radioButtonKurir.UseVisualStyleBackColor = true;
             // 
             // radioButtonKonsumen
             // 
             this.radioButtonKonsumen.AutoSize = true;
             this.radioButtonKonsumen.Checked = true;
-            this.radioButtonKonsumen.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonKonsumen.Location = new System.Drawing.Point(39, 112);
-            this.radioButtonKonsumen.Margin = new System.Windows.Forms.Padding(2);
+            this.radioButtonKonsumen.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonKonsumen.Location = new System.Drawing.Point(130, 77);
+            this.radioButtonKonsumen.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.radioButtonKonsumen.Name = "radioButtonKonsumen";
-            this.radioButtonKonsumen.Size = new System.Drawing.Size(101, 23);
-            this.radioButtonKonsumen.TabIndex = 4;
+            this.radioButtonKonsumen.Size = new System.Drawing.Size(85, 20);
+            this.radioButtonKonsumen.TabIndex = 3;
             this.radioButtonKonsumen.TabStop = true;
             this.radioButtonKonsumen.Text = "Konsumen";
             this.radioButtonKonsumen.UseVisualStyleBackColor = true;
-            this.radioButtonKonsumen.CheckedChanged += new System.EventHandler(this.radioButtonKonsumen_CheckedChanged);
             // 
-            // radioButtonKurir
+            // buttonMasuk
             // 
-            this.radioButtonKurir.AutoSize = true;
-            this.radioButtonKurir.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonKurir.Location = new System.Drawing.Point(187, 112);
-            this.radioButtonKurir.Margin = new System.Windows.Forms.Padding(2);
-            this.radioButtonKurir.Name = "radioButtonKurir";
-            this.radioButtonKurir.Size = new System.Drawing.Size(61, 23);
-            this.radioButtonKurir.TabIndex = 5;
-            this.radioButtonKurir.Text = "Kurir";
-            this.radioButtonKurir.UseVisualStyleBackColor = true;
-            this.radioButtonKurir.CheckedChanged += new System.EventHandler(this.radioButtonKurir_CheckedChanged);
-            // 
-            // radioButtonPegawai
-            // 
-            this.radioButtonPegawai.AutoSize = true;
-            this.radioButtonPegawai.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonPegawai.Location = new System.Drawing.Point(290, 112);
-            this.radioButtonPegawai.Margin = new System.Windows.Forms.Padding(2);
-            this.radioButtonPegawai.Name = "radioButtonPegawai";
-            this.radioButtonPegawai.Size = new System.Drawing.Size(85, 23);
-            this.radioButtonPegawai.TabIndex = 6;
-            this.radioButtonPegawai.Text = "Pegawai";
-            this.radioButtonPegawai.UseVisualStyleBackColor = true;
-            this.radioButtonPegawai.CheckedChanged += new System.EventHandler(this.radioButtonPegawai_CheckedChanged);
-            // 
-            // labelLoginInfo
-            // 
-            this.labelLoginInfo.AutoSize = true;
-            this.labelLoginInfo.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelLoginInfo.Location = new System.Drawing.Point(-3, 19);
-            this.labelLoginInfo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.labelLoginInfo.Name = "labelLoginInfo";
-            this.labelLoginInfo.Size = new System.Drawing.Size(59, 19);
-            this.labelLoginInfo.TabIndex = 7;
-            this.labelLoginInfo.Text = "Email :";
-            // 
-            // labelLoginPassword
-            // 
-            this.labelLoginPassword.AutoSize = true;
-            this.labelLoginPassword.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelLoginPassword.Location = new System.Drawing.Point(-3, 52);
-            this.labelLoginPassword.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.labelLoginPassword.Name = "labelLoginPassword";
-            this.labelLoginPassword.Size = new System.Drawing.Size(92, 19);
-            this.labelLoginPassword.TabIndex = 8;
-            this.labelLoginPassword.Text = "Kata sandi :";
-            // 
-            // panelLoginInfo
-            // 
-            this.panelLoginInfo.Controls.Add(this.textBoxPassword);
-            this.panelLoginInfo.Controls.Add(this.textBoxLoginInfo);
-            this.panelLoginInfo.Controls.Add(this.labelLoginInfo);
-            this.panelLoginInfo.Controls.Add(this.labelLoginPassword);
-            this.panelLoginInfo.Location = new System.Drawing.Point(41, 144);
-            this.panelLoginInfo.Margin = new System.Windows.Forms.Padding(2);
-            this.panelLoginInfo.Name = "panelLoginInfo";
-            this.panelLoginInfo.Size = new System.Drawing.Size(333, 91);
-            this.panelLoginInfo.TabIndex = 9;
-            // 
-            // textBoxPassword
-            // 
-            this.textBoxPassword.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxPassword.Location = new System.Drawing.Point(94, 50);
-            this.textBoxPassword.Margin = new System.Windows.Forms.Padding(2);
-            this.textBoxPassword.Name = "textBoxPassword";
-            this.textBoxPassword.PasswordChar = '*';
-            this.textBoxPassword.Size = new System.Drawing.Size(201, 27);
-            this.textBoxPassword.TabIndex = 10;
-            // 
-            // textBoxLoginInfo
-            // 
-            this.textBoxLoginInfo.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxLoginInfo.Location = new System.Drawing.Point(94, 17);
-            this.textBoxLoginInfo.Margin = new System.Windows.Forms.Padding(2);
-            this.textBoxLoginInfo.Name = "textBoxLoginInfo";
-            this.textBoxLoginInfo.Size = new System.Drawing.Size(201, 27);
-            this.textBoxLoginInfo.TabIndex = 9;
-            // 
-            // linkLabelDaftar
-            // 
-            this.linkLabelDaftar.AutoSize = true;
-            this.linkLabelDaftar.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabelDaftar.LinkColor = System.Drawing.Color.OrangeRed;
-            this.linkLabelDaftar.Location = new System.Drawing.Point(37, 286);
-            this.linkLabelDaftar.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.linkLabelDaftar.Name = "linkLabelDaftar";
-            this.linkLabelDaftar.Size = new System.Drawing.Size(175, 17);
-            this.linkLabelDaftar.TabIndex = 10;
-            this.linkLabelDaftar.TabStop = true;
-            this.linkLabelDaftar.Text = "Belum punya akun ? Daftar";
-            this.linkLabelDaftar.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelDaftar_LinkClicked);
+            this.buttonMasuk.BackColor = System.Drawing.Color.OrangeRed;
+            this.buttonMasuk.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonMasuk.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.buttonMasuk.Location = new System.Drawing.Point(29, 187);
+            this.buttonMasuk.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonMasuk.Name = "buttonMasuk";
+            this.buttonMasuk.Size = new System.Drawing.Size(150, 37);
+            this.buttonMasuk.TabIndex = 7;
+            this.buttonMasuk.Text = "Masuk";
+            this.buttonMasuk.UseVisualStyleBackColor = false;
             // 
             // FormMasuk
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(652, 354);
+            this.ClientSize = new System.Drawing.Size(368, 276);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.linkLabelDaftar);
-            this.Controls.Add(this.panelLoginInfo);
+            this.Controls.Add(this.panelLogin);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.radioButtonPegawai);
             this.Controls.Add(this.radioButtonKurir);
             this.Controls.Add(this.radioButtonKonsumen);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonMasuk);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FormMasuk";
-            this.Text = "Login";
+            this.Text = "Masuk Ke OMA!";
             this.Load += new System.EventHandler(this.FormMasuk_Load);
-            this.panelLoginInfo.ResumeLayout(false);
-            this.panelLoginInfo.PerformLayout();
+            this.panelLogin.ResumeLayout(false);
+            this.panelLogin.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -215,18 +222,19 @@ namespace OnlineMart_Ndase
 
         #endregion
 
-        private System.Windows.Forms.Button buttonMasuk;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.RadioButton radioButtonKonsumen;
-        private System.Windows.Forms.RadioButton radioButtonKurir;
-        private System.Windows.Forms.RadioButton radioButtonPegawai;
-        private System.Windows.Forms.Label labelLoginInfo;
-        private System.Windows.Forms.Label labelLoginPassword;
-        private System.Windows.Forms.Panel panelLoginInfo;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.LinkLabel linkLabelDaftar;
         private System.Windows.Forms.TextBox textBoxPassword;
         private System.Windows.Forms.TextBox textBoxLoginInfo;
-        private System.Windows.Forms.LinkLabel linkLabelDaftar;
+        private System.Windows.Forms.Panel panelLogin;
+        private System.Windows.Forms.Label labelLoginInfo;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.RadioButton radioButtonPegawai;
+        private System.Windows.Forms.RadioButton radioButtonKurir;
+        private System.Windows.Forms.RadioButton radioButtonKonsumen;
+        private System.Windows.Forms.Button buttonMasuk;
     }
 }
 

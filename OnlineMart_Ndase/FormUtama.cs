@@ -41,5 +41,10 @@ namespace OnlineMart_Ndase
         {
             this.Close();
         }
+
+        private void promoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

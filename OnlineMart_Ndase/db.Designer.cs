@@ -12,7 +12,7 @@ namespace OnlineMart_Ndase {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.8.1.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.10.0.0")]
     internal sealed partial class db : global::System.Configuration.ApplicationSettingsBase {
         
         private static db defaultInstance = ((db)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new db())));
@@ -25,7 +25,7 @@ namespace OnlineMart_Ndase {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        [global::System.Configuration.DefaultSettingValueAttribute("localhost")]
         public string DbServer {
             get {
                 return ((string)(this["DbServer"]));
@@ -37,7 +37,7 @@ namespace OnlineMart_Ndase {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        [global::System.Configuration.DefaultSettingValueAttribute("oma")]
         public string DbName {
             get {
                 return ((string)(this["DbName"]));
@@ -49,7 +49,7 @@ namespace OnlineMart_Ndase {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        [global::System.Configuration.DefaultSettingValueAttribute("root")]
         public string DbUsername {
             get {
                 return ((string)(this["DbUsername"]));

@@ -24,3 +24,35 @@ K:\.lain\.c#\database\proj\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMar
 K:\.lain\.c#\database\proj\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.exe
 K:\.lain\.c#\database\proj\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.pdb
 K:\.lain\.c#\database\proj\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormUtama.resources
+C:\Users\Katheryn Natasia\Documents\Tugas Kuliah\SEM 3\Database\OnlineMart_Ndase\OnlineMart_Ndase\bin\Debug\OnlineMart_Ndase.exe.config
+C:\Users\Katheryn Natasia\Documents\Tugas Kuliah\SEM 3\Database\OnlineMart_Ndase\OnlineMart_Ndase\bin\Debug\OnlineMart_Ndase.exe
+C:\Users\Katheryn Natasia\Documents\Tugas Kuliah\SEM 3\Database\OnlineMart_Ndase\OnlineMart_Ndase\bin\Debug\OnlineMart_Ndase.pdb
+C:\Users\Katheryn Natasia\Documents\Tugas Kuliah\SEM 3\Database\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.csproj.AssemblyReference.cache
+C:\Users\Katheryn Natasia\Documents\Tugas Kuliah\SEM 3\Database\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormDaftar.resources
+C:\Users\Katheryn Natasia\Documents\Tugas Kuliah\SEM 3\Database\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormMasuk.resources
+C:\Users\Katheryn Natasia\Documents\Tugas Kuliah\SEM 3\Database\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormUtama.resources
+C:\Users\Katheryn Natasia\Documents\Tugas Kuliah\SEM 3\Database\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.Properties.Resources.resources
+C:\Users\Katheryn Natasia\Documents\Tugas Kuliah\SEM 3\Database\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.csproj.GenerateResource.cache
+C:\Users\Katheryn Natasia\Documents\Tugas Kuliah\SEM 3\Database\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.csproj.CoreCompileInputs.cache
+C:\Users\Katheryn Natasia\Documents\Tugas Kuliah\SEM 3\Database\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.exe
+C:\Users\Katheryn Natasia\Documents\Tugas Kuliah\SEM 3\Database\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.pdb
+E:\UBAYA\Kelas\Semester 3\2. Database - KP C\9\A\OnlineMart_Ndase\OnlineMart_Ndase\OnlineMart_Ndase\bin\Debug\OnlineMart_Ndase.exe.config
+E:\UBAYA\Kelas\Semester 3\2. Database - KP C\9\A\OnlineMart_Ndase\OnlineMart_Ndase\OnlineMart_Ndase\bin\Debug\OnlineMart_Ndase.exe
+E:\UBAYA\Kelas\Semester 3\2. Database - KP C\9\A\OnlineMart_Ndase\OnlineMart_Ndase\OnlineMart_Ndase\bin\Debug\OnlineMart_Ndase.pdb
+E:\UBAYA\Kelas\Semester 3\2. Database - KP C\9\A\OnlineMart_Ndase\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.csproj.AssemblyReference.cache
+E:\UBAYA\Kelas\Semester 3\2. Database - KP C\9\A\OnlineMart_Ndase\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormDaftar.resources
+E:\UBAYA\Kelas\Semester 3\2. Database - KP C\9\A\OnlineMart_Ndase\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormPegawaiDaftarMetodePembayaran.resources
+E:\UBAYA\Kelas\Semester 3\2. Database - KP C\9\A\OnlineMart_Ndase\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormKonsumenRiwayatTransaksi.resources
+E:\UBAYA\Kelas\Semester 3\2. Database - KP C\9\A\OnlineMart_Ndase\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormPegawaiDaftarBarang.resources
+E:\UBAYA\Kelas\Semester 3\2. Database - KP C\9\A\OnlineMart_Ndase\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormPegawaiDaftarCabang.resources
+E:\UBAYA\Kelas\Semester 3\2. Database - KP C\9\A\OnlineMart_Ndase\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormKurirDaftarPengiriman.resources
+E:\UBAYA\Kelas\Semester 3\2. Database - KP C\9\A\OnlineMart_Ndase\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormKurirRekapPendapatan.resources
+E:\UBAYA\Kelas\Semester 3\2. Database - KP C\9\A\OnlineMart_Ndase\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormMasuk.resources
+E:\UBAYA\Kelas\Semester 3\2. Database - KP C\9\A\OnlineMart_Ndase\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormPegawaiBuatCabang.resources
+E:\UBAYA\Kelas\Semester 3\2. Database - KP C\9\A\OnlineMart_Ndase\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormPegawaiDaftarKategori.resources
+E:\UBAYA\Kelas\Semester 3\2. Database - KP C\9\A\OnlineMart_Ndase\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormUtama.resources
+E:\UBAYA\Kelas\Semester 3\2. Database - KP C\9\A\OnlineMart_Ndase\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.Properties.Resources.resources
+E:\UBAYA\Kelas\Semester 3\2. Database - KP C\9\A\OnlineMart_Ndase\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.csproj.GenerateResource.cache
+E:\UBAYA\Kelas\Semester 3\2. Database - KP C\9\A\OnlineMart_Ndase\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.csproj.CoreCompileInputs.cache
+E:\UBAYA\Kelas\Semester 3\2. Database - KP C\9\A\OnlineMart_Ndase\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.exe
+E:\UBAYA\Kelas\Semester 3\2. Database - KP C\9\A\OnlineMart_Ndase\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.pdb
