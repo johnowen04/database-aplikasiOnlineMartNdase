@@ -36,7 +36,8 @@ namespace OnlineMart_Ndase
                 if (hasil)
                 {
                     MessageBox.Show("Isi saldo berhasil.");
-                    formUtama.ko.Saldo += ris.Saldo;
+                    //formUtama.ko.Saldo += ris.Saldo;
+                    Konsumen.UpdateSaldo(float.Parse(textBoxNominal.Text), formUtama.ko.Id);
                 }
                 else
                 {

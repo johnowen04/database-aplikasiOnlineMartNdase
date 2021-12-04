@@ -101,5 +101,36 @@ namespace OnlineMart_Ndase
         {
             this.Close();
         }
+
+        private void textBoxCari_TextChanged(object sender, EventArgs e)
+        {
+            string kriteria = "";
+
+            switch (comboBoxCari.Text)
+            {
+                case "ID Promo":
+                    kriteria = "id";
+                    break;
+                case "Nama Promo":
+                    kriteria = "nama";
+                    break;
+                case "Tipe Promo":
+                    kriteria = "tipe";
+                    break;
+                case "Diskon":
+                    kriteria = "diskon";
+                    break;
+                case "Diskon Maksimal":
+                    kriteria = "diskon_max";
+                    break;
+                case "Minimal Belanja":
+                    kriteria = "minimal_belanja";
+                    break;
+            }
+
+            listPromo = Promo.ReadData(kriteria, textBoxCari.Text);
+
+            TampilDataGrid();
+        }
     }
 }

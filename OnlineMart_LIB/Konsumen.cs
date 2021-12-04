@@ -136,6 +136,16 @@ namespace OnlineMart_LIB
             }
             return listKonsumen;
         }
+
+        public static void UpdateSaldo(float jumlahSaldo, int id)
+        {
+            string sql = "";
+
+            sql = "update pelanggans set saldo=saldo+" + jumlahSaldo +
+                "where id=" + id;
+
+            Koneksi.JalankanPerintahDML(sql);
+        }
         #endregion
     }
 }

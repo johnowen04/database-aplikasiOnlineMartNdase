@@ -70,30 +70,30 @@ namespace OnlineMart_LIB
             return listHadiah;
         }
 
-        //public static Boolean UpdateData(Hadiah h)
-        //{
-        //    string sql = "update gifts set nama=" + h.Nama + ", jumlah_poin=" + h.JumlahPoin.ToString() +
-        //        " where id=" + h.Id;
+        public static Boolean UpdateData(Hadiah h)
+        {
+            string sql = "update gifts set nama=" + h.Nama + ", jumlah_poin=" + h.JumlahPoin.ToString() +
+                " where id=" + h.Id;
 
-        //    int jumlahDataBerubah = Koneksi.JalankanPerintahDML(sql);
+            int jumlahDataBerubah = Koneksi.JalankanPerintahDML(sql);
 
-        //    if (jumlahDataBerubah == 0)
-        //        return false;
-        //    else
-        //        return true;
-        //}
+            if (jumlahDataBerubah == 0)
+                return false;
+            else
+                return true;
+        }
 
-        //public static Boolean DeleteData(string id)
-        //{
-        //    string sql = "delete from gifts where id='" + id + "'";
+        public static Boolean DeleteData(string id)
+        {
+            string sql = "delete from gifts where id='" + id + "'";
 
-        //    int jumlahDataBerubah = Koneksi.JalankanPerintahDML(sql);
+            int jumlahDataBerubah = Koneksi.JalankanPerintahDML(sql);
 
-        //    if (jumlahDataBerubah == 0)
-        //        return false;
-        //    else
-        //        return true;
-        //}
+            if (jumlahDataBerubah == 0)
+                return false;
+            else
+                return true;
+        }
         #endregion
     }
 }

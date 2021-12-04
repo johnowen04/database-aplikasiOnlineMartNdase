@@ -30,73 +30,28 @@ namespace OnlineMart_Ndase
         private void InitializeComponent()
         {
             this.dataGridViewKeranjang = new System.Windows.Forms.DataGridView();
-            this.panelKeranjang = new System.Windows.Forms.Panel();
-            this.textBoxCari = new System.Windows.Forms.TextBox();
-            this.comboBoxCari = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.buttonKeluar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.buttonCheckout = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewKeranjang)).BeginInit();
-            this.panelKeranjang.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridViewKeranjang
             // 
             this.dataGridViewKeranjang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewKeranjang.Location = new System.Drawing.Point(13, 167);
+            this.dataGridViewKeranjang.Location = new System.Drawing.Point(13, 71);
             this.dataGridViewKeranjang.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataGridViewKeranjang.Name = "dataGridViewKeranjang";
             this.dataGridViewKeranjang.RowHeadersWidth = 62;
             this.dataGridViewKeranjang.Size = new System.Drawing.Size(802, 308);
             this.dataGridViewKeranjang.TabIndex = 12;
             // 
-            // panelKeranjang
-            // 
-            this.panelKeranjang.BackColor = System.Drawing.Color.SeaShell;
-            this.panelKeranjang.Controls.Add(this.textBoxCari);
-            this.panelKeranjang.Controls.Add(this.comboBoxCari);
-            this.panelKeranjang.Controls.Add(this.label2);
-            this.panelKeranjang.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panelKeranjang.Location = new System.Drawing.Point(13, 70);
-            this.panelKeranjang.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.panelKeranjang.Name = "panelKeranjang";
-            this.panelKeranjang.Size = new System.Drawing.Size(802, 88);
-            this.panelKeranjang.TabIndex = 11;
-            // 
-            // textBoxCari
-            // 
-            this.textBoxCari.Location = new System.Drawing.Point(458, 25);
-            this.textBoxCari.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBoxCari.Name = "textBoxCari";
-            this.textBoxCari.Size = new System.Drawing.Size(298, 31);
-            this.textBoxCari.TabIndex = 2;
-            // 
-            // comboBoxCari
-            // 
-            this.comboBoxCari.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxCari.FormattingEnabled = true;
-            this.comboBoxCari.Location = new System.Drawing.Point(224, 25);
-            this.comboBoxCari.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.comboBoxCari.Name = "comboBoxCari";
-            this.comboBoxCari.Size = new System.Drawing.Size(223, 32);
-            this.comboBoxCari.TabIndex = 1;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(42, 29);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(174, 24);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Cari berdasarkan :";
-            // 
             // buttonKeluar
             // 
-            this.buttonKeluar.BackColor = System.Drawing.Color.OrangeRed;
+            this.buttonKeluar.BackColor = System.Drawing.Color.WhiteSmoke;
             this.buttonKeluar.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonKeluar.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.buttonKeluar.Location = new System.Drawing.Point(665, 484);
+            this.buttonKeluar.ForeColor = System.Drawing.Color.OrangeRed;
+            this.buttonKeluar.Location = new System.Drawing.Point(665, 388);
             this.buttonKeluar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonKeluar.Name = "buttonKeluar";
             this.buttonKeluar.Size = new System.Drawing.Size(150, 57);
@@ -118,20 +73,33 @@ namespace OnlineMart_Ndase
             this.label1.Text = "     Keranjang";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // buttonCheckout
+            // 
+            this.buttonCheckout.BackColor = System.Drawing.Color.OrangeRed;
+            this.buttonCheckout.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCheckout.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.buttonCheckout.Location = new System.Drawing.Point(507, 388);
+            this.buttonCheckout.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.buttonCheckout.Name = "buttonCheckout";
+            this.buttonCheckout.Size = new System.Drawing.Size(150, 57);
+            this.buttonCheckout.TabIndex = 14;
+            this.buttonCheckout.Text = "&Checkout";
+            this.buttonCheckout.UseVisualStyleBackColor = false;
+            this.buttonCheckout.Click += new System.EventHandler(this.buttonCheckout_Click);
+            // 
             // FormKonsumenKeranjang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(827, 551);
+            this.ClientSize = new System.Drawing.Size(827, 451);
+            this.Controls.Add(this.buttonCheckout);
             this.Controls.Add(this.dataGridViewKeranjang);
-            this.Controls.Add(this.panelKeranjang);
             this.Controls.Add(this.buttonKeluar);
             this.Controls.Add(this.label1);
             this.Name = "FormKonsumenKeranjang";
             this.Text = "Keranjang";
+            this.Load += new System.EventHandler(this.FormKonsumenKeranjang_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewKeranjang)).EndInit();
-            this.panelKeranjang.ResumeLayout(false);
-            this.panelKeranjang.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -139,11 +107,8 @@ namespace OnlineMart_Ndase
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridViewKeranjang;
-        private System.Windows.Forms.Panel panelKeranjang;
-        private System.Windows.Forms.TextBox textBoxCari;
-        private System.Windows.Forms.ComboBox comboBoxCari;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button buttonKeluar;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button buttonCheckout;
     }
 }

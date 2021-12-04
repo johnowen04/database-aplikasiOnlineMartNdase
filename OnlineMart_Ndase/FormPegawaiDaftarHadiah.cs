@@ -88,5 +88,27 @@ namespace OnlineMart_Ndase
         {
             this.Close();
         }
+
+        private void textBoxCari_TextChanged(object sender, EventArgs e)
+        {
+            string kriteria = "";
+
+            switch (comboBoxCari.Text)
+            {
+                case "ID Hadiah":
+                    kriteria = "id";
+                    break;
+                case "Nama Hadiah":
+                    kriteria = "nama";
+                    break;
+                case "Jumlah Poin":
+                    kriteria = "jumlah_poin";
+                    break;
+            }
+
+            listHadiah = Hadiah.ReadData(kriteria, textBoxCari.Text);
+
+            TampilDataGrid();
+        }
     }
 }

@@ -18,6 +18,15 @@ namespace OnlineMart_LIB
         #endregion
 
         #region CONSTRUCTORS
+        public Pegawai()
+        {
+            Id = 0;
+            Nama = "";
+            Email = "";
+            Password = "";
+            Telephone = "";
+        }
+
         public Pegawai(int id, string nama, string email, string password, string telephone)
         {
             Id = id;
@@ -25,6 +34,15 @@ namespace OnlineMart_LIB
             Email = email;
             Password = password;
             Telephone = telephone;
+        }
+
+        public Pegawai(int id, string nama)
+        {
+            Id = id;
+            Nama = nama;
+            Email = "";
+            Password = "";
+            Telephone = "";
         }
         #endregion
 

@@ -27,7 +27,7 @@ namespace OnlineMart_Ndase
         {
             try
             {
-                Promo p = new Promo(textBoxTipe.Text, textBoxNama.Text, int.Parse(textBoxDiskon.Text), int.Parse(textBoxMaksimalDiskon.Text), float.Parse(textBoxMinimalPembelian.Text));
+                Promo p = new Promo(int.Parse(textBoxID.Text), textBoxTipe.Text, textBoxNama.Text, int.Parse(textBoxDiskon.Text), int.Parse(textBoxMaksimalDiskon.Text), float.Parse(textBoxMinimalPembelian.Text));
 
                 Boolean hasil = Promo.CreateData(p);
 

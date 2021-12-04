@@ -45,11 +45,13 @@
   <ItemGroup>
     <Compile Include="Barang.cs" />
     <Compile Include="Cabang.cs" />
+    <Compile Include="CabangBarang.cs" />
     <Compile Include="Hadiah.cs" />
     <Compile Include="Kategori.cs" />
     <Compile Include="Koneksi.cs" />
     <Compile Include="Konsumen.cs" />
     <Compile Include="Kurir.cs" />
+    <Compile Include="Order.cs" />
     <Compile Include="Pengiriman.cs" />
     <Compile Include="Promo.cs" />
     <Compile Include="Pegawai.cs" />

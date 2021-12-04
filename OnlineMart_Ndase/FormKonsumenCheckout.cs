@@ -7,11 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using OnlineMart_LIB;
 
 namespace OnlineMart_Ndase
 {
     public partial class FormKonsumenCheckout : Form
     {
+        //FormUtama formUtama;
+        FormKonsumenKeranjang formKonsumenKeranjang;
+
         public FormKonsumenCheckout()
         {
             InitializeComponent();
@@ -35,6 +39,50 @@ namespace OnlineMart_Ndase
             labelKodePromo.Enabled = false;
 
             buttonBayar.Enabled = false;
+
+            formKonsumenKeranjang = (FormKonsumenKeranjang)this.Owner;
+            FormatDataGrid();
+            TampilDataGrid();
+        }
+
+        private void FormatDataGrid()
+        {
+            dataGridViewBarang.Columns.Clear();
+
+            dataGridViewBarang.Columns.Add("Nama", "Nama Barang");
+            dataGridViewBarang.Columns.Add("Harga", "Harga Barang");
+            dataGridViewBarang.Columns.Add("Kategori", "Kategori");
+            dataGridViewBarang.Columns.Add("Cabang", "Cabang");
+
+            dataGridViewBarang.Columns["Nama"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewBarang.Columns["Harga"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewBarang.Columns["Kategori"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewBarang.Columns["Cabang"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+
+            dataGridViewBarang.Columns["Harga"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+
+            dataGridViewBarang.Columns["Harga"].DefaultCellStyle.Format = "#,###";
+
+            dataGridViewBarang.AllowUserToAddRows = false;
+            dataGridViewBarang.ReadOnly = true;
+        }
+
+        private void TampilDataGrid()
+        {
+            dataGridViewBarang.Rows.Clear();
+
+            if (formKonsumenKeranjang.formUtama.keranjang.Count > 0)
+            {
+                foreach (CabangBarang cb in formKonsumenKeranjang.formUtama.keranjang)
+                {
+                    dataGridViewBarang.Rows.Add(cb.Barang.Nama, cb.Barang.Harga,
+                        cb.Barang.Kategori.Nama, cb.Cabang.Nama);
+                }
+            }
+            else
+            {
+                dataGridViewBarang.DataSource = null;
+            }
         }
     }
 }

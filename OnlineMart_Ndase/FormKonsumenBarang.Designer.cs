@@ -49,6 +49,7 @@ namespace OnlineMart_Ndase
             this.dataGridViewBarang.RowHeadersWidth = 62;
             this.dataGridViewBarang.Size = new System.Drawing.Size(802, 308);
             this.dataGridViewBarang.TabIndex = 8;
+            this.dataGridViewBarang.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewBarang_CellContentClick);
             // 
             // panelDaftarBarang
             // 
@@ -70,11 +71,17 @@ namespace OnlineMart_Ndase
             this.textBoxCari.Name = "textBoxCari";
             this.textBoxCari.Size = new System.Drawing.Size(298, 31);
             this.textBoxCari.TabIndex = 2;
+            this.textBoxCari.TextChanged += new System.EventHandler(this.textBoxCari_TextChanged);
             // 
             // comboBoxCari
             // 
             this.comboBoxCari.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxCari.FormattingEnabled = true;
+            this.comboBoxCari.Items.AddRange(new object[] {
+            "Nama Barang",
+            "Harga Barang",
+            "Nama Kategori",
+            "Nama Cabang"});
             this.comboBoxCari.Location = new System.Drawing.Point(224, 25);
             this.comboBoxCari.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboBoxCari.Name = "comboBoxCari";
@@ -129,6 +136,7 @@ namespace OnlineMart_Ndase
             this.Controls.Add(this.label1);
             this.Name = "FormKonsumenBarang";
             this.Text = "Barang";
+            this.Load += new System.EventHandler(this.FormKonsumenBarang_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBarang)).EndInit();
             this.panelDaftarBarang.ResumeLayout(false);
             this.panelDaftarBarang.PerformLayout();

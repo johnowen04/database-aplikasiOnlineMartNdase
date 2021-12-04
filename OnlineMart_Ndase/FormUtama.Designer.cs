@@ -34,7 +34,6 @@ namespace OnlineMart_Ndase
             this.barangToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.dealsToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.keranjangToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.checkoutToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.akunToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.riwayatTransaksiToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.cekPesananToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -60,7 +59,6 @@ namespace OnlineMart_Ndase
             // menuStrip1
             // 
             this.menuStrip1.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.belanjaToolStripMenuItem1,
@@ -81,8 +79,7 @@ namespace OnlineMart_Ndase
             this.belanjaToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.barangToolStripMenuItem1,
             this.dealsToolStripMenuItem1,
-            this.keranjangToolStripMenuItem1,
-            this.checkoutToolStripMenuItem1});
+            this.keranjangToolStripMenuItem1});
             this.belanjaToolStripMenuItem1.Name = "belanjaToolStripMenuItem1";
             this.belanjaToolStripMenuItem1.Size = new System.Drawing.Size(93, 28);
             this.belanjaToolStripMenuItem1.Text = "Belanja";
@@ -108,13 +105,6 @@ namespace OnlineMart_Ndase
             this.keranjangToolStripMenuItem1.Size = new System.Drawing.Size(270, 34);
             this.keranjangToolStripMenuItem1.Text = "Keranjang";
             this.keranjangToolStripMenuItem1.Click += new System.EventHandler(this.keranjangToolStripMenuItem1_Click);
-            // 
-            // checkoutToolStripMenuItem1
-            // 
-            this.checkoutToolStripMenuItem1.Name = "checkoutToolStripMenuItem1";
-            this.checkoutToolStripMenuItem1.Size = new System.Drawing.Size(270, 34);
-            this.checkoutToolStripMenuItem1.Text = "Checkout";
-            this.checkoutToolStripMenuItem1.Click += new System.EventHandler(this.checkoutToolStripMenuItem1_Click);
             // 
             // akunToolStripMenuItem1
             // 
@@ -291,7 +281,6 @@ namespace OnlineMart_Ndase
         private System.Windows.Forms.ToolStripMenuItem barangToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem dealsToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem keranjangToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem checkoutToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem akunToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem riwayatTransaksiToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem cekPesananToolStripMenuItem1;

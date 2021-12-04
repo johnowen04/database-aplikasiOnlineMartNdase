@@ -18,6 +18,7 @@ namespace OnlineMart_Ndase
         public Pegawai pe;
         public string pengguna = "";
         FormMasuk formMasuk;
+        public List<CabangBarang> keranjang;
 
         public FormUtama()
         {
@@ -39,10 +40,8 @@ namespace OnlineMart_Ndase
                 if(formMasuk.ShowDialog() == DialogResult.OK)
                 {
                     SetHakAkses();
-                }
-                else
-                {
-                    
+                    if (!(ko is null))
+                        keranjang = new List<CabangBarang>();
                 }
 
             }
@@ -116,23 +115,6 @@ namespace OnlineMart_Ndase
                 FormKonsumenKeranjang formKonsumenKeranjang = new FormKonsumenKeranjang();
                 formKonsumenKeranjang.MdiParent = this;
                 formKonsumenKeranjang.Show();
-            }
-            else
-            {
-                form.Show();
-                form.BringToFront();
-            }
-        }
-
-        private void checkoutToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            Form form = Application.OpenForms["FormKonsumenCheckout"];
-
-            if (form == null)
-            {
-                FormKonsumenCheckout formKonsumenCheckout = new FormKonsumenCheckout();
-                formKonsumenCheckout.MdiParent = this;
-                formKonsumenCheckout.Show();
             }
             else
             {

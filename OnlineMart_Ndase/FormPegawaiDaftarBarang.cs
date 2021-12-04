@@ -13,7 +13,7 @@ namespace OnlineMart_Ndase
 {
     public partial class FormPegawaiDaftarBarang : Form
     {
-        List<Barang> listBarang = new List<Barang>();
+        public List<Barang> listBarang = new List<Barang>();
 
         public FormPegawaiDaftarBarang()
         {

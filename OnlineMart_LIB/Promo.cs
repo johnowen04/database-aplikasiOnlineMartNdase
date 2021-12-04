@@ -9,23 +9,16 @@ namespace OnlineMart_LIB
 {
     public class Promo
     {
+        #region FIELDS
         private int id;
         private string tipe;
         private string nama;
         private int diskon;
         private int maxDiskon;
         private float minBelanja;
+        #endregion
 
-        public Promo(string tipe, string nama, int diskon, int maxDiskon, float minBelanja)
-        {
-            Id = 0;
-            Tipe = tipe;
-            Nama = nama;
-            Diskon = diskon;
-            MaxDiskon = maxDiskon;
-            MinBelanja = minBelanja;
-        }
-
+        #region CONSTRUCTORS
         public Promo(int id, string tipe, string nama, int diskon, int maxDiskon, float minBelanja)
         {
             Id = id;
@@ -35,13 +28,16 @@ namespace OnlineMart_LIB
             MaxDiskon = maxDiskon;
             MinBelanja = minBelanja;
         }
+        #endregion
 
+        #region PROPERTIES
         public int Id { get => id; set => id = value; }
         public string Tipe { get => tipe; set => tipe = value; }
         public string Nama { get => nama; set => nama = value; }
         public int Diskon { get => diskon; set => diskon = value; }
         public int MaxDiskon { get => maxDiskon; set => maxDiskon = value; }
         public float MinBelanja { get => minBelanja; set => minBelanja = value; }
+        #endregion
 
         #region METHODS
         public static Boolean CreateData(Promo p)
@@ -84,31 +80,31 @@ namespace OnlineMart_LIB
             return listPromo;
         }
 
-        //public static Boolean UpdateData(Promo p)
-        //{
-        //    string sql = "update promos set diskon=" + p.Diskon + ", diskon_max=" + p.MaxDiskon +
-        //        ", minimal_belanja=" + p.MinBelanja +
-        //        " where id=" + p.Id;
+        public static Boolean UpdateData(Promo p)
+        {
+            string sql = "update promos set diskon=" + p.Diskon + ", diskon_max=" + p.MaxDiskon +
+                ", minimal_belanja=" + p.MinBelanja +
+                " where id=" + p.Id;
 
-        //    int jumlahDataBerubah = Koneksi.JalankanPerintahDML(sql);
+            int jumlahDataBerubah = Koneksi.JalankanPerintahDML(sql);
 
-        //    if (jumlahDataBerubah == 0)
-        //        return false;
-        //    else
-        //        return true;
-        //}
+            if (jumlahDataBerubah == 0)
+                return false;
+            else
+                return true;
+        }
 
-        //public static Boolean DeleteData(string id)
-        //{
-        //    string sql = "delete from promos where id='" + id + "'";
+        public static Boolean DeleteData(string id)
+        {
+            string sql = "delete from promos where id='" + id + "'";
 
-        //    int jumlahDataBerubah = Koneksi.JalankanPerintahDML(sql);
+            int jumlahDataBerubah = Koneksi.JalankanPerintahDML(sql);
 
-        //    if (jumlahDataBerubah == 0)
-        //        return false;
-        //    else
-        //        return true;
-        //}
+            if (jumlahDataBerubah == 0)
+                return false;
+            else
+                return true;
+        }
         #endregion
     }
 }
