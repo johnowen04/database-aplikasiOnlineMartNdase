@@ -84,12 +84,6 @@
     <Compile Include="FormKonsumenCheckout.Designer.cs">
       <DependentUpon>FormKonsumenCheckout.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormKonsumenDeals.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormKonsumenDeals.Designer.cs">
-      <DependentUpon>FormKonsumenDeals.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormKonsumenIsiSaldo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -270,6 +264,18 @@
     <Compile Include="FormPegawaiUbahMetodePembayaran.Designer.cs">
       <DependentUpon>FormPegawaiUbahMetodePembayaran.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormPegawaiUbahPromo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPegawaiUbahPromo.Designer.cs">
+      <DependentUpon>FormPegawaiUbahPromo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPegawaiUbahHadiah.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPegawaiUbahHadiah.Designer.cs">
+      <DependentUpon>FormPegawaiUbahHadiah.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormUtama.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -292,9 +298,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormKonsumenCheckout.resx">
       <DependentUpon>FormKonsumenCheckout.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormKonsumenDeals.resx">
-      <DependentUpon>FormKonsumenDeals.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormKonsumenIsiSaldo.resx">
       <DependentUpon>FormKonsumenIsiSaldo.cs</DependentUpon>
@@ -385,6 +388,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormPegawaiUbahMetodePembayaran.resx">
       <DependentUpon>FormPegawaiUbahMetodePembayaran.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPegawaiUbahPromo.resx">
+      <DependentUpon>FormPegawaiUbahPromo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPegawaiUbahHadiah.resx">
+      <DependentUpon>FormPegawaiUbahHadiah.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormUtama.resx">
       <DependentUpon>FormUtama.cs</DependentUpon>

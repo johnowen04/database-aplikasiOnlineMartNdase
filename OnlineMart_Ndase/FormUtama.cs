@@ -90,23 +90,6 @@ namespace OnlineMart_Ndase
             }
         }
 
-        private void dealsToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            Form form = Application.OpenForms["FormKonsumenDeals"];
-
-            if (form == null)
-            {
-                FormKonsumenDeals formKonsumenDeals = new FormKonsumenDeals();
-                formKonsumenDeals.MdiParent = this;
-                formKonsumenDeals.Show();
-            }
-            else
-            {
-                form.Show();
-                form.BringToFront();
-            }
-        }
-
         private void keranjangToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             Form form = Application.OpenForms["FormKonsumenKeranjang"];

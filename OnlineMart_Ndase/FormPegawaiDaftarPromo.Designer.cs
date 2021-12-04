@@ -67,6 +67,7 @@ namespace OnlineMart_Ndase
             this.dataGridViewDaftarPromo.RowHeadersWidth = 62;
             this.dataGridViewDaftarPromo.Size = new System.Drawing.Size(802, 308);
             this.dataGridViewDaftarPromo.TabIndex = 7;
+            this.dataGridViewDaftarPromo.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDaftarPromo_CellContentClick);
             // 
             // panelDaftarPromo
             // 

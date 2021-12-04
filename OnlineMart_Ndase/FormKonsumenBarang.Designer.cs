@@ -122,7 +122,7 @@ namespace OnlineMart_Ndase
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(802, 57);
             this.label1.TabIndex = 6;
-            this.label1.Text = "     Barang";
+            this.label1.Text = "     Barang dan Deals";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // FormKonsumenBarang
@@ -135,7 +135,7 @@ namespace OnlineMart_Ndase
             this.Controls.Add(this.buttonKeluar);
             this.Controls.Add(this.label1);
             this.Name = "FormKonsumenBarang";
-            this.Text = "Barang";
+            this.Text = "Barang dan Deals";
             this.Load += new System.EventHandler(this.FormKonsumenBarang_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBarang)).EndInit();
             this.panelDaftarBarang.ResumeLayout(false);

@@ -15,6 +15,8 @@ namespace OnlineMart_Ndase
     {
         private List<Pengiriman> listPengiriman = new List<Pengiriman>();
 
+        private FormUtama formUtama;
+
         public FormKurirDaftarPengiriman()
         {
             InitializeComponent();
@@ -72,14 +74,37 @@ namespace OnlineMart_Ndase
 
         private void FormKurirDaftarPengiriman_Load(object sender, EventArgs e)
         {
+            formUtama = (FormUtama)this.MdiParent;
             FormatDataGrid();
-            listPengiriman = Pengiriman.ReadData("", "");
+            listPengiriman = Pengiriman.ReadData(formUtama.ku);
             TampilDataGrid();
         }
 
         private void buttonKeluar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void textBoxCari_TextChanged(object sender, EventArgs e)
+        {
+            string kriteria = "";
+
+            switch (comboBoxCari.Text)
+            {
+                case "Nama Konsumen":
+                    kriteria = "p.nama";
+                    break;
+                case "Alamat Pengiriman":
+                    kriteria = "o.alamat_tujuan";
+                    break;
+                case "Komisi":
+                    kriteria = "(o.ongkos_kirim * 0.8)";
+                    break;
+            }
+
+            listPengiriman = Pengiriman.ReadData(formUtama.ku, kriteria, textBoxCari.Text);
+
+            TampilDataGrid();
         }
     }
 }

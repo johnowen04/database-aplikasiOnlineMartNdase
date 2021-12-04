@@ -22,6 +22,22 @@ namespace OnlineMart_LIB
         private MetodePembayaran metodePembayaran;
         private List<BarangOrder> listBarangOrder;
 
+        public Order()
+        {
+            Id = "";
+            Tanggal_Waktu = DateTime.Now;
+            Alamat_Tujuan = "";
+            Ongkos_Kirim = 0;
+            Total_Bayar = 0;
+            Cabang = null;
+            Kurir = null;
+            Konsumen = null;
+            Promo = null;
+            Status = "";
+            MetodePembayaran = null;
+            ListBarangOrder = new List<BarangOrder>();
+        }
+
         public Order(string id, DateTime tanggal_waktu, string alamat_tujuan, float ongkos_kirim, float total_bayar, 
             Cabang cabang, Kurir kurir, Konsumen konsumen, Promo promo, string status, MetodePembayaran metodePembayaran)
         {
@@ -52,13 +68,13 @@ namespace OnlineMart_LIB
         public MetodePembayaran MetodePembayaran { get => metodePembayaran; set => metodePembayaran = value; }
         public List<BarangOrder> ListBarangOrder { get => listBarangOrder; private set => listBarangOrder = value; }
 
-        public static string GenerateNoNota()
+        public static string GenerateNoOrder()
         {
             string sql = "select RIGHT(id, 3) as NoOrder" +
                 " from orders " +
                 " where Date(tanggal_waktu) = Date(CURRENT_DATE)" +
-                " order by tanggal_waktu DESC limit 1";
-
+                " order by id DESC limit 1";
+            
             MySqlDataReader hasil = Koneksi.JalankanPerintahQuery(sql);
 
             string hasilNoOrder = "";
@@ -67,6 +83,7 @@ namespace OnlineMart_LIB
                 if (hasil.GetValue(0).ToString() != "")
                 {
                     int noOrders = int.Parse(hasil.GetValue(0).ToString()) + 1;
+                    Console.WriteLine(hasil.GetValue(0).ToString());
                     hasilNoOrder = DateTime.Now.Year +
                                   DateTime.Now.Month.ToString().PadLeft(2, '0') +
                                   DateTime.Now.Day.ToString().PadLeft(2, '0') +
@@ -80,21 +97,23 @@ namespace OnlineMart_LIB
                               DateTime.Now.Day.ToString().PadLeft(2, '0') +
                               "001";
             }
+
             return hasilNoOrder;
         }
 
-        public void TambahDetilBarang(Barang barang, int jumlah, float harga)
+        public static void CreateData(Order order)
         {
-            ListBarangOrder.Add(new BarangOrder(barang, jumlah, harga));
-        }
+            string sql1 = "insert into orders(id, tanggal_waktu, alamat_tujuan, ongkos_kirim, total_bayar, cabangs_id, drivers_id, pelanggans_id, promo_id, status, metode_pembayaran_id) "
+                + "values('" + order.Id + "','" + order.Tanggal_Waktu.ToString("yyyy-MM-dd hh:mm:ss") + "','"
+                + order.Alamat_Tujuan + "'," + order.Ongkos_Kirim + ",'" + order.Total_Bayar.ToString("####") + "'," + order.Cabang.Id + ","
+                + order.Kurir.Id + "," + order.Konsumen.Id + "," ;
 
-        public static Boolean CreateData(Order order)
-        {
-            string sql1 = "insert into orders(id, tanggal_waktu, alamat_tujuan, ongkos_kirim, total_bayar, "
-                + "cabangs_id, drivers_id, pelanggans_id, promo_id, status, metode_pembayaran_id) " 
-                + " values(" + order.Id + ",'" + order.Tanggal_Waktu.ToString("yyyy-MM-dd hh:mm:ss") + "','"
-                + order.Alamat_Tujuan + "'," + order.Ongkos_Kirim + "," + order.Total_Bayar + "," + order.Cabang.Id + ","
-                + order.Kurir.Id + "," + order.Konsumen.Id + "," + order.Promo.Id + ",'Pesanan Diproses',"
+            if (order.promo is null)
+                sql1 += 0;
+            else
+                sql1 += order.Promo.Id;
+
+            sql1 += ",'Pesanan Diproses',"
                 + order.MetodePembayaran.Id + ")";
 
             if (Koneksi.JalankanPerintahDML(sql1) != 0)
@@ -102,19 +121,21 @@ namespace OnlineMart_LIB
                 foreach (BarangOrder barangOrder in order.ListBarangOrder)
                 {
                     string sql2 = "insert into barangs_orders(barangs_id, orders_id, jumlah, harga) "
-                        + " values (" + barangOrder.Barang.Id + "," + order.Id + "," + barangOrder.Jumlah + ","
+                        + "values (" + barangOrder.Barang.Id + "," + order.Id + "," + barangOrder.Jumlah + ","
                         + barangOrder.Harga + ")";
 
                     if (Koneksi.JalankanPerintahDML(sql2) != 0)
-                    { 
+                    {
                         StokBarang.UpdateStok("penjualan",
                             new StokBarang(order.Cabang, barangOrder.Barang, barangOrder.Jumlah));
-                        return true;
                     }
                 }
             }
+        }
 
-            return false;
+        public void TambahDetilBarang(Barang barang, int jumlah, float harga)
+        {
+            ListBarangOrder.Add(new BarangOrder(barang, jumlah, harga));
         }
     }
 }

@@ -12,6 +12,12 @@ namespace OnlineMart_LIB
         private int id;
         private string nama;
 
+        public MetodePembayaran()
+        {
+            Id = 0;
+            Nama = "";
+        }
+
         public MetodePembayaran(int id, string nama)
         {
             Id = id;
@@ -27,11 +33,11 @@ namespace OnlineMart_LIB
         public int Id { get => id; set => id = value; }
         public string Nama { get => nama; set => nama = value; }
 
-        public static Boolean CreateData(MetodePembayaran mp)
+        public static void CreateData(MetodePembayaran mp)
         {
             string sql = "insert into metode_pembayarans (id, nama) values ('" + mp.Id + "','" + mp.Nama.Replace("'", "\\'") + "')";
 
-            return Koneksi.JalankanPerintahDML(sql) != 0;
+            Koneksi.JalankanPerintahDML(sql);
         }
 
         public static List<MetodePembayaran> ReadData() => ReadData("", "");

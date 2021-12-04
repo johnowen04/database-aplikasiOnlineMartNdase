@@ -50,6 +50,7 @@ namespace OnlineMart_Ndase
             this.dataGridViewDaftarHadiah.RowHeadersWidth = 62;
             this.dataGridViewDaftarHadiah.Size = new System.Drawing.Size(802, 308);
             this.dataGridViewDaftarHadiah.TabIndex = 8;
+            this.dataGridViewDaftarHadiah.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDaftarHadiah_CellContentClick);
             // 
             // panelDaftarHadiah
             // 

@@ -31,10 +31,10 @@ namespace OnlineMart_LIB
         public Barang Barang { get => barang; set => barang = value; }
         public int Stok { get => stok; set => stok = value; }
 
-        public static Boolean CreateStok(StokBarang sb)
+        public static void CreateStok(StokBarang sb)
         {
             string sql = "insert into cabangs_barangs (cabangs_id, barangs_id, stok) values('" + sb.Cabang.Id + "', '" + sb.Barang.Id + "', " + sb.Stok + ")";
-            return Koneksi.JalankanPerintahDML(sql) != 0;
+            Koneksi.JalankanPerintahDML(sql);
         }
 
         public static Boolean CheckDuplicate(StokBarang sb)
@@ -51,7 +51,7 @@ namespace OnlineMart_LIB
             return false;
         }
        
-        public static Boolean UpdateStok(string jenisTransaksi, StokBarang sb)
+        public static void UpdateStok(string jenisTransaksi, StokBarang sb)
         {
             string sql = "update cabangs_barangs set stok=";
 
@@ -62,7 +62,7 @@ namespace OnlineMart_LIB
 
             sql += " where cabangs_id=" + sb.Cabang.Id + " and barangs_id=" + sb.Barang.Id + "";
 
-            return Koneksi.JalankanPerintahDML(sql) != 0;
+            Koneksi.JalankanPerintahDML(sql);
         }
     }
 }

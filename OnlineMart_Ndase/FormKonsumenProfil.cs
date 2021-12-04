@@ -23,8 +23,6 @@ namespace OnlineMart_Ndase
 
         public void FormKonsumenProfil_Load(object sender, EventArgs e)
         {
-            // Select data from DB
-
             formUtama = (FormUtama)this.MdiParent;
             listKonsumen = Konsumen.ReadData("email", formUtama.ko.Email);
 
@@ -33,8 +31,8 @@ namespace OnlineMart_Ndase
                 labelNama.Text = ": " + listKonsumen[0].Nama;
                 labelEmail.Text = ": " + listKonsumen[0].Email;
                 labelTelepon.Text = ": " + listKonsumen[0].Telepon;
-                labelOmaSaldo.Text = ": " + listKonsumen[0].Saldo;
-                labelPoint.Text = ": " + listKonsumen[0].Poin;
+                labelOmaSaldo.Text = ": " + "Rp" + listKonsumen[0].Saldo.ToString("####");
+                labelPoint.Text = ": " + listKonsumen[0].Poin + " poin" ;
             }
         }
 

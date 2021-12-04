@@ -28,19 +28,19 @@ namespace OnlineMart_Ndase
             dataGridViewDaftarHadiah.Columns.Add("Nama", "Nama Promo");
             dataGridViewDaftarHadiah.Columns.Add("JumlahPoin", "Jumlah Poin");
 
-            //DataGridViewButtonColumn buttonColumnUbah = new DataGridViewButtonColumn();
-            //buttonColumnUbah.HeaderText = "Aksi";
-            //buttonColumnUbah.Text = "Ubah";
-            //buttonColumnUbah.Name = "btnUbahGrid";
-            //buttonColumnUbah.UseColumnTextForButtonValue = true;
-            //dataGridViewDaftarHadiah.Columns.Add(buttonColumnUbah);
+            DataGridViewButtonColumn buttonColumnUbah = new DataGridViewButtonColumn();
+            buttonColumnUbah.HeaderText = "Aksi";
+            buttonColumnUbah.Text = "Ubah";
+            buttonColumnUbah.Name = "btnUbahGrid";
+            buttonColumnUbah.UseColumnTextForButtonValue = true;
+            dataGridViewDaftarHadiah.Columns.Add(buttonColumnUbah);
 
-            //DataGridViewButtonColumn buttonColumnHapus = new DataGridViewButtonColumn();
-            //buttonColumnHapus.HeaderText = "Aksi";
-            //buttonColumnHapus.Text = "Hapus";
-            //buttonColumnHapus.Name = "btnHapusGrid";
-            //buttonColumnHapus.UseColumnTextForButtonValue = true;
-            //dataGridViewDaftarHadiah.Columns.Add(buttonColumnHapus);
+            DataGridViewButtonColumn buttonColumnHapus = new DataGridViewButtonColumn();
+            buttonColumnHapus.HeaderText = "Aksi";
+            buttonColumnHapus.Text = "Hapus";
+            buttonColumnHapus.Name = "btnHapusGrid";
+            buttonColumnHapus.UseColumnTextForButtonValue = true;
+            dataGridViewDaftarHadiah.Columns.Add(buttonColumnHapus);
 
             dataGridViewDaftarHadiah.Columns["Id"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             dataGridViewDaftarHadiah.Columns["Nama"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
@@ -84,10 +84,7 @@ namespace OnlineMart_Ndase
             formPegawaiTambahHadiah.Show();
         }
 
-        private void buttonKeluar_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+        private void buttonKeluar_Click(object sender, EventArgs e) => this.Close();
 
         private void textBoxCari_TextChanged(object sender, EventArgs e)
         {
@@ -109,6 +106,44 @@ namespace OnlineMart_Ndase
             listHadiah = Hadiah.ReadData(kriteria, textBoxCari.Text);
 
             TampilDataGrid();
+        }
+
+        private void dataGridViewDaftarHadiah_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string pId = dataGridViewDaftarHadiah.CurrentRow.Cells["id"].Value.ToString();
+            string pNama = dataGridViewDaftarHadiah.CurrentRow.Cells["nama"].Value.ToString();
+            string pPoin = dataGridViewDaftarHadiah.CurrentRow.Cells["JumlahPoin"].Value.ToString();
+
+            if (e.ColumnIndex == dataGridViewDaftarHadiah.Columns["btnHapusGrid"].Index && e.RowIndex >= 0)
+            {
+                DialogResult hasil = MessageBox.Show(this, "Apakah anda yakin ingin menghapus " + pId + "-" + pNama + "?",
+                    "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (hasil == DialogResult.Yes)
+                {
+                    Boolean hapus = Hadiah.DeleteData(pId);
+                    if (hapus == true)
+                    {
+                        MessageBox.Show("Berhasil hapus data", "Informasi");
+
+                        FormPegawaiDaftarHadiah_Load(sender, e);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Gagal hapus data", "Informasi");
+                    }
+                }
+            }
+            else
+            {
+                FormPegawaiUbahHadiah form = new FormPegawaiUbahHadiah();
+                form.Owner = this;
+                form.textBoxID.Text = pId;
+                form.textBoxNama.Text = pNama;
+                form.textBoxJumlahPoin.Text = pPoin;
+                form.ShowDialog();
+                FormPegawaiDaftarHadiah_Load(sender, e);
+            }
         }
     }
 }

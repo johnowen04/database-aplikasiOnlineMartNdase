@@ -151,10 +151,10 @@ namespace OnlineMart_Ndase
         {
             string kriteria = "";
 
-            switch(comboBoxCari.Text)
+            switch (comboBoxCari.Text)
             {
-                case "ID Cabang":
-                    kriteria = "c.id";
+                case "Nama Konsumen":
+                    kriteria = "";
                     break;
                 case "Nama Cabang":
                     kriteria = "C.nama";

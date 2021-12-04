@@ -21,7 +21,6 @@ namespace OnlineMart_LIB
         #endregion
 
         #region CONSTRUCTORS
-
         public Konsumen()
         {
             Id = 0;
@@ -101,13 +100,13 @@ namespace OnlineMart_LIB
             return null;
         }
 
-        public static Boolean CreateData(Konsumen k)
+        public static void CreateData(Konsumen k)
         {
             string sql = "insert into pelanggans (nama, email, password, telepon, saldo, poin) values ('" + 
                 k.Nama.Replace("'", "\\'") + "','" + k.Email +"', SHA2('" + k.Password +"', 512), '" + 
                 k.Telepon + "','" + k.Saldo + "','" + k.Poin + "')";
 
-            return Koneksi.JalankanPerintahDML(sql) != 0;
+            Koneksi.JalankanPerintahDML(sql);
         }
 
         public static List<Konsumen> ReadData() => ReadData("", "");
@@ -158,21 +157,19 @@ namespace OnlineMart_LIB
             return Koneksi.JalankanPerintahDML(sql) != 0;
         }
 
-        public static Boolean UpdateSaldo(string jenisTransaksi, int id, float jumlah)
+        public static void UpdateSaldo(string jenisTransaksi, int id, float jumlah)
         {
             string sql = "update pelanggans set saldo=";
             
             if (jenisTransaksi == "isi saldo")
-                sql += "saldo+" + jumlah;
-            else if (jenisTransaksi == "transaksi")
-                sql += "saldo-" + jumlah;
+                sql += "saldo+'" + jumlah.ToString("####");
+            else if (jenisTransaksi == "checkout")
+                sql += "saldo-'" + jumlah.ToString("####");
 
-            sql += " where id=" + id;
+            sql += "' where id='" + id + "'";
 
-            if (Koneksi.JalankanPerintahDML(sql) != 0)
-                return RiwayatIsiSaldo.CreateData(new RiwayatIsiSaldo(DateTime.Now, jumlah, new Konsumen() { Id = id }));
-
-            return false;
+            if (Koneksi.JalankanPerintahDML(sql) != 0 && jenisTransaksi == "isi saldo")
+                RiwayatIsiSaldo.CreateData(new RiwayatIsiSaldo(DateTime.Now, jumlah, new Konsumen() { Id = id }));
         }
 
         public void TambahBarangKeKeranjang(KeranjangBarang kb) => ListKeranjangBarang.Add(kb);
@@ -181,6 +178,8 @@ namespace OnlineMart_LIB
         {
             ListKeranjangBarang.Add(new KeranjangBarang(this, barang, quantity));
         }
+
+        public void HapusBarangDariKeranjang() => ListKeranjangBarang.Clear();
         #endregion
     }
 }

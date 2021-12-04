@@ -19,6 +19,16 @@ namespace OnlineMart_LIB
         #endregion
 
         #region CONSTRUCTORS
+        public Promo()
+        {
+            Id = 0;
+            Tipe = "";
+            Nama = "";
+            Diskon = 0;
+            MaxDiskon = 0;
+            MinBelanja = 0.0f;
+        }
+
         public Promo(int id, string tipe, string nama, int diskon, int maxDiskon, float minBelanja)
         {
             Id = id;
@@ -40,17 +50,12 @@ namespace OnlineMart_LIB
         #endregion
 
         #region METHODS
-        public static Boolean CreateData(Promo p)
+        public static void CreateData(Promo p)
         {
             string sql = "insert into promos (id, tipe, nama, diskon, diskon_max, minimal_belanja) " +
                 "values (" + p.Id + ", '" + p.Tipe.Replace("'", "\\'") + "','" + p.Nama.Replace("'", "\\'") + "'," + p.Diskon+ "," + p.MaxDiskon + "," + p.MinBelanja + ")";
 
-            int jumlahDataBerubah = Koneksi.JalankanPerintahDML(sql);
-
-            if (jumlahDataBerubah == 0)
-                return false;
-            else
-                return true;
+            Koneksi.JalankanPerintahDML(sql);
         }
 
         public static List<Promo> ReadData() => ReadData("", "");
@@ -58,6 +63,7 @@ namespace OnlineMart_LIB
         public static List<Promo> ReadData(string kriteria, string nilaiKriteria)
         {
             string sql;
+
             if (kriteria == "")
             {
                 sql = "select * from promos";
@@ -87,30 +93,19 @@ namespace OnlineMart_LIB
                 ", minimal_belanja=" + p.MinBelanja +
                 " where id=" + p.Id;
 
-            int jumlahDataBerubah = Koneksi.JalankanPerintahDML(sql);
-
-            if (jumlahDataBerubah == 0)
-                return false;
-            else
-                return true;
+            return Koneksi.JalankanPerintahDML(sql) != 0;
         }
 
         public static Boolean DeleteData(string id)
         {
             string sql = "delete from promos where id='" + id + "'";
 
-            int jumlahDataBerubah = Koneksi.JalankanPerintahDML(sql);
-
-            if (jumlahDataBerubah == 0)
-                return false;
-            else
-                return true;
+            return Koneksi.JalankanPerintahDML(sql) != 0;
         }
 
         public static Promo CekPromo(int id)
         {
-            string sql;
-            sql = "select id, tipe, nama, diskon, diskon_max, minimal_belanja from promos " +
+            string sql = "select id, tipe, nama, diskon, diskon_max, minimal_belanja from promos " +
                     " where id=" + id;
 
             MySqlDataReader hasil = Koneksi.JalankanPerintahQuery(sql);

@@ -13,6 +13,13 @@ namespace OnlineMart_LIB
         private string nama;
         private int jumlahPoin;
 
+        public Hadiah()
+        {
+            Id = 0;
+            Nama = "";
+            JumlahPoin = 0;
+        }
+
         public Hadiah(string nama, int jumlahPoin)
         {
             Nama = nama;
@@ -31,12 +38,12 @@ namespace OnlineMart_LIB
         public int JumlahPoin { get => jumlahPoin; set => jumlahPoin = value; }
 
         #region METHODS
-        public static Boolean CreateData(Hadiah h)
+        public static void CreateData(Hadiah h)
         {
             string sql = "insert into gifts (id, nama, jumlah_poin) " +
                 "values (" + h.Id + ",'" + h.Nama.Replace("'", "\\'") + "','" + h.JumlahPoin.ToString() + "')";
 
-            return Koneksi.JalankanPerintahDML(sql) != 0;
+            Koneksi.JalankanPerintahDML(sql);
         }
 
         public static List<Hadiah> ReadData() => ReadData("", "");
@@ -68,7 +75,7 @@ namespace OnlineMart_LIB
 
         public static Boolean UpdateData(Hadiah h)
         {
-            string sql = "update gifts set nama=" + h.Nama + ", jumlah_poin=" + h.JumlahPoin.ToString() +
+            string sql = "update gifts set nama='" + h.Nama + "', jumlah_poin='" + h.JumlahPoin.ToString() + "'" +
                 " where id=" + h.Id;
 
             return Koneksi.JalankanPerintahDML(sql) != 0;

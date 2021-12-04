@@ -43,10 +43,11 @@ namespace OnlineMart_Ndase
             // dataGridViewDaftarPengiriman
             // 
             this.dataGridViewDaftarPengiriman.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewDaftarPengiriman.Location = new System.Drawing.Point(12, 112);
+            this.dataGridViewDaftarPengiriman.Location = new System.Drawing.Point(18, 172);
+            this.dataGridViewDaftarPengiriman.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataGridViewDaftarPengiriman.Name = "dataGridViewDaftarPengiriman";
             this.dataGridViewDaftarPengiriman.RowHeadersWidth = 62;
-            this.dataGridViewDaftarPengiriman.Size = new System.Drawing.Size(535, 200);
+            this.dataGridViewDaftarPengiriman.Size = new System.Drawing.Size(802, 308);
             this.dataGridViewDaftarPengiriman.TabIndex = 2;
             // 
             // panelDaftarPengiriman
@@ -56,33 +57,42 @@ namespace OnlineMart_Ndase
             this.panelDaftarPengiriman.Controls.Add(this.comboBoxCari);
             this.panelDaftarPengiriman.Controls.Add(this.label2);
             this.panelDaftarPengiriman.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panelDaftarPengiriman.Location = new System.Drawing.Point(12, 49);
+            this.panelDaftarPengiriman.Location = new System.Drawing.Point(18, 75);
+            this.panelDaftarPengiriman.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelDaftarPengiriman.Name = "panelDaftarPengiriman";
-            this.panelDaftarPengiriman.Size = new System.Drawing.Size(535, 57);
+            this.panelDaftarPengiriman.Size = new System.Drawing.Size(802, 88);
             this.panelDaftarPengiriman.TabIndex = 1;
             // 
             // textBoxCari
             // 
-            this.textBoxCari.Location = new System.Drawing.Point(305, 16);
+            this.textBoxCari.Location = new System.Drawing.Point(458, 25);
+            this.textBoxCari.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxCari.Name = "textBoxCari";
-            this.textBoxCari.Size = new System.Drawing.Size(200, 23);
+            this.textBoxCari.Size = new System.Drawing.Size(298, 31);
             this.textBoxCari.TabIndex = 2;
+            this.textBoxCari.TextChanged += new System.EventHandler(this.textBoxCari_TextChanged);
             // 
             // comboBoxCari
             // 
             this.comboBoxCari.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxCari.FormattingEnabled = true;
-            this.comboBoxCari.Location = new System.Drawing.Point(149, 16);
+            this.comboBoxCari.Items.AddRange(new object[] {
+            "Nama Konsumen",
+            "Alamat Pengiriman",
+            "Komisi"});
+            this.comboBoxCari.Location = new System.Drawing.Point(224, 25);
+            this.comboBoxCari.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboBoxCari.Name = "comboBoxCari";
-            this.comboBoxCari.Size = new System.Drawing.Size(150, 24);
+            this.comboBoxCari.Size = new System.Drawing.Size(223, 32);
             this.comboBoxCari.TabIndex = 1;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(28, 19);
+            this.label2.Location = new System.Drawing.Point(42, 29);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(115, 16);
+            this.label2.Size = new System.Drawing.Size(174, 24);
             this.label2.TabIndex = 0;
             this.label2.Text = "Cari berdasarkan :";
             // 
@@ -91,9 +101,10 @@ namespace OnlineMart_Ndase
             this.label1.BackColor = System.Drawing.Color.OrangeRed;
             this.label1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Location = new System.Drawing.Point(18, 14);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(535, 37);
+            this.label1.Size = new System.Drawing.Size(802, 57);
             this.label1.TabIndex = 0;
             this.label1.Text = "     Daftar Pengiriman";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -103,9 +114,10 @@ namespace OnlineMart_Ndase
             this.buttonKeluar.BackColor = System.Drawing.Color.OrangeRed;
             this.buttonKeluar.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonKeluar.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.buttonKeluar.Location = new System.Drawing.Point(447, 318);
+            this.buttonKeluar.Location = new System.Drawing.Point(670, 489);
+            this.buttonKeluar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonKeluar.Name = "buttonKeluar";
-            this.buttonKeluar.Size = new System.Drawing.Size(100, 37);
+            this.buttonKeluar.Size = new System.Drawing.Size(150, 57);
             this.buttonKeluar.TabIndex = 3;
             this.buttonKeluar.Text = "&Keluar";
             this.buttonKeluar.UseVisualStyleBackColor = false;
@@ -113,14 +125,13 @@ namespace OnlineMart_Ndase
             // 
             // FormKurirDaftarPengiriman
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(559, 363);
+            this.ClientSize = new System.Drawing.Size(838, 558);
             this.Controls.Add(this.dataGridViewDaftarPengiriman);
             this.Controls.Add(this.panelDaftarPengiriman);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonKeluar);
-            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormKurirDaftarPengiriman";
             this.Text = "Daftar Pengiriman";
             this.Load += new System.EventHandler(this.FormKurirDaftarPengiriman_Load);

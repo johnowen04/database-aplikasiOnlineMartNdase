@@ -31,12 +31,13 @@ namespace OnlineMart_LIB
         public Barang Barang { get => barang; set => barang = value; }
         public int Quantity { get => quantity; set => quantity = value; }
 
-        public static Boolean CreateData(KeranjangBarang kb)
+        public static void CreateData(KeranjangBarang kb)
         {
             string sql = "insert into keranjangs_barangs (pelanggans_id, barangs_id, quantity) " 
                 + "values('" + kb.Konsumen.Id + "','" + kb.Barang.Id + "', " + kb.Quantity + ")";
-            return Koneksi.JalankanPerintahDML(sql) != 0;
+            Koneksi.JalankanPerintahDML(sql);
         }
+
         public static Boolean CheckDuplicate(KeranjangBarang kb)
         {
             string sql = "select * from keranjangs_barangs "
@@ -45,13 +46,10 @@ namespace OnlineMart_LIB
             MySqlDataReader hasil = Koneksi.JalankanPerintahQuery(sql);
 
             while (hasil.Read())
-            {
                 return true;
-            }
 
             return false;
         }
-
 
         public static Boolean UpdateQuantity(KeranjangBarang kb)
         {

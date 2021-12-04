@@ -31,19 +31,19 @@ namespace OnlineMart_Ndase
             dataGridViewDaftarPromo.Columns.Add("MaxDiskon", "Max. Diskon");
             dataGridViewDaftarPromo.Columns.Add("MinBelanja", "Min. Belanja");
 
-            //DataGridViewButtonColumn buttonColumnUbah = new DataGridViewButtonColumn();
-            //buttonColumnUbah.HeaderText = "Aksi";
-            //buttonColumnUbah.Text = "Ubah";
-            //buttonColumnUbah.Name = "btnUbahGrid";
-            //buttonColumnUbah.UseColumnTextForButtonValue = true;
-            //dataGridViewDaftarPromo.Columns.Add(buttonColumnUbah);
+            DataGridViewButtonColumn buttonColumnUbah = new DataGridViewButtonColumn();
+            buttonColumnUbah.HeaderText = "Aksi";
+            buttonColumnUbah.Text = "Ubah";
+            buttonColumnUbah.Name = "btnUbahGrid";
+            buttonColumnUbah.UseColumnTextForButtonValue = true;
+            dataGridViewDaftarPromo.Columns.Add(buttonColumnUbah);
 
-            //DataGridViewButtonColumn buttonColumnHapus = new DataGridViewButtonColumn();
-            //buttonColumnHapus.HeaderText = "Aksi";
-            //buttonColumnHapus.Text = "Hapus";
-            //buttonColumnHapus.Name = "btnHapusGrid";
-            //buttonColumnHapus.UseColumnTextForButtonValue = true;
-            //dataGridViewDaftarPromo.Columns.Add(buttonColumnHapus);
+            DataGridViewButtonColumn buttonColumnHapus = new DataGridViewButtonColumn();
+            buttonColumnHapus.HeaderText = "Aksi";
+            buttonColumnHapus.Text = "Hapus";
+            buttonColumnHapus.Name = "btnHapusGrid";
+            buttonColumnHapus.UseColumnTextForButtonValue = true;
+            dataGridViewDaftarPromo.Columns.Add(buttonColumnHapus);
 
             dataGridViewDaftarPromo.Columns["Id"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             dataGridViewDaftarPromo.Columns["Tipe"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
@@ -73,8 +73,11 @@ namespace OnlineMart_Ndase
             {
                 foreach (Promo p in listPromo)
                 {
-                    dataGridViewDaftarPromo.Rows.Add(p.Id, p.Tipe, p.Nama,
+                    if (p.Id != 0)
+                    {
+                        dataGridViewDaftarPromo.Rows.Add(p.Id, p.Tipe, p.Nama,
                         p.Diskon, p.MaxDiskon, p.MinBelanja);
+                    }
                 }
             }
             else
@@ -131,6 +134,50 @@ namespace OnlineMart_Ndase
             listPromo = Promo.ReadData(kriteria, textBoxCari.Text);
 
             TampilDataGrid();
+        }
+
+        private void dataGridViewDaftarPromo_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string pId = dataGridViewDaftarPromo.CurrentRow.Cells["Id"].Value.ToString();
+            string pNama = dataGridViewDaftarPromo.CurrentRow.Cells["Nama"].Value.ToString();
+            string pTipe = dataGridViewDaftarPromo.CurrentRow.Cells["Tipe"].Value.ToString();
+            string pDiskon = dataGridViewDaftarPromo.CurrentRow.Cells["Diskon"].Value.ToString();
+            string pMaks = dataGridViewDaftarPromo.CurrentRow.Cells["MaxDiskon"].Value.ToString();
+            string pMinimal = dataGridViewDaftarPromo.CurrentRow.Cells["MinBelanja"].Value.ToString();
+
+            if (e.ColumnIndex == dataGridViewDaftarPromo.Columns["btnHapusGrid"].Index && e.RowIndex >= 0)
+            {
+                DialogResult hasil = MessageBox.Show(this, "Apakah anda yakin ingin menghapus " + pId + "-" + pNama + "?",
+                    "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (hasil == DialogResult.Yes)
+                {
+                    Boolean hapus = Promo.DeleteData(pId);
+                    if (hapus == true)
+                    {
+                        MessageBox.Show("Berhasil hapus data", "Informasi");
+
+                        FormPegawaiDaftarPromo_Load(sender, e);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Gagal hapus data", "Informasi");
+                    }
+                }
+            }
+            else
+            {
+                FormPegawaiUbahPromo form = new FormPegawaiUbahPromo();
+                form.Owner = this;
+                form.textBoxID.Text = pId;
+                form.textBoxNama.Text = pNama;
+                form.textBoxTipe.Text = pTipe;
+                form.textBoxDiskon.Text = pDiskon;
+                form.textBoxMaksimalDiskon.Text = pMaks;
+                form.textBoxMinimalPembelian.Text = pMinimal;
+                form.ShowDialog();
+                FormPegawaiDaftarPromo_Load(sender, e);
+            }
         }
     }
 }

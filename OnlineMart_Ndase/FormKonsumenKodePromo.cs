@@ -13,15 +13,14 @@ namespace OnlineMart_Ndase
 {
     public partial class FormKonsumenKodePromo : Form
     {
+        public float totalBelanja;
+
         public FormKonsumenKodePromo()
         {
             InitializeComponent();
         }
 
-        private void buttonBatal_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+        private void buttonBatal_Click(object sender, EventArgs e) => this.Close();
 
         private void buttonMasukkan_Click(object sender, EventArgs e)
         {
@@ -33,11 +32,17 @@ namespace OnlineMart_Ndase
 
                 if (!(p is null))
                 {
-                    FormKonsumenCheckout form = (FormKonsumenCheckout)this.Owner;
-                    form.linkLabelKodePromo.Text = p.Id.ToString();
-                    //form.linkLabelKodePromo.TextAlign = ContentAlignment.MiddleRight;
-                    form.promo = p;
-                    this.Close();
+                    if (totalBelanja > p.MinBelanja)
+                    {
+                        FormKonsumenCheckout form = (FormKonsumenCheckout)this.Owner;
+                        form.linkLabelKodePromo.Text = p.Id.ToString();
+                        form.promo = p;
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Kode promo tidak bisa dipakai. Pembelian kurang dari minimal pembelanjaan.");
+                    }
                 }
                 else
                 {

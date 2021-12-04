@@ -29,12 +29,8 @@ namespace OnlineMart_Ndase
             {
                 Promo p = new Promo(int.Parse(textBoxID.Text), textBoxTipe.Text, textBoxNama.Text, int.Parse(textBoxDiskon.Text), int.Parse(textBoxMaksimalDiskon.Text), float.Parse(textBoxMinimalPembelian.Text));
 
-                Boolean hasil = Promo.CreateData(p);
-
-                if (hasil)
-                    MessageBox.Show("Data Promo telah tersimpan", "Informasi");
-                else
-                    MessageBox.Show("Penyimpanan data gagal.", "Informasi");
+                Promo.CreateData(p);
+                MessageBox.Show("Data Promo telah tersimpan", "Informasi");
             }
             catch (Exception ex)
             {

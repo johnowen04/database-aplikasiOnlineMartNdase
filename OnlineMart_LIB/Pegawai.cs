@@ -56,11 +56,6 @@ namespace OnlineMart_LIB
         #endregion
 
         #region METHODS
-        public override string ToString()
-        {
-            return Nama;
-        }
-
         public static Pegawai CekLogin(string email, string password)
         {
             string sql;
@@ -107,6 +102,8 @@ namespace OnlineMart_LIB
             }
             return listPegawai;
         }
+
+        public override string ToString() => Nama;
         #endregion
     }
 }

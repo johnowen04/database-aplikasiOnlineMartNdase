@@ -41,12 +41,12 @@ namespace OnlineMart_LIB
         public float Saldo { get => saldo; set => saldo = value; }
         public Konsumen Konsumen { get => konsumen; set => konsumen = value; }
 
-        public static Boolean CreateData(RiwayatIsiSaldo ris)
+        public static void CreateData(RiwayatIsiSaldo ris)
         {
             string sql = "insert into riwayat_isi_saldos (waktu, isi_saldo, pelanggans_id) " +
                 "values (now(), " + ris.Saldo + "," + ris.Konsumen.Id + ")";
 
-            return Koneksi.JalankanPerintahDML(sql) != 0;
+            Koneksi.JalankanPerintahDML(sql);
         }
 
         public static List<RiwayatIsiSaldo> ReadData() => ReadData("", "");

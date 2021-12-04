@@ -64,10 +64,7 @@ namespace OnlineMart_Ndase
             }
         }
 
-        private void buttonKeluar_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+        private void buttonKeluar_Click(object sender, EventArgs e) =>this.Close();
 
         private void FormKonsumenKeranjang_Load(object sender, EventArgs e)
         {
@@ -89,6 +86,7 @@ namespace OnlineMart_Ndase
                 //formKonsumenCheckout.labelKodePromo.Enabled = false;
                 formKonsumenCheckout.buttonBayar.Enabled = false;
                 formKonsumenCheckout.ShowDialog();
+                FormKonsumenKeranjang_Load(sender, e);
             }
             else
             {

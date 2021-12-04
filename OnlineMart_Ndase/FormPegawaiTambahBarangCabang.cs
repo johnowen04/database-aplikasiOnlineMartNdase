@@ -36,10 +36,8 @@ namespace OnlineMart_Ndase
 
                 if (!StokBarang.CheckDuplicate(stokBarang))
                 {
-                    if (StokBarang.CreateStok(stokBarang))
-                        MessageBox.Show("Tambah barang " + selectedBarang.Nama + " di cabang " + formPegawaiDaftarBarangCabang.cabang.Nama + " berhasil.", "Informasi");
-                    else
-                        MessageBox.Show("Tambah barang gagal.", "Kesalahan");
+                    StokBarang.CreateStok(stokBarang);
+                    MessageBox.Show("Tambah barang " + selectedBarang.Nama + " di cabang " + formPegawaiDaftarBarangCabang.cabang.Nama + " berhasil.", "Informasi");
                 }
                 else
                 {

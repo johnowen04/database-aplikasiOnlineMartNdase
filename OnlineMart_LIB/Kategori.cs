@@ -34,11 +34,11 @@ namespace OnlineMart_LIB
         #endregion
 
         #region METHODS
-        public static Boolean CreateData(Kategori k)
+        public static void CreateData(Kategori k)
         {
             string sql = "insert into kategoris (id, nama) values ('" + k.Id + "','" + k.Nama.Replace("'", "\\'") + "')";
 
-            return Koneksi.JalankanPerintahDML(sql) != 0;
+            Koneksi.JalankanPerintahDML(sql);
         }
 
         public static List<Kategori> ReadData() => ReadData("", "");
@@ -80,10 +80,7 @@ namespace OnlineMart_LIB
             return Koneksi.JalankanPerintahDML(sql) != 0;
         }
 
-        public override string ToString()
-        {
-            return Nama;
-        }
+        public override string ToString() => Nama;
         #endregion
 
     }

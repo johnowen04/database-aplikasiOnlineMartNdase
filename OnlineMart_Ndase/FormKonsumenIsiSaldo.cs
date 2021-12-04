@@ -23,7 +23,7 @@ namespace OnlineMart_Ndase
         private void FormKonsumenIsiSaldo_Load(object sender, EventArgs e)
         {
             formUtama = (FormUtama)this.MdiParent;
-            labelSaldoSekarang.Text = formUtama.ko.Saldo.ToString();
+            labelSaldoSekarang.Text = "Rp" + formUtama.ko.Saldo.ToString("######");
         }
 
         private void buttonIsi_Click(object sender, EventArgs e)
@@ -32,15 +32,9 @@ namespace OnlineMart_Ndase
             {
                 float nominal = float.Parse(textBoxNominal.Text);
 
-                if (Konsumen.UpdateSaldo("isi saldo", formUtama.ko.Id, nominal))
-                {
-                    formUtama.ko.Saldo += nominal;
-                    MessageBox.Show("Isi saldo berhasil.");
-                }
-                else
-                { 
-                    throw new ArgumentException("Isi saldo gagal."); 
-                }
+                Konsumen.UpdateSaldo("isi saldo", formUtama.ko.Id, nominal);
+                formUtama.ko.Saldo += nominal;
+                MessageBox.Show("Isi saldo berhasil.", "Informasi");
 
                 FormKonsumenIsiSaldo_Load(sender, e);
             }

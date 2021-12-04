@@ -46,12 +46,12 @@ namespace OnlineMart_LIB
         #endregion
 
         #region METHODS
-        public static Boolean CreateData(Cabang c)
+        public static void CreateData(Cabang c)
         {
             string sql = "insert into cabangs (id, nama, alamat, pegawais_id) values ('" + c.Id + "','" + 
                 c.Nama.Replace("'", "\\'") + "','" + c.Alamat + "','" + c.Pegawai.Id + "')";
 
-            return Koneksi.JalankanPerintahDML(sql) != 0;
+            Koneksi.JalankanPerintahDML(sql);
         }
 
         public static List<Cabang> ReadData() => ReadData("", "");

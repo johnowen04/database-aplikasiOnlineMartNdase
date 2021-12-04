@@ -24,12 +24,8 @@ namespace OnlineMart_Ndase
             {
                 Hadiah h = new Hadiah(int.Parse(textBoxID.Text), textBoxNama.Text, int.Parse(textBoxJumlahPoin.Text));
 
-                Boolean hasil = Hadiah.CreateData(h);
-
-                if (hasil)
-                    MessageBox.Show("Data Hadiah telah tersimpan", "Informasi");
-                else
-                    MessageBox.Show("Penyimpanan data gagal.", "Informasi");
+                Hadiah.CreateData(h);
+                MessageBox.Show("Data Hadiah telah tersimpan", "Informasi");
             }
             catch (Exception ex)
             {

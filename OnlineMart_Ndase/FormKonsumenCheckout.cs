@@ -13,13 +13,14 @@ namespace OnlineMart_Ndase
 {
     public partial class FormKonsumenCheckout : Form
     {
-        FormUtama formUtama;
-        FormKonsumenKeranjang formKonsumenKeranjang;
         public Promo promo;
+        private FormUtama formUtama;
+        private FormKonsumenKeranjang formKonsumenKeranjang;
+
         private float potonganHarga = 0.0f;
         private float totalBelanja = 0.0f;
         private float totalBayar = 0.0f;
-        private float ongkosKirim = 20000f;
+        private float ongkosKirim = 20000.0f;
 
         public FormKonsumenCheckout()
         {
@@ -32,6 +33,7 @@ namespace OnlineMart_Ndase
         {
             FormKonsumenKodePromo formKonsumenKodePromo = new FormKonsumenKodePromo();
             formKonsumenKodePromo.Owner = this;
+            formKonsumenKodePromo.totalBelanja = totalBelanja;
             if (linkLabelKodePromo.Text != "Masukkan kode promo")
                 formKonsumenKodePromo.textBoxID.Text = linkLabelKodePromo.Text;
             formKonsumenKodePromo.ShowDialog();
@@ -43,7 +45,6 @@ namespace OnlineMart_Ndase
             formKonsumenKeranjang = (FormKonsumenKeranjang)this.Owner;
             formUtama = (FormUtama)formKonsumenKeranjang.MdiParent;
 
-            //comboBoxMetodePembayaran.Items.Clear();
             comboBoxMetodePembayaran.DataSource = MetodePembayaran.ReadData();
             comboBoxMetodePembayaran.DisplayMember = "Nama";
             comboBoxMetodePembayaran.DropDownStyle = ComboBoxStyle.DropDownList;
@@ -51,13 +52,13 @@ namespace OnlineMart_Ndase
             FormatDataGrid();
             TampilDataGrid();
 
-            totalBelanja = HitungTotalBelanja(formKonsumenKeranjang.formUtama.ko.ListKeranjangBarang);
-            potonganHarga = HitungPotonganHarga(totalBelanja, promo);
+            totalBelanja = HitungTotalBelanja(formUtama.ko.ListKeranjangBarang);
+            HitungPromo(promo);
             totalBayar = totalBelanja - potonganHarga + ongkosKirim;
 
-            labelOngkosKirim.Text = "Rp" + ongkosKirim.ToString();
-            labelPotonganHarga.Text = "- Rp" + potonganHarga.ToString();
-            labelTotalPembayaran.Text = "Rp" + totalBayar.ToString();
+            labelOngkosKirim.Text = "Rp" + ongkosKirim.ToString("####");
+            labelPotonganHarga.Text = "- Rp" + potonganHarga.ToString("####");
+            labelTotalPembayaran.Text = "Rp" + totalBayar.ToString("####");
         }
         
         private void FormatDataGrid()
@@ -104,39 +105,35 @@ namespace OnlineMart_Ndase
             }
         }
 
-        private float HitungPotonganHarga(float tb, Promo promo)
+        private void HitungPromo(Promo promo)
         {
-            float potonganHarga = 0.0f;
-
             if (promo != null)
             {
-                if (tb >= promo.MinBelanja)
-                {
-                    potonganHarga = tb * promo.Diskon;
-
-                    if (potonganHarga <= promo.MaxDiskon)
-                        return potonganHarga;
-                    else
-                        return promo.MaxDiskon;
-                }
-
                 switch (promo.Tipe)
                 {
                     case "Potongan Harga":
+                        ongkosKirim = 20000.0f;
+                        potonganHarga = HitungPotonganHarga(totalBelanja, promo);
                         break;
-                    case "Cashback":
-                        break;
-                    case "Potongan Ongkir":
+                    case "Ongkos Kirim":
+                        ongkosKirim = 0.0f;
+                        potonganHarga = 0.0f;
                         break;
                 }
             }
+        }
 
+        private float HitungPotonganHarga(float totalBelanja, Promo promo)
+        {
+            float potonganHarga = totalBelanja * promo.Diskon;
+            if (potonganHarga >= promo.MaxDiskon)
+                return promo.MaxDiskon;
             return potonganHarga;
         }
 
         private float HitungTotalBelanja(List<KeranjangBarang> listKeranjangBarang)
         {
-            float totalBelanja = 0.0f;
+            float totalBelanja = 0;
 
             if (listKeranjangBarang.Count > 0)
             {
@@ -163,37 +160,59 @@ namespace OnlineMart_Ndase
             {
                 if (textBoxAlamat.Text == "")
                 {
-                    throw new ArgumentException("Alamat tidak boleh kosong. Nggak punya rumah ya???");
+                    throw new ArgumentException("Alamat tidak boleh kosong.");
                 }
 
-                if (formKonsumenKeranjang.formUtama.ko.Saldo >= totalBayar)
+                if (formKonsumenKeranjang.formUtama.ko.Saldo > 0)
                 {
-                    DialogResult checkCheckout = MessageBox.Show("Anda yakin ingin checkout barang yang ada di keranjang?",
-                        "Konfirmasi", MessageBoxButtons.YesNo);
-
-                    if (checkCheckout == DialogResult.Yes)
+                    if (formKonsumenKeranjang.formUtama.ko.Saldo >= totalBayar)
                     {
-                        Random random = new Random();
-                        MetodePembayaran metodePembayaran = (MetodePembayaran)comboBoxMetodePembayaran.SelectedItem;
-                        Kurir kurir = new Kurir
+                        DialogResult checkCheckout = MessageBox.Show("Anda yakin ingin checkout barang yang ada di keranjang?",
+                            "Konfirmasi", MessageBoxButtons.YesNo);
+
+                        if (checkCheckout == DialogResult.Yes)
                         {
-                            Id = random.Next(1, 5)
-                        };
+                            Random random = new Random();
+                            MetodePembayaran metodePembayaran = (MetodePembayaran)comboBoxMetodePembayaran.SelectedItem;
+                            Kurir kurir = new Kurir
+                            {
+                                Id = random.Next(1, 5)
+                            };
 
-                        Order order = new Order(Order.GenerateNoNota(), DateTime.Now, textBoxAlamat.Text,
-                            ongkosKirim, totalBayar, formUtama.cabang, kurir, formUtama.ko, promo, "Pesanan diproses", metodePembayaran);
+                            Order order = new Order(Order.GenerateNoOrder(), DateTime.Now, textBoxAlamat.Text,
+                                ongkosKirim, totalBayar, formUtama.cabang, kurir, formUtama.ko, promo, "Pesanan diproses", metodePembayaran);
 
-                        if (Order.CreateData(order))
-                            if (Konsumen.UpdateSaldo("checkout", formUtama.ko.Id, totalBayar))
-                                MessageBox.Show("Proses checkout berhasil.", "Informasi");
+                            if (formUtama.ko.ListKeranjangBarang.Count > 0)
+                            {
+                                foreach (KeranjangBarang kb in formUtama.ko.ListKeranjangBarang)
+                                {
+                                    order.TambahDetilBarang(kb.Barang, kb.Quantity, float.Parse(kb.Barang.Harga));
+                                }
+                            }
                             else
-                                MessageBox.Show("Checkout gagal.", "Kesalahan");
+                            {
+                                throw new ArgumentException("Keranjang tidak boleh kosong");
+                            }
+
+                            Order.CreateData(order);
+                            Konsumen.UpdateSaldo("checkout", formUtama.ko.Id, totalBayar);
+                            MessageBox.Show("Checkout berhasil", "Informasi");
+                            textBoxAlamat.Clear();
+
+                            formUtama.ko.Saldo -= totalBayar;
+                            formUtama.ko.HapusBarangDariKeranjang();
+                            linkLabelKodePromo.Text = "Masukkan kode promo";
+                            FormKonsumenCheckout_Load(sender, e);
+                        }
+                    }
+                    else
+                    {
+                        throw new ArgumentException("Saldo anda tidak cukup.");
                     }
                 }
-
                 else
                 {
-                    MessageBox.Show("Saldo tidak cukup");
+                    throw new ArgumentException("Saldo anda tidak cukup.");
                 }
             }
 

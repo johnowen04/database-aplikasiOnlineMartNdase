@@ -79,22 +79,14 @@ namespace OnlineMart_LIB
             return null;
         }
 
-        public static Boolean CreateData(Kurir k)
+        public static void CreateData(Kurir k)
         {
             string sql = "insert into drivers ( nama, email, username, password, telepon) values ('"
                 + k.Nama.Replace("'", "\\'") + "','" + k.Email + "','"
                 + k.Username + "',SHA2('" + k.Password + "',512), '"
                 + k.Telepon + "')";
 
-            int jumlahDataBerubah = Koneksi.JalankanPerintahDML(sql);
-            if (jumlahDataBerubah == 0)
-            {
-                return false;
-            }
-            else
-            {
-                return true;
-            }
+            Koneksi.JalankanPerintahDML(sql);
         }
         #endregion
     }
