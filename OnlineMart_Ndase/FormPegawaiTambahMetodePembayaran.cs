@@ -16,5 +16,25 @@ namespace OnlineMart_Ndase
         {
             InitializeComponent();
         }
+
+        private void buttonTambah_Click(object sender, EventArgs e)
+        {
+            // Add data to DB
+        }
+
+        private void buttonBersihkan_Click(object sender, EventArgs e)
+        {
+            textBoxID.Text = "";
+            textBoxNama.Text = "";
+            textBoxID.Focus();
+        }
+
+        private void buttonKeluar_Click(object sender, EventArgs e)
+        {
+            FormPegawaiDaftarMetodePembayaran form = (FormPegawaiDaftarMetodePembayaran)this.Owner;
+            form.FormPegawaiDaftarMetodePembayaran_Load(sender, e);
+
+            this.Close();
+        }
     }
 }

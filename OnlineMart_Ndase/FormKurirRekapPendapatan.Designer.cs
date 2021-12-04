@@ -109,6 +109,7 @@ namespace OnlineMart_Ndase
             this.buttonKeluar.TabIndex = 3;
             this.buttonKeluar.Text = "&Keluar";
             this.buttonKeluar.UseVisualStyleBackColor = false;
+            this.buttonKeluar.Click += new System.EventHandler(this.buttonKeluar_Click);
             // 
             // FormKurirRekapPendapatan
             // 
@@ -119,9 +120,10 @@ namespace OnlineMart_Ndase
             this.Controls.Add(this.panelRekapPendapatan);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonKeluar);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormKurirRekapPendapatan";
             this.Text = "Rekap Pendapatan";
+            this.Load += new System.EventHandler(this.FormKurirRekapPendapatan_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRiwayatPendapatan)).EndInit();
             this.panelRekapPendapatan.ResumeLayout(false);
             this.panelRekapPendapatan.PerformLayout();

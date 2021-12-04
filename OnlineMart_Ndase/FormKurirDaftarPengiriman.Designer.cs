@@ -109,6 +109,7 @@ namespace OnlineMart_Ndase
             this.buttonKeluar.TabIndex = 3;
             this.buttonKeluar.Text = "&Keluar";
             this.buttonKeluar.UseVisualStyleBackColor = false;
+            this.buttonKeluar.Click += new System.EventHandler(this.buttonKeluar_Click);
             // 
             // FormKurirDaftarPengiriman
             // 
@@ -119,9 +120,10 @@ namespace OnlineMart_Ndase
             this.Controls.Add(this.panelDaftarPengiriman);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonKeluar);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormKurirDaftarPengiriman";
             this.Text = "Daftar Pengiriman";
+            this.Load += new System.EventHandler(this.FormKurirDaftarPengiriman_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDaftarPengiriman)).EndInit();
             this.panelDaftarPengiriman.ResumeLayout(false);
             this.panelDaftarPengiriman.PerformLayout();

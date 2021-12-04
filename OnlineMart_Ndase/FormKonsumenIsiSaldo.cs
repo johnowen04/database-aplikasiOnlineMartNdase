@@ -16,5 +16,20 @@ namespace OnlineMart_Ndase
         {
             InitializeComponent();
         }
+
+        private void FormKonsumenIsiSaldo_Load(object sender, EventArgs e)
+        {
+            // Select data from DB
+        }
+
+        private void buttonIsi_Click(object sender, EventArgs e)
+        {
+            // Add data to DB
+        }
+
+        private void buttonKeluar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

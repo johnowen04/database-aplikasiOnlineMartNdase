@@ -36,7 +36,7 @@ namespace OnlineMart_Ndase
             this.textBoxLoginInfo = new System.Windows.Forms.TextBox();
             this.panelLogin = new System.Windows.Forms.Panel();
             this.labelLoginInfo = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.labelPassword = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.radioButtonPegawai = new System.Windows.Forms.RadioButton();
             this.radioButtonKurir = new System.Windows.Forms.RadioButton();
@@ -79,12 +79,13 @@ namespace OnlineMart_Ndase
             this.linkLabelDaftar.TabIndex = 8;
             this.linkLabelDaftar.TabStop = true;
             this.linkLabelDaftar.Text = "Belum punya akun ? Daftar";
+            this.linkLabelDaftar.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelDaftar_LinkClicked);
             // 
             // textBoxPassword
             // 
             this.textBoxPassword.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxPassword.Location = new System.Drawing.Point(78, 38);
-            this.textBoxPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxPassword.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxPassword.Name = "textBoxPassword";
             this.textBoxPassword.Size = new System.Drawing.Size(201, 23);
             this.textBoxPassword.TabIndex = 3;
@@ -93,7 +94,7 @@ namespace OnlineMart_Ndase
             // 
             this.textBoxLoginInfo.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxLoginInfo.Location = new System.Drawing.Point(78, 11);
-            this.textBoxLoginInfo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxLoginInfo.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxLoginInfo.Name = "textBoxLoginInfo";
             this.textBoxLoginInfo.Size = new System.Drawing.Size(201, 23);
             this.textBoxLoginInfo.TabIndex = 1;
@@ -103,9 +104,9 @@ namespace OnlineMart_Ndase
             this.panelLogin.Controls.Add(this.textBoxPassword);
             this.panelLogin.Controls.Add(this.textBoxLoginInfo);
             this.panelLogin.Controls.Add(this.labelLoginInfo);
-            this.panelLogin.Controls.Add(this.label4);
+            this.panelLogin.Controls.Add(this.labelPassword);
             this.panelLogin.Location = new System.Drawing.Point(29, 101);
-            this.panelLogin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelLogin.Margin = new System.Windows.Forms.Padding(2);
             this.panelLogin.Name = "panelLogin";
             this.panelLogin.Size = new System.Drawing.Size(290, 72);
             this.panelLogin.TabIndex = 6;
@@ -121,16 +122,16 @@ namespace OnlineMart_Ndase
             this.labelLoginInfo.TabIndex = 0;
             this.labelLoginInfo.Text = "Email :";
             // 
-            // label4
+            // labelPassword
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(-2, 41);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(76, 16);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Kata sandi :";
+            this.labelPassword.AutoSize = true;
+            this.labelPassword.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPassword.Location = new System.Drawing.Point(-2, 41);
+            this.labelPassword.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelPassword.Name = "labelPassword";
+            this.labelPassword.Size = new System.Drawing.Size(76, 16);
+            this.labelPassword.TabIndex = 2;
+            this.labelPassword.Text = "Kata sandi :";
             // 
             // label8
             // 
@@ -148,24 +149,26 @@ namespace OnlineMart_Ndase
             this.radioButtonPegawai.AutoSize = true;
             this.radioButtonPegawai.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonPegawai.Location = new System.Drawing.Point(276, 77);
-            this.radioButtonPegawai.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.radioButtonPegawai.Margin = new System.Windows.Forms.Padding(2);
             this.radioButtonPegawai.Name = "radioButtonPegawai";
             this.radioButtonPegawai.Size = new System.Drawing.Size(74, 20);
             this.radioButtonPegawai.TabIndex = 5;
             this.radioButtonPegawai.Text = "Pegawai";
             this.radioButtonPegawai.UseVisualStyleBackColor = true;
+            this.radioButtonPegawai.CheckedChanged += new System.EventHandler(this.radioButtonPegawai_CheckedChanged);
             // 
             // radioButtonKurir
             // 
             this.radioButtonKurir.AutoSize = true;
             this.radioButtonKurir.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonKurir.Location = new System.Drawing.Point(219, 77);
-            this.radioButtonKurir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.radioButtonKurir.Margin = new System.Windows.Forms.Padding(2);
             this.radioButtonKurir.Name = "radioButtonKurir";
             this.radioButtonKurir.Size = new System.Drawing.Size(53, 20);
             this.radioButtonKurir.TabIndex = 4;
             this.radioButtonKurir.Text = "Kurir";
             this.radioButtonKurir.UseVisualStyleBackColor = true;
+            this.radioButtonKurir.CheckedChanged += new System.EventHandler(this.radioButtonKurir_CheckedChanged);
             // 
             // radioButtonKonsumen
             // 
@@ -173,13 +176,14 @@ namespace OnlineMart_Ndase
             this.radioButtonKonsumen.Checked = true;
             this.radioButtonKonsumen.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonKonsumen.Location = new System.Drawing.Point(130, 77);
-            this.radioButtonKonsumen.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.radioButtonKonsumen.Margin = new System.Windows.Forms.Padding(2);
             this.radioButtonKonsumen.Name = "radioButtonKonsumen";
             this.radioButtonKonsumen.Size = new System.Drawing.Size(85, 20);
             this.radioButtonKonsumen.TabIndex = 3;
             this.radioButtonKonsumen.TabStop = true;
             this.radioButtonKonsumen.Text = "Konsumen";
             this.radioButtonKonsumen.UseVisualStyleBackColor = true;
+            this.radioButtonKonsumen.CheckedChanged += new System.EventHandler(this.radioButtonKonsumen_CheckedChanged);
             // 
             // buttonMasuk
             // 
@@ -187,12 +191,13 @@ namespace OnlineMart_Ndase
             this.buttonMasuk.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonMasuk.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.buttonMasuk.Location = new System.Drawing.Point(29, 187);
-            this.buttonMasuk.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonMasuk.Margin = new System.Windows.Forms.Padding(2);
             this.buttonMasuk.Name = "buttonMasuk";
             this.buttonMasuk.Size = new System.Drawing.Size(150, 37);
             this.buttonMasuk.TabIndex = 7;
             this.buttonMasuk.Text = "Masuk";
             this.buttonMasuk.UseVisualStyleBackColor = false;
+            this.buttonMasuk.Click += new System.EventHandler(this.buttonMasuk_Click);
             // 
             // FormMasuk
             // 
@@ -209,7 +214,7 @@ namespace OnlineMart_Ndase
             this.Controls.Add(this.radioButtonKurir);
             this.Controls.Add(this.radioButtonKonsumen);
             this.Controls.Add(this.buttonMasuk);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormMasuk";
             this.Text = "Masuk Ke OMA!";
             this.Load += new System.EventHandler(this.FormMasuk_Load);
@@ -229,7 +234,7 @@ namespace OnlineMart_Ndase
         private System.Windows.Forms.TextBox textBoxLoginInfo;
         private System.Windows.Forms.Panel panelLogin;
         private System.Windows.Forms.Label labelLoginInfo;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label labelPassword;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.RadioButton radioButtonPegawai;
         private System.Windows.Forms.RadioButton radioButtonKurir;

@@ -50,9 +50,10 @@ namespace OnlineMart_Ndase
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(44, 35);
+            this.label1.Location = new System.Drawing.Point(29, 23);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(62, 24);
+            this.label1.Size = new System.Drawing.Size(43, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "Nama";
             // 
@@ -60,9 +61,10 @@ namespace OnlineMart_Ndase
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(44, 71);
+            this.label2.Location = new System.Drawing.Point(29, 46);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(59, 24);
+            this.label2.Size = new System.Drawing.Size(39, 17);
             this.label2.TabIndex = 1;
             this.label2.Text = "Email";
             // 
@@ -70,9 +72,10 @@ namespace OnlineMart_Ndase
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(44, 110);
+            this.label3.Location = new System.Drawing.Point(29, 71);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(82, 24);
+            this.label3.Size = new System.Drawing.Size(56, 17);
             this.label3.TabIndex = 2;
             this.label3.Text = "Telepon";
             // 
@@ -80,9 +83,10 @@ namespace OnlineMart_Ndase
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(44, 145);
+            this.label4.Location = new System.Drawing.Point(29, 94);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(106, 24);
+            this.label4.Size = new System.Drawing.Size(73, 17);
             this.label4.TabIndex = 3;
             this.label4.Text = "OMA Saldo";
             // 
@@ -90,9 +94,10 @@ namespace OnlineMart_Ndase
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(44, 180);
+            this.label5.Location = new System.Drawing.Point(29, 117);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(55, 24);
+            this.label5.Size = new System.Drawing.Size(39, 17);
             this.label5.TabIndex = 4;
             this.label5.Text = "Point";
             // 
@@ -100,9 +105,10 @@ namespace OnlineMart_Ndase
             // 
             this.labelPoint.AutoSize = true;
             this.labelPoint.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPoint.Location = new System.Drawing.Point(156, 180);
+            this.labelPoint.Location = new System.Drawing.Point(104, 117);
+            this.labelPoint.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelPoint.Name = "labelPoint";
-            this.labelPoint.Size = new System.Drawing.Size(30, 24);
+            this.labelPoint.Size = new System.Drawing.Size(22, 17);
             this.labelPoint.TabIndex = 9;
             this.labelPoint.Text = ": -";
             // 
@@ -110,9 +116,10 @@ namespace OnlineMart_Ndase
             // 
             this.labelOmaSaldo.AutoSize = true;
             this.labelOmaSaldo.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelOmaSaldo.Location = new System.Drawing.Point(156, 145);
+            this.labelOmaSaldo.Location = new System.Drawing.Point(104, 94);
+            this.labelOmaSaldo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelOmaSaldo.Name = "labelOmaSaldo";
-            this.labelOmaSaldo.Size = new System.Drawing.Size(30, 24);
+            this.labelOmaSaldo.Size = new System.Drawing.Size(22, 17);
             this.labelOmaSaldo.TabIndex = 8;
             this.labelOmaSaldo.Text = ": -";
             // 
@@ -120,9 +127,10 @@ namespace OnlineMart_Ndase
             // 
             this.labelTelepon.AutoSize = true;
             this.labelTelepon.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTelepon.Location = new System.Drawing.Point(156, 110);
+            this.labelTelepon.Location = new System.Drawing.Point(104, 71);
+            this.labelTelepon.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelTelepon.Name = "labelTelepon";
-            this.labelTelepon.Size = new System.Drawing.Size(17, 24);
+            this.labelTelepon.Size = new System.Drawing.Size(13, 17);
             this.labelTelepon.TabIndex = 7;
             this.labelTelepon.Text = ":";
             // 
@@ -130,9 +138,10 @@ namespace OnlineMart_Ndase
             // 
             this.labelEmail.AutoSize = true;
             this.labelEmail.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelEmail.Location = new System.Drawing.Point(156, 71);
+            this.labelEmail.Location = new System.Drawing.Point(104, 46);
+            this.labelEmail.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelEmail.Name = "labelEmail";
-            this.labelEmail.Size = new System.Drawing.Size(17, 24);
+            this.labelEmail.Size = new System.Drawing.Size(13, 17);
             this.labelEmail.TabIndex = 6;
             this.labelEmail.Text = ":";
             // 
@@ -140,9 +149,10 @@ namespace OnlineMart_Ndase
             // 
             this.labelNama.AutoSize = true;
             this.labelNama.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNama.Location = new System.Drawing.Point(156, 35);
+            this.labelNama.Location = new System.Drawing.Point(104, 23);
+            this.labelNama.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelNama.Name = "labelNama";
-            this.labelNama.Size = new System.Drawing.Size(17, 24);
+            this.labelNama.Size = new System.Drawing.Size(13, 17);
             this.labelNama.TabIndex = 5;
             this.labelNama.Text = ":";
             // 
@@ -160,10 +170,9 @@ namespace OnlineMart_Ndase
             this.panelProfil.Controls.Add(this.labelTelepon);
             this.panelProfil.Controls.Add(this.labelEmail);
             this.panelProfil.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panelProfil.Location = new System.Drawing.Point(13, 70);
-            this.panelProfil.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panelProfil.Location = new System.Drawing.Point(9, 45);
             this.panelProfil.Name = "panelProfil";
-            this.panelProfil.Size = new System.Drawing.Size(802, 247);
+            this.panelProfil.Size = new System.Drawing.Size(535, 161);
             this.panelProfil.TabIndex = 12;
             // 
             // buttonUbah
@@ -171,51 +180,52 @@ namespace OnlineMart_Ndase
             this.buttonUbah.BackColor = System.Drawing.Color.OrangeRed;
             this.buttonUbah.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonUbah.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.buttonUbah.Location = new System.Drawing.Point(507, 327);
-            this.buttonUbah.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.buttonUbah.Location = new System.Drawing.Point(338, 213);
             this.buttonUbah.Name = "buttonUbah";
-            this.buttonUbah.Size = new System.Drawing.Size(150, 57);
+            this.buttonUbah.Size = new System.Drawing.Size(100, 37);
             this.buttonUbah.TabIndex = 15;
             this.buttonUbah.Text = "&Ubah";
             this.buttonUbah.UseVisualStyleBackColor = false;
+            this.buttonUbah.Click += new System.EventHandler(this.buttonUbah_Click);
             // 
             // buttonKeluar
             // 
             this.buttonKeluar.BackColor = System.Drawing.Color.WhiteSmoke;
             this.buttonKeluar.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonKeluar.ForeColor = System.Drawing.Color.OrangeRed;
-            this.buttonKeluar.Location = new System.Drawing.Point(665, 327);
-            this.buttonKeluar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.buttonKeluar.Location = new System.Drawing.Point(443, 213);
             this.buttonKeluar.Name = "buttonKeluar";
-            this.buttonKeluar.Size = new System.Drawing.Size(150, 57);
+            this.buttonKeluar.Size = new System.Drawing.Size(100, 37);
             this.buttonKeluar.TabIndex = 14;
             this.buttonKeluar.Text = "&Keluar";
             this.buttonKeluar.UseVisualStyleBackColor = false;
+            this.buttonKeluar.Click += new System.EventHandler(this.buttonKeluar_Click);
             // 
             // label7
             // 
             this.label7.BackColor = System.Drawing.Color.OrangeRed;
             this.label7.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label7.Location = new System.Drawing.Point(13, 9);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(9, 6);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(802, 57);
+            this.label7.Size = new System.Drawing.Size(535, 37);
             this.label7.TabIndex = 11;
             this.label7.Text = "     Profil";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // FormKonsumenProfil
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(831, 395);
+            this.ClientSize = new System.Drawing.Size(554, 257);
             this.Controls.Add(this.panelProfil);
             this.Controls.Add(this.buttonUbah);
             this.Controls.Add(this.buttonKeluar);
             this.Controls.Add(this.label7);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormKonsumenProfil";
             this.Text = "Profil";
+            this.Load += new System.EventHandler(this.FormKonsumenProfil_Load);
             this.panelProfil.ResumeLayout(false);
             this.panelProfil.PerformLayout();
             this.ResumeLayout(false);

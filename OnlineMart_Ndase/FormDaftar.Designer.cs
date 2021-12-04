@@ -65,7 +65,7 @@ namespace OnlineMart_Ndase
             this.radioButtonKurir.AutoSize = true;
             this.radioButtonKurir.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonKurir.Location = new System.Drawing.Point(220, 80);
-            this.radioButtonKurir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.radioButtonKurir.Margin = new System.Windows.Forms.Padding(2);
             this.radioButtonKurir.Name = "radioButtonKurir";
             this.radioButtonKurir.Size = new System.Drawing.Size(53, 20);
             this.radioButtonKurir.TabIndex = 4;
@@ -78,7 +78,7 @@ namespace OnlineMart_Ndase
             this.radioButtonKonsumen.Checked = true;
             this.radioButtonKonsumen.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonKonsumen.Location = new System.Drawing.Point(130, 80);
-            this.radioButtonKonsumen.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.radioButtonKonsumen.Margin = new System.Windows.Forms.Padding(2);
             this.radioButtonKonsumen.Name = "radioButtonKonsumen";
             this.radioButtonKonsumen.Size = new System.Drawing.Size(85, 20);
             this.radioButtonKonsumen.TabIndex = 3;
@@ -103,18 +103,19 @@ namespace OnlineMart_Ndase
             this.buttonDaftar.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonDaftar.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.buttonDaftar.Location = new System.Drawing.Point(30, 268);
-            this.buttonDaftar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonDaftar.Margin = new System.Windows.Forms.Padding(2);
             this.buttonDaftar.Name = "buttonDaftar";
             this.buttonDaftar.Size = new System.Drawing.Size(150, 37);
             this.buttonDaftar.TabIndex = 7;
             this.buttonDaftar.Text = "&Daftar";
             this.buttonDaftar.UseVisualStyleBackColor = false;
+            this.buttonDaftar.Click += new System.EventHandler(this.buttonDaftar_Click);
             // 
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(77, 91);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(201, 23);
             this.textBox1.TabIndex = 7;
@@ -145,7 +146,7 @@ namespace OnlineMart_Ndase
             // 
             this.textBoxNamaKonsumen.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxNamaKonsumen.Location = new System.Drawing.Point(77, 10);
-            this.textBoxNamaKonsumen.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxNamaKonsumen.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxNamaKonsumen.Name = "textBoxNamaKonsumen";
             this.textBoxNamaKonsumen.Size = new System.Drawing.Size(201, 23);
             this.textBoxNamaKonsumen.TabIndex = 1;
@@ -183,7 +184,7 @@ namespace OnlineMart_Ndase
             this.panelDaftar.Controls.Add(this.textBoxEmailKonsumen);
             this.panelDaftar.Controls.Add(this.label8);
             this.panelDaftar.Location = new System.Drawing.Point(30, 104);
-            this.panelDaftar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelDaftar.Margin = new System.Windows.Forms.Padding(2);
             this.panelDaftar.Name = "panelDaftar";
             this.panelDaftar.Size = new System.Drawing.Size(287, 125);
             this.panelDaftar.TabIndex = 5;
@@ -192,7 +193,7 @@ namespace OnlineMart_Ndase
             // 
             this.textBoxKataSandiKonsumen.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxKataSandiKonsumen.Location = new System.Drawing.Point(77, 64);
-            this.textBoxKataSandiKonsumen.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxKataSandiKonsumen.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxKataSandiKonsumen.Name = "textBoxKataSandiKonsumen";
             this.textBoxKataSandiKonsumen.Size = new System.Drawing.Size(201, 23);
             this.textBoxKataSandiKonsumen.TabIndex = 5;
@@ -201,7 +202,7 @@ namespace OnlineMart_Ndase
             // 
             this.textBoxEmailKonsumen.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxEmailKonsumen.Location = new System.Drawing.Point(77, 37);
-            this.textBoxEmailKonsumen.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxEmailKonsumen.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxEmailKonsumen.Name = "textBoxEmailKonsumen";
             this.textBoxEmailKonsumen.Size = new System.Drawing.Size(201, 23);
             this.textBoxEmailKonsumen.TabIndex = 3;
@@ -211,7 +212,7 @@ namespace OnlineMart_Ndase
             this.checkBoxDaftar.AutoSize = true;
             this.checkBoxDaftar.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBoxDaftar.Location = new System.Drawing.Point(30, 233);
-            this.checkBoxDaftar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkBoxDaftar.Margin = new System.Windows.Forms.Padding(2);
             this.checkBoxDaftar.Name = "checkBoxDaftar";
             this.checkBoxDaftar.Size = new System.Drawing.Size(498, 18);
             this.checkBoxDaftar.TabIndex = 6;
@@ -230,6 +231,7 @@ namespace OnlineMart_Ndase
             this.linkLabelMasuk.TabIndex = 8;
             this.linkLabelMasuk.TabStop = true;
             this.linkLabelMasuk.Text = "Sudah punya akun ? Masuk";
+            this.linkLabelMasuk.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelMasuk_LinkClicked);
             // 
             // label2
             // 
@@ -256,7 +258,7 @@ namespace OnlineMart_Ndase
             this.Controls.Add(this.checkBoxDaftar);
             this.Controls.Add(this.linkLabelMasuk);
             this.Controls.Add(this.label2);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormDaftar";
             this.Text = "Daftar Ke OMA!";
             this.Load += new System.EventHandler(this.FormDaftar_Load);

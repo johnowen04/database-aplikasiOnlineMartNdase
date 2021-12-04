@@ -110,6 +110,7 @@ namespace OnlineMart_Ndase
             this.buttonKeluar.TabIndex = 4;
             this.buttonKeluar.Text = "&Keluar";
             this.buttonKeluar.UseVisualStyleBackColor = false;
+            this.buttonKeluar.Click += new System.EventHandler(this.buttonKeluar_Click);
             // 
             // buttonTambah
             // 
@@ -122,6 +123,7 @@ namespace OnlineMart_Ndase
             this.buttonTambah.TabIndex = 5;
             this.buttonTambah.Text = "&Tambah";
             this.buttonTambah.UseVisualStyleBackColor = false;
+            this.buttonTambah.Click += new System.EventHandler(this.buttonTambah_Click);
             // 
             // FormPegawaiDaftarCabang
             // 
@@ -133,9 +135,10 @@ namespace OnlineMart_Ndase
             this.Controls.Add(this.dataGridViewDaftarCabang);
             this.Controls.Add(this.panelDaftarCabang);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormPegawaiDaftarCabang";
             this.Text = "Daftar Cabang";
+            this.Load += new System.EventHandler(this.FormPegawaiDaftarCabang_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDaftarCabang)).EndInit();
             this.panelDaftarCabang.ResumeLayout(false);
             this.panelDaftarCabang.PerformLayout();

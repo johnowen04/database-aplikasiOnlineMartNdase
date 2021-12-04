@@ -17,9 +17,21 @@ namespace OnlineMart_Ndase
             InitializeComponent();
         }
 
+        public void FormKonsumenProfil_Load(object sender, EventArgs e)
+        {
+            // Select data from DB
+        }
+
         private void buttonUbah_Click(object sender, EventArgs e)
         {
+            FormKonsumenUbahProfil formKonsumenUbahProfil = new FormKonsumenUbahProfil();
+            formKonsumenUbahProfil.Owner = this;
+            formKonsumenUbahProfil.Show();
+        }
 
+        private void buttonKeluar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -12,6 +12,8 @@ namespace OnlineMart_Ndase
 {
     public partial class FormDaftar : Form
     {
+        FormMasuk formMasuk;
+
         public FormDaftar()
         {
             InitializeComponent();
@@ -19,14 +21,18 @@ namespace OnlineMart_Ndase
 
         private void FormDaftar_Load(object sender, EventArgs e)
         {
-            
+            formMasuk = (FormMasuk)this.Owner;
         }
 
         private void linkLabelMasuk_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            FormMasuk form = (FormMasuk)this.Owner;
-            form.FormMasuk_Load(linkLabelMasuk, e);
+            formMasuk.FormMasuk_Load(linkLabelMasuk, e);
+            this.Close();
+        }
 
+        private void buttonDaftar_Click(object sender, EventArgs e)
+        {
+            formMasuk.FormMasuk_Load(linkLabelMasuk, e);
             this.Close();
         }
     }

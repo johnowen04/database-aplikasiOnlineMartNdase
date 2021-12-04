@@ -49,45 +49,40 @@ namespace OnlineMart_Ndase
             this.panelTambahMetodePembayaran.Controls.Add(this.textBoxID);
             this.panelTambahMetodePembayaran.Controls.Add(this.label2);
             this.panelTambahMetodePembayaran.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panelTambahMetodePembayaran.Location = new System.Drawing.Point(18, 75);
-            this.panelTambahMetodePembayaran.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panelTambahMetodePembayaran.Location = new System.Drawing.Point(12, 49);
             this.panelTambahMetodePembayaran.Name = "panelTambahMetodePembayaran";
-            this.panelTambahMetodePembayaran.Size = new System.Drawing.Size(502, 137);
+            this.panelTambahMetodePembayaran.Size = new System.Drawing.Size(335, 89);
             this.panelTambahMetodePembayaran.TabIndex = 6;
             // 
             // textBoxNama
             // 
-            this.textBoxNama.Location = new System.Drawing.Point(172, 74);
-            this.textBoxNama.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textBoxNama.Location = new System.Drawing.Point(115, 48);
             this.textBoxNama.Name = "textBoxNama";
-            this.textBoxNama.Size = new System.Drawing.Size(298, 31);
+            this.textBoxNama.Size = new System.Drawing.Size(200, 23);
             this.textBoxNama.TabIndex = 3;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(36, 78);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(24, 51);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(75, 24);
+            this.label6.Size = new System.Drawing.Size(50, 16);
             this.label6.TabIndex = 2;
             this.label6.Text = "Nama :";
             // 
             // textBoxID
             // 
-            this.textBoxID.Location = new System.Drawing.Point(172, 29);
-            this.textBoxID.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textBoxID.Location = new System.Drawing.Point(115, 19);
             this.textBoxID.Name = "textBoxID";
-            this.textBoxID.Size = new System.Drawing.Size(148, 31);
+            this.textBoxID.Size = new System.Drawing.Size(100, 23);
             this.textBoxID.TabIndex = 1;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(36, 34);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(24, 22);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 24);
+            this.label2.Size = new System.Drawing.Size(29, 16);
             this.label2.TabIndex = 0;
             this.label2.Text = "ID :";
             // 
@@ -96,36 +91,35 @@ namespace OnlineMart_Ndase
             this.buttonBersihkan.BackColor = System.Drawing.Color.WhiteSmoke;
             this.buttonBersihkan.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonBersihkan.ForeColor = System.Drawing.Color.OrangeRed;
-            this.buttonBersihkan.Location = new System.Drawing.Point(177, 222);
-            this.buttonBersihkan.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.buttonBersihkan.Location = new System.Drawing.Point(118, 144);
             this.buttonBersihkan.Name = "buttonBersihkan";
-            this.buttonBersihkan.Size = new System.Drawing.Size(150, 57);
+            this.buttonBersihkan.Size = new System.Drawing.Size(100, 37);
             this.buttonBersihkan.TabIndex = 8;
             this.buttonBersihkan.Text = "&Bersihkan";
             this.buttonBersihkan.UseVisualStyleBackColor = false;
+            this.buttonBersihkan.Click += new System.EventHandler(this.buttonBersihkan_Click);
             // 
             // buttonTambah
             // 
             this.buttonTambah.BackColor = System.Drawing.Color.OrangeRed;
             this.buttonTambah.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonTambah.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.buttonTambah.Location = new System.Drawing.Point(18, 222);
-            this.buttonTambah.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.buttonTambah.Location = new System.Drawing.Point(12, 144);
             this.buttonTambah.Name = "buttonTambah";
-            this.buttonTambah.Size = new System.Drawing.Size(150, 57);
+            this.buttonTambah.Size = new System.Drawing.Size(100, 37);
             this.buttonTambah.TabIndex = 7;
             this.buttonTambah.Text = "&Tambah";
             this.buttonTambah.UseVisualStyleBackColor = false;
+            this.buttonTambah.Click += new System.EventHandler(this.buttonTambah_Click);
             // 
             // label1
             // 
             this.label1.BackColor = System.Drawing.Color.OrangeRed;
             this.label1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label1.Location = new System.Drawing.Point(18, 14);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(502, 57);
+            this.label1.Size = new System.Drawing.Size(335, 37);
             this.label1.TabIndex = 5;
             this.label1.Text = "     Tambah Metode Pembayaran";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -135,25 +129,24 @@ namespace OnlineMart_Ndase
             this.buttonKeluar.BackColor = System.Drawing.Color.WhiteSmoke;
             this.buttonKeluar.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonKeluar.ForeColor = System.Drawing.Color.OrangeRed;
-            this.buttonKeluar.Location = new System.Drawing.Point(370, 222);
-            this.buttonKeluar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.buttonKeluar.Location = new System.Drawing.Point(247, 144);
             this.buttonKeluar.Name = "buttonKeluar";
-            this.buttonKeluar.Size = new System.Drawing.Size(150, 57);
+            this.buttonKeluar.Size = new System.Drawing.Size(100, 37);
             this.buttonKeluar.TabIndex = 9;
             this.buttonKeluar.Text = "&Keluar";
             this.buttonKeluar.UseVisualStyleBackColor = false;
+            this.buttonKeluar.Click += new System.EventHandler(this.buttonKeluar_Click);
             // 
             // FormPegawaiTambahMetodePembayaran
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(537, 294);
+            this.ClientSize = new System.Drawing.Size(358, 191);
             this.Controls.Add(this.panelTambahMetodePembayaran);
             this.Controls.Add(this.buttonBersihkan);
             this.Controls.Add(this.buttonTambah);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonKeluar);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FormPegawaiTambahMetodePembayaran";
             this.Text = "Tambah Metode Pembayaran";
             this.panelTambahMetodePembayaran.ResumeLayout(false);

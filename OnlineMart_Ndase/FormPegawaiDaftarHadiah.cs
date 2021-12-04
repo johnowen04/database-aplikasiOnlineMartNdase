@@ -16,5 +16,22 @@ namespace OnlineMart_Ndase
         {
             InitializeComponent();
         }
+
+        public void FormPegawaiDaftarHadiah_Load(object sender, EventArgs e)
+        {
+            // Select Data from DB
+        }
+
+        private void buttonTambah_Click(object sender, EventArgs e)
+        {
+            FormPegawaiTambahHadiah formPegawaiTambahHadiah = new FormPegawaiTambahHadiah();
+            formPegawaiTambahHadiah.Owner = this;
+            formPegawaiTambahHadiah.Show();
+        }
+
+        private void buttonKeluar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

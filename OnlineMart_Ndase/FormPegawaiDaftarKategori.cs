@@ -16,5 +16,22 @@ namespace OnlineMart_Ndase
         {
             InitializeComponent();
         }
+
+        public void FormPegawaiDaftarKategori_Load(object sender, EventArgs e)
+        {
+            // Select data from DB
+        }
+
+        private void buttonTambah_Click(object sender, EventArgs e)
+        {
+            FormPegawaiTambahKategori formPegawaiTambahKategori = new FormPegawaiTambahKategori();
+            formPegawaiTambahKategori.Owner = this;
+            formPegawaiTambahKategori.Show();
+        }
+
+        private void buttonKeluar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

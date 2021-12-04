@@ -16,5 +16,15 @@ namespace OnlineMart_Ndase
         {
             InitializeComponent();
         }
+
+        private void FormPegawaiRekapPenjualanOMASaldo_Load(object sender, EventArgs e)
+        {
+            // Select data from DB
+        }
+
+        private void buttonKeluar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
