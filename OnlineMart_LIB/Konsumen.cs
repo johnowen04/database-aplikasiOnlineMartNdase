@@ -71,6 +71,13 @@ namespace OnlineMart_LIB
         #endregion
 
         #region METHODS
+        public Boolean CheckDuplicate(KeranjangBarang kb)
+        {
+            if (ListKeranjangBarang.Find(keranjangBarang => keranjangBarang.Cabang.Nama == kb.Cabang.Nama && keranjangBarang.Barang.Nama == kb.Barang.Nama) != null)
+                return true;
+
+            return false;
+        }
         public static Konsumen CekLogin(string email, string password)
         {
             string sql;
@@ -161,9 +168,11 @@ namespace OnlineMart_LIB
             return false;
         }
 
+        public void TambahBarangKeKeranjang(KeranjangBarang kb) => ListKeranjangBarang.Add(kb);
+
         public void TambahBarangKeKeranjang(Cabang cabang, Barang barang, int quantity)
         {
-            ListKeranjangBarang.Add(new KeranjangBarang(cabang, barang, quantity));
+            ListKeranjangBarang.Add(new KeranjangBarang(this, cabang, barang, quantity));
         }
         #endregion
     }

@@ -116,7 +116,7 @@ namespace OnlineMart_LIB
 
         public void TambahStokBarang(Barang barang, int stok)
         {
-            ListStokBarang.Add(new StokBarang(barang, stok));
+            ListStokBarang.Add(new StokBarang(this, barang, stok));
         }
         #endregion
     }

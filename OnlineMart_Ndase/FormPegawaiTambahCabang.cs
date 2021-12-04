@@ -14,6 +14,7 @@ namespace OnlineMart_Ndase
     public partial class FormPegawaiTambahCabang : Form
     {
         public List<Pegawai> listPegawai = new List<Pegawai>();
+
         public FormPegawaiTambahCabang()
         {
             InitializeComponent();

@@ -19,6 +19,20 @@ namespace OnlineMart_Ndase
         {
             InitializeComponent();
         }
+
+        private void buttonTambah_Click(object sender, EventArgs e)
+        {
+            FormPegawaiTambahBarangCabang form = new FormPegawaiTambahBarangCabang();
+            form.Owner = this;
+            form.comboBoxBarang.Items.Clear();
+            List<Barang> listBarang = Barang.ReadData();
+            form.comboBoxBarang.DataSource = listBarang;
+            form.comboBoxBarang.DisplayMember = "Nama";
+            form.ShowDialog();
+            RefreshData();
+            FormPegawaiDaftarBarangCabang_Load(sender, e);
+        }
+
         private void FormatDataGrid()
         {
             dataGridViewDaftarBarangCabang.Columns.Clear();
@@ -70,15 +84,43 @@ namespace OnlineMart_Ndase
             }
         }
 
+        private void dataGridViewDaftarBarangCabang_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string bId = dataGridViewDaftarBarangCabang.CurrentRow.Cells["id"].Value.ToString();
+            string bNama = dataGridViewDaftarBarangCabang.CurrentRow.Cells["nama"].Value.ToString();
+            string bHarga = dataGridViewDaftarBarangCabang.CurrentRow.Cells["harga"].Value.ToString();
+            string bNamaKategori = dataGridViewDaftarBarangCabang.CurrentRow.Cells["kategori"].Value.ToString();
+            string bStok = dataGridViewDaftarBarangCabang.CurrentRow.Cells["stok"].Value.ToString();
+
+            if (e.ColumnIndex == dataGridViewDaftarBarangCabang.Columns["btnTambahStokGrid"].Index && e.RowIndex >= 0)
+            {
+                FormPegawaiTambahStokBarangCabang form = new FormPegawaiTambahStokBarangCabang();
+                form.Owner = this;
+                form.textBoxID.Text = bId;
+                form.textBoxNama.Text = bNama;
+                form.textBoxHarga.Text = bHarga;
+                form.comboBoxKategori.DataSource = Kategori.ReadData("", "");
+                form.comboBoxKategori.DisplayMember = "Nama";
+                form.comboBoxKategori.SelectedIndex = form.comboBoxKategori.FindString(bNamaKategori);
+                form.textBoxStok.Text = bStok;
+                form.ShowDialog();
+                RefreshData();
+                FormPegawaiDaftarBarangCabang_Load(sender, e);
+            }
+        }
+
         private void FormPegawaiDaftarBarangCabang_Load(object sender, EventArgs e)
         {
             FormatDataGrid();
             TampilDataGrid();
         }
 
-        private void buttonKeluar_Click(object sender, EventArgs e)
+        private void buttonKeluar_Click(object sender, EventArgs e) => this.Close();
+
+        private void RefreshData()
         {
-            this.Close();
+            List<Cabang> refreshCabang = Cabang.ReadData("c.id", cabang.Id.ToString());
+            cabang = refreshCabang.Count == 1 ? refreshCabang[0] : cabang;
         }
     }
 }

@@ -192,6 +192,12 @@
     <Compile Include="FormPegawaiRekapPenjualanOMASaldo.Designer.cs">
       <DependentUpon>FormPegawaiRekapPenjualanOMASaldo.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormPegawaiTambahBarangCabang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPegawaiTambahBarangCabang.Designer.cs">
+      <DependentUpon>FormPegawaiTambahBarangCabang.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormPegawaiTambahCabang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -233,6 +239,12 @@
     </Compile>
     <Compile Include="FormPegawaiTambahPromo.Designer.cs">
       <DependentUpon>FormPegawaiTambahPromo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPegawaiTambahStokBarangCabang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPegawaiTambahStokBarangCabang.Designer.cs">
+      <DependentUpon>FormPegawaiTambahStokBarangCabang.cs</DependentUpon>
     </Compile>
     <Compile Include="FormPegawaiUbahBarang.cs">
       <SubType>Form</SubType>
@@ -329,6 +341,9 @@
     <EmbeddedResource Include="FormPegawaiRekapPenjualanOMASaldo.resx">
       <DependentUpon>FormPegawaiRekapPenjualanOMASaldo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormPegawaiTambahBarangCabang.resx">
+      <DependentUpon>FormPegawaiTambahBarangCabang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormPegawaiTambahCabang.resx">
       <DependentUpon>FormPegawaiTambahCabang.cs</DependentUpon>
     </EmbeddedResource>
@@ -349,6 +364,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormPegawaiTambahPromo.resx">
       <DependentUpon>FormPegawaiTambahPromo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPegawaiTambahStokBarangCabang.resx">
+      <DependentUpon>FormPegawaiTambahStokBarangCabang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormPegawaiUbahBarang.resx">
       <DependentUpon>FormPegawaiUbahBarang.cs</DependentUpon>

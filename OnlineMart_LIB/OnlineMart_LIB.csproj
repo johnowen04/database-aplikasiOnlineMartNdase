@@ -47,7 +47,6 @@
     <Compile Include="Cabang.cs" />
     <Compile Include="Hadiah.cs" />
     <Compile Include="Kategori.cs" />
-    <Compile Include="Keranjang.cs" />
     <Compile Include="KeranjangBarang.cs" />
     <Compile Include="Koneksi.cs" />
     <Compile Include="Konsumen.cs" />

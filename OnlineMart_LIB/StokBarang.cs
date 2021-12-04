@@ -9,37 +9,54 @@ namespace OnlineMart_LIB
 {
     public class StokBarang
     {
+        private Cabang cabang;
         private Barang barang;
         private int stok;
 
         public StokBarang()
         {
+            Cabang = null;
             Barang = null;
             Stok = 0;
         }
 
-        public StokBarang(Barang barang, int stok)
+        public StokBarang(Cabang cabang, Barang barang, int stok)
         {
+            Cabang = cabang;
             Barang = barang;
             Stok = stok;
         }
 
+        public Cabang Cabang { get => cabang; set => cabang = value; }
         public Barang Barang { get => barang; set => barang = value; }
         public int Stok { get => stok; set => stok = value; }
 
-        public Boolean UpdateStok(string jenisTransaki, int cabang_id, int barang_id, int quantity)
+        public static Boolean CreateStok(StokBarang sb)
         {
-            string sql = "update cabangs_barang set stok=";
-
-            if (jenisTransaki == "pembelian")
-                sql += "stok+" + quantity;
-            else
-                sql += "stok-" + quantity;
-
-            sql += " where cabangs_id=;" + cabang_id + "' and barangs_id='" + barang_id + "'";
-
+            string sql = "insert into cabangs_barangs (cabangs_id, barangs_id, stok) values('" + sb.Cabang.Id + "', '" + sb.Barang.Id + "', " + sb.Stok + ")";
             return Koneksi.JalankanPerintahDML(sql) != 0;
         }
 
+        public static Boolean CheckDuplicate(StokBarang sb)
+        {
+            string sql = "select * from cabangs_barangs where cabangs_id='" + sb.Cabang.Id + "' and barangs_id='" + sb.Barang.Id + "'";
+
+            MySqlDataReader hasil = Koneksi.JalankanPerintahQuery(sql);
+
+            while (hasil.Read())
+            {
+                return true;
+            }
+
+            return false;
+        }
+
+        public static Boolean UpdateStok(StokBarang sb)
+        {
+            string sql = "update cabangs_barangs set stok=" + sb.Stok 
+                + " where cabangs_id='" + sb.Cabang.Id + "' and barangs_id='" + sb.Barang.Id + "'";
+
+            return Koneksi.JalankanPerintahDML(sql) != 0;
+        }
     }
 }

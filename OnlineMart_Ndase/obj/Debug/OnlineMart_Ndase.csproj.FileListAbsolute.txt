@@ -277,3 +277,5 @@ C:\Users\Mariana Junita\Downloads\OnlineMart_Ndase\OnlineMart_Ndase\OnlineMart_N
 C:\Users\Mariana Junita\Downloads\OnlineMart_Ndase\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.exe
 C:\Users\Mariana Junita\Downloads\OnlineMart_Ndase\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.pdb
 K:\.lain\.c#\database\proj\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormPegawaiDaftarBarangCabang.resources
+K:\.lain\.c#\database\proj\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormPegawaiTambahBarangCabang.resources
+K:\.lain\.c#\database\proj\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormPegawaiTambahStokBarangCabang.resources

@@ -49,6 +49,7 @@ namespace OnlineMart_Ndase
             this.dataGridViewDaftarBarangCabang.RowHeadersWidth = 62;
             this.dataGridViewDaftarBarangCabang.Size = new System.Drawing.Size(535, 200);
             this.dataGridViewDaftarBarangCabang.TabIndex = 8;
+            this.dataGridViewDaftarBarangCabang.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDaftarBarangCabang_CellContentClick);
             // 
             // panelDaftarBarang
             // 
@@ -103,6 +104,7 @@ namespace OnlineMart_Ndase
             this.buttonTambah.TabIndex = 10;
             this.buttonTambah.Text = "&Tambah";
             this.buttonTambah.UseVisualStyleBackColor = false;
+            this.buttonTambah.Click += new System.EventHandler(this.buttonTambah_Click);
             // 
             // buttonKeluar
             // 
