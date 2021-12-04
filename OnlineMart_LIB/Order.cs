@@ -138,10 +138,9 @@ namespace OnlineMart_LIB
             ListBarangOrder.Add(new BarangOrder(barang, jumlah, harga));
         }
 
-        public static List<Order> ReadData(string kriteria, string konsumenID)
+        public static List<Order> ReadData(string konsumenID)
         {
-            string sql;
-                sql = "select o.id, o.tanggal_waktu, o.alamat_tujuan, o.ongkos_kirim, o.total_bayar, c.nama, d.nama, " +
+            string sql = "select o.id, o.tanggal_waktu, o.alamat_tujuan, o.ongkos_kirim, o.total_bayar, c.nama, d.nama, " +
                     "p.id, p.nama, o.status, mp.nama from orders as o " +
                     "inner join cabangs as c on o.cabangs_id = c.id " +
                     "inner join drivers as d on o.drivers_id = d.id " +
@@ -180,6 +179,18 @@ namespace OnlineMart_LIB
                 o.Kurir = ku;
                 o.Promo = p;
                 o.MetodePembayaran = mp;
+
+                string sql2 = "select barangs_id, jumlah, harga from barangs_orders where orders_id='" + o.Id + "'";
+                MySqlDataReader hasilDetil = Koneksi.JalankanPerintahQuery(sql2);
+
+                while(hasilDetil.Read())
+                {
+                    List<Barang> barang = Barang.ReadData("b.id", hasilDetil.GetString(0));
+                    int jumlah = hasilDetil.GetInt32(1);
+                    float harga = hasilDetil.GetFloat(2);
+
+                    o.TambahDetilBarang(barang[0], jumlah, harga);
+                }
 
                 listOrder.Add(o);
             }

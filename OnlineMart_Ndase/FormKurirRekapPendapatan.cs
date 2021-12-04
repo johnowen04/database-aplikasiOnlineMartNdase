@@ -45,6 +45,9 @@ namespace OnlineMart_Ndase
             dataGridViewPendapatan.Columns["bulan"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             dataGridViewPendapatan.Columns["total_pendapatan"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
 
+            dataGridViewPendapatan.Columns["total_pendapatan"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+            dataGridViewPendapatan.Columns["total_pendapatan"].DefaultCellStyle.Format = "#,###";
+
             dataGridViewPendapatan.AllowUserToAddRows = false;
             dataGridViewPendapatan.ReadOnly = true;
         }

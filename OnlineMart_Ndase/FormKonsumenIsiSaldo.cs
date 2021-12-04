@@ -23,7 +23,7 @@ namespace OnlineMart_Ndase
         private void FormKonsumenIsiSaldo_Load(object sender, EventArgs e)
         {
             formUtama = (FormUtama)this.MdiParent;
-            labelSaldoSekarang.Text = "Rp" + formUtama.ko.Saldo.ToString("######");
+            labelSaldoSekarang.Text = "Rp" + formUtama.ko.Saldo.ToString("#,###");
         }
 
         private void buttonIsi_Click(object sender, EventArgs e)

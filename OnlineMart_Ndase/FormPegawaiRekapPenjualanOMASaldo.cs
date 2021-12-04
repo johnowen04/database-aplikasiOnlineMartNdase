@@ -46,6 +46,9 @@ namespace OnlineMart_Ndase
             dataGridViewRiwayatOMASaldo.Columns["bulan"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             dataGridViewRiwayatOMASaldo.Columns["total"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
 
+            dataGridViewRiwayatOMASaldo.Columns["total"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+            dataGridViewRiwayatOMASaldo.Columns["total"].DefaultCellStyle.Format = "#,###";
+
             dataGridViewRiwayatOMASaldo.AllowUserToAddRows = false;
             dataGridViewRiwayatOMASaldo.ReadOnly = true;
         }

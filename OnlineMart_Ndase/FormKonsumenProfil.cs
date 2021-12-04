@@ -31,7 +31,7 @@ namespace OnlineMart_Ndase
                 labelNama.Text = ": " + listKonsumen[0].Nama;
                 labelEmail.Text = ": " + listKonsumen[0].Email;
                 labelTelepon.Text = ": " + listKonsumen[0].Telepon;
-                labelOmaSaldo.Text = ": " + "Rp" + listKonsumen[0].Saldo.ToString("####");
+                labelOmaSaldo.Text = ": " + "Rp" + listKonsumen[0].Saldo.ToString("#,###");
                 labelPoint.Text = ": " + listKonsumen[0].Poin + " poin" ;
             }
         }

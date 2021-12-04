@@ -49,7 +49,6 @@ namespace OnlineMart_Ndase
             dataGridViewDaftarBarang.Columns["Kategori"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
 
             dataGridViewDaftarBarang.Columns["Harga"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
-
             dataGridViewDaftarBarang.Columns["Harga"].DefaultCellStyle.Format = "#,###";
 
             dataGridViewDaftarBarang.AllowUserToAddRows = false;

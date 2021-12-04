@@ -82,8 +82,6 @@ namespace OnlineMart_Ndase
             {
                 FormKonsumenCheckout formKonsumenCheckout = new FormKonsumenCheckout();
                 formKonsumenCheckout.Owner = this;
-                //formKonsumenCheckout.labelKodePromo.Visible = false;
-                //formKonsumenCheckout.labelKodePromo.Enabled = false;
                 formKonsumenCheckout.buttonBayar.Enabled = false;
                 formKonsumenCheckout.ShowDialog();
                 FormKonsumenKeranjang_Load(sender, e);

@@ -56,9 +56,9 @@ namespace OnlineMart_Ndase
             HitungPromo(promo);
             totalBayar = totalBelanja - potonganHarga + ongkosKirim;
 
-            labelOngkosKirim.Text = "Rp" + ongkosKirim.ToString("####");
-            labelPotonganHarga.Text = "- Rp" + potonganHarga.ToString("####");
-            labelTotalPembayaran.Text = "Rp" + totalBayar.ToString("####");
+            labelOngkosKirim.Text = "Rp" + ongkosKirim.ToString("#,###");
+            labelPotonganHarga.Text = "- Rp" + potonganHarga.ToString("#,###");
+            labelTotalPembayaran.Text = "Rp" + totalBayar.ToString("#,###");
         }
         
         private void FormatDataGrid()

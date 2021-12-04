@@ -107,17 +107,10 @@ namespace OnlineMart_Ndase
                     {
                         keranjangBarang = formUtama.ko.ListKeranjangBarang.Find(kb => kb.Barang.Nama == keranjangBarang.Barang.Nama);
                         keranjangBarang.Quantity += 1;
-
-                        //MessageBox.Show("Quantity barang berhasil ditambahkan nama barang:"
-                        //            + stokBarangDipilih.Barang.Nama
-                        //            + "; qty:" + formUtama.ko.ListKeranjangBarang.Find(kb => kb.Cabang.Nama == cabangDipilih.Nama && kb.Barang.Nama == stokBarangDipilih.Barang.Nama).Quantity);
                     }
                     else
                     {
                         formUtama.ko.TambahBarangKeKeranjang(keranjangBarang);
-
-                        //MessageBox.Show("Barang dimasukkan ke keranjang nama barang:"
-                        //            + stokBarangDipilih.Barang.Nama);
                     }
                     
                     MessageBox.Show("Barang telah dimasukkan ke keranjang.", "Informasi");

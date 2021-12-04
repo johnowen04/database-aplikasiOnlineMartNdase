@@ -156,7 +156,6 @@ K:\.lain\.c#\database\proj\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMar
 K:\.lain\.c#\database\proj\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormKonsumenBarang.resources
 K:\.lain\.c#\database\proj\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormKonsumenCetakNota.resources
 K:\.lain\.c#\database\proj\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormKonsumenCheckout.resources
-K:\.lain\.c#\database\proj\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormKonsumenDeals.resources
 K:\.lain\.c#\database\proj\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormKonsumenKeranjang.resources
 K:\.lain\.c#\database\proj\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormKonsumenKodePromo.resources
 K:\.lain\.c#\database\proj\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormPegawaiUbahBarang.resources
@@ -410,3 +409,6 @@ C:\Users\USER\Documents\UBAYA\Kelas\Semester 3\2. Database - KP C\12\B\tahap3_nd
 C:\Users\USER\Documents\UBAYA\Kelas\Semester 3\2. Database - KP C\12\B\tahap3_ndase\OnlineMart_Ndase\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.csproj.CopyComplete
 C:\Users\USER\Documents\UBAYA\Kelas\Semester 3\2. Database - KP C\12\B\tahap3_ndase\OnlineMart_Ndase\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.exe
 C:\Users\USER\Documents\UBAYA\Kelas\Semester 3\2. Database - KP C\12\B\tahap3_ndase\OnlineMart_Ndase\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.pdb
+K:\.lain\.c#\database\proj\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormKonsumenChat.resources
+K:\.lain\.c#\database\proj\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormPegawaiUbahPromo.resources
+K:\.lain\.c#\database\proj\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormPegawaiUbahHadiah.resources

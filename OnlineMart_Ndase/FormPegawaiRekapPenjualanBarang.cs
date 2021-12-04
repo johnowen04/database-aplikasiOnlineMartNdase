@@ -95,6 +95,9 @@ namespace OnlineMart_Ndase
             dataGridViewRiwayatOmset.Columns["nama"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             dataGridViewRiwayatOmset.Columns["total"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
 
+            dataGridViewRiwayatOmset.Columns["total"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+            dataGridViewRiwayatOmset.Columns["total"].DefaultCellStyle.Format = "#,###";
+
             dataGridViewRiwayatOmset.AllowUserToAddRows = false;
             dataGridViewRiwayatOmset.ReadOnly = true;
         }
