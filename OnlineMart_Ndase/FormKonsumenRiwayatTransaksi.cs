@@ -92,6 +92,7 @@ namespace OnlineMart_Ndase
                 if (e.ColumnIndex == dataGridViewRiwayatTransaksi.Columns["btnCekGrid"].Index && e.RowIndex >= 0)
                 {
                     Order selectedOrder = listOrder.Find(order => order.Id == tId);
+                    selectedOrder.Konsumen = formUtama.ko;
 
                     FormKonsumenCekPesanan form = new FormKonsumenCekPesanan();
                     form.Owner = this;

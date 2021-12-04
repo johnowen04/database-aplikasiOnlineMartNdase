@@ -230,7 +230,7 @@ namespace OnlineMart_LIB
 
         public static List<Order> ReadData(string konsumenID)
         {
-            string sql = "select o.id, o.tanggal_waktu, o.alamat_tujuan, o.ongkos_kirim, o.total_bayar, c.nama, d.nama, " +
+            string sql = "select o.id, o.tanggal_waktu, o.alamat_tujuan, o.ongkos_kirim, o.total_bayar, c.nama, d.id, d.nama, " +
                     "p.id, p.nama, o.status, mp.nama from orders as o " +
                     "inner join cabangs as c on o.cabangs_id = c.id " +
                     "inner join drivers as d on o.drivers_id = d.id " +
@@ -254,16 +254,17 @@ namespace OnlineMart_LIB
                 c.Nama = hasil.GetString(5);
 
                 Kurir ku = new Kurir();
-                ku.Nama = hasil.GetString(6);
+                ku.Id = hasil.GetInt32(6);
+                ku.Nama = hasil.GetString(7);
 
                 Promo p = new Promo();
-                p.Id = int.Parse(hasil.GetString(7));
-                p.Nama = hasil.GetString(8);
+                p.Id = int.Parse(hasil.GetString(8));
+                p.Nama = hasil.GetString(9);
 
-                o.Status = hasil.GetString(9);
+                o.Status = hasil.GetString(10);
 
                 MetodePembayaran mp = new MetodePembayaran();
-                mp.Nama = hasil.GetString(10);
+                mp.Nama = hasil.GetString(11);
 
                 o.Cabang = c;
                 o.Kurir = ku;

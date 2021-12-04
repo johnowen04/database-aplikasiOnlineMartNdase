@@ -79,6 +79,7 @@ namespace OnlineMart_Ndase
         private void buttonChat_Click(object sender, EventArgs e)
         {
             FormKonsumenChat form = new FormKonsumenChat();
+            form.order = order;
             form.ShowDialog();
         }
     }
