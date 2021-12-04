@@ -81,6 +81,7 @@ namespace OnlineMart_Ndase
             this.buttonBersihkan.TabIndex = 8;
             this.buttonBersihkan.Text = "Bersihkan";
             this.buttonBersihkan.UseVisualStyleBackColor = false;
+            this.buttonBersihkan.Click += new System.EventHandler(this.buttonBersihkan_Click);
             // 
             // buttonMasukkan
             // 
@@ -94,6 +95,7 @@ namespace OnlineMart_Ndase
             this.buttonMasukkan.TabIndex = 7;
             this.buttonMasukkan.Text = "&Masukkan";
             this.buttonMasukkan.UseVisualStyleBackColor = false;
+            this.buttonMasukkan.Click += new System.EventHandler(this.buttonMasukkan_Click);
             // 
             // label1
             // 
@@ -143,11 +145,11 @@ namespace OnlineMart_Ndase
         #endregion
 
         private System.Windows.Forms.Panel panelMasukkanKodePromo;
-        private System.Windows.Forms.TextBox textBoxID;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button buttonBersihkan;
         private System.Windows.Forms.Button buttonMasukkan;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button buttonBatal;
+        public System.Windows.Forms.TextBox textBoxID;
     }
 }

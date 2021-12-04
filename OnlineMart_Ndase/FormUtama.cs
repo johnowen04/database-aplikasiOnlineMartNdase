@@ -16,6 +16,7 @@ namespace OnlineMart_Ndase
         public Konsumen ko;
         public Kurir ku;
         public Pegawai pe;
+        public Cabang cabang;
         public string pengguna = "";
         FormMasuk formMasuk;
         //public List<CabangBarang> keranjang;

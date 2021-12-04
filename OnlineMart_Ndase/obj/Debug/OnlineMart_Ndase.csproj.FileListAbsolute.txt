@@ -279,3 +279,7 @@ C:\Users\Mariana Junita\Downloads\OnlineMart_Ndase\OnlineMart_Ndase\OnlineMart_N
 K:\.lain\.c#\database\proj\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormPegawaiDaftarBarangCabang.resources
 K:\.lain\.c#\database\proj\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormPegawaiTambahBarangCabang.resources
 K:\.lain\.c#\database\proj\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormPegawaiTambahStokBarangCabang.resources
+C:\Users\Mariana Junita\Downloads\OnlineMart_Ndase (1)\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormPegawaiDaftarBarangCabang.resources
+C:\Users\Mariana Junita\Downloads\OnlineMart_Ndase (1)\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormPegawaiTambahBarangCabang.resources
+C:\Users\Mariana Junita\Downloads\OnlineMart_Ndase (1)\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormPegawaiTambahStokBarangCabang.resources
+C:\Users\Mariana Junita\Downloads\OnlineMart_Ndase (1)\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormPegawaiUbahMetodePembayaran.resources

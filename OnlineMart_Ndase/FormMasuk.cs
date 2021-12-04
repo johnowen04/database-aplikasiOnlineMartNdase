@@ -23,6 +23,10 @@ namespace OnlineMart_Ndase
         public void FormMasuk_Load(object sender, EventArgs e)
         {
             formUtama = (FormUtama)this.Owner;
+
+            comboBoxCabang.DataSource = Cabang.ReadData();
+            comboBoxCabang.DisplayMember = "nama";
+            comboBoxCabang.DropDownStyle = ComboBoxStyle.DropDownList;
         }
 
         private void radioButtonKonsumen_CheckedChanged(object sender, EventArgs e)
@@ -31,6 +35,9 @@ namespace OnlineMart_Ndase
             textBoxPassword.MaxLength = 8;
             linkLabelDaftar.ForeColor = Color.OrangeRed;
             linkLabelDaftar.Enabled = true;
+            labelCabang.Visible = true;
+            comboBoxCabang.Visible = true;
+            comboBoxCabang.Enabled = true;
         }
 
         private void radioButtonKurir_CheckedChanged(object sender, EventArgs e)
@@ -39,6 +46,9 @@ namespace OnlineMart_Ndase
             textBoxPassword.MaxLength = 0;
             linkLabelDaftar.ForeColor = Color.OrangeRed;
             linkLabelDaftar.Enabled = true;
+            labelCabang.Visible = false;
+            comboBoxCabang.Visible = false;
+            comboBoxCabang.Enabled = false;
         }
 
         private void radioButtonPegawai_CheckedChanged(object sender, EventArgs e)
@@ -47,6 +57,9 @@ namespace OnlineMart_Ndase
             textBoxPassword.MaxLength = 0;
             linkLabelDaftar.ForeColor = Color.DarkGray;
             linkLabelDaftar.Enabled = false;
+            labelCabang.Visible = false;
+            comboBoxCabang.Visible = false;
+            comboBoxCabang.Enabled = false;
         }
 
         private void buttonMasuk_Click(object sender, EventArgs e)
@@ -66,8 +79,11 @@ namespace OnlineMart_Ndase
                     {
                         formUtama.ko = ko;
                         formUtama.pengguna = "ko";
+                        formUtama.cabang = (Cabang)comboBoxCabang.SelectedItem;
+                        formUtama.labelTextCabang.Visible = true;
+                        formUtama.labelCabang.Visible = true;
+                        formUtama.labelCabang.Text = formUtama.cabang.Nama;
                         MessageBox.Show("Koneksi Berhasil.", "Informasi");
-                        //formUtama.menuStripKonsumen.Visible = true;
 
                         this.DialogResult = DialogResult.OK;
                         this.Close();

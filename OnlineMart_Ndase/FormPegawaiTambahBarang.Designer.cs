@@ -32,9 +32,7 @@ namespace OnlineMart_Ndase
             this.panelTambahBarang = new System.Windows.Forms.Panel();
             this.textBoxID = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBoxCabang = new System.Windows.Forms.ComboBox();
             this.comboBoxKategori = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.textBoxHarga = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.textBoxNama = new System.Windows.Forms.TextBox();
@@ -52,9 +50,7 @@ namespace OnlineMart_Ndase
             this.panelTambahBarang.BackColor = System.Drawing.Color.SeaShell;
             this.panelTambahBarang.Controls.Add(this.textBoxID);
             this.panelTambahBarang.Controls.Add(this.label2);
-            this.panelTambahBarang.Controls.Add(this.comboBoxCabang);
             this.panelTambahBarang.Controls.Add(this.comboBoxKategori);
-            this.panelTambahBarang.Controls.Add(this.label5);
             this.panelTambahBarang.Controls.Add(this.textBoxHarga);
             this.panelTambahBarang.Controls.Add(this.label4);
             this.panelTambahBarang.Controls.Add(this.textBoxNama);
@@ -64,7 +60,7 @@ namespace OnlineMart_Ndase
             this.panelTambahBarang.Location = new System.Drawing.Point(18, 75);
             this.panelTambahBarang.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelTambahBarang.Name = "panelTambahBarang";
-            this.panelTambahBarang.Size = new System.Drawing.Size(502, 271);
+            this.panelTambahBarang.Size = new System.Drawing.Size(502, 223);
             this.panelTambahBarang.TabIndex = 1;
             // 
             // textBoxID
@@ -73,9 +69,10 @@ namespace OnlineMart_Ndase
             this.textBoxID.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxID.Name = "textBoxID";
             this.textBoxID.ReadOnly = true;
-            this.textBoxID.Size = new System.Drawing.Size(298, 31);
+            this.textBoxID.Size = new System.Drawing.Size(148, 31);
             this.textBoxID.TabIndex = 13;
-            this.textBoxID.Text = "  -";
+            this.textBoxID.Text = "-";
+            this.textBoxID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label2
             // 
@@ -87,16 +84,6 @@ namespace OnlineMart_Ndase
             this.label2.TabIndex = 12;
             this.label2.Text = "ID :";
             // 
-            // comboBoxCabang
-            // 
-            this.comboBoxCabang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxCabang.FormattingEnabled = true;
-            this.comboBoxCabang.Location = new System.Drawing.Point(150, 203);
-            this.comboBoxCabang.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.comboBoxCabang.Name = "comboBoxCabang";
-            this.comboBoxCabang.Size = new System.Drawing.Size(298, 32);
-            this.comboBoxCabang.TabIndex = 11;
-            // 
             // comboBoxKategori
             // 
             this.comboBoxKategori.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -106,16 +93,6 @@ namespace OnlineMart_Ndase
             this.comboBoxKategori.Name = "comboBoxKategori";
             this.comboBoxKategori.Size = new System.Drawing.Size(298, 32);
             this.comboBoxKategori.TabIndex = 10;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(39, 207);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(96, 24);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "Cabang  :";
             // 
             // textBoxHarga
             // 
@@ -168,7 +145,7 @@ namespace OnlineMart_Ndase
             this.buttonTambah.BackColor = System.Drawing.Color.OrangeRed;
             this.buttonTambah.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonTambah.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.buttonTambah.Location = new System.Drawing.Point(18, 356);
+            this.buttonTambah.Location = new System.Drawing.Point(18, 308);
             this.buttonTambah.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonTambah.Name = "buttonTambah";
             this.buttonTambah.Size = new System.Drawing.Size(150, 57);
@@ -195,7 +172,7 @@ namespace OnlineMart_Ndase
             this.buttonKeluar.BackColor = System.Drawing.Color.WhiteSmoke;
             this.buttonKeluar.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonKeluar.ForeColor = System.Drawing.Color.OrangeRed;
-            this.buttonKeluar.Location = new System.Drawing.Point(370, 356);
+            this.buttonKeluar.Location = new System.Drawing.Point(370, 308);
             this.buttonKeluar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonKeluar.Name = "buttonKeluar";
             this.buttonKeluar.Size = new System.Drawing.Size(150, 57);
@@ -209,7 +186,7 @@ namespace OnlineMart_Ndase
             this.buttonBersihkan.BackColor = System.Drawing.Color.WhiteSmoke;
             this.buttonBersihkan.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonBersihkan.ForeColor = System.Drawing.Color.OrangeRed;
-            this.buttonBersihkan.Location = new System.Drawing.Point(177, 356);
+            this.buttonBersihkan.Location = new System.Drawing.Point(177, 308);
             this.buttonBersihkan.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonBersihkan.Name = "buttonBersihkan";
             this.buttonBersihkan.Size = new System.Drawing.Size(150, 57);
@@ -222,7 +199,7 @@ namespace OnlineMart_Ndase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(538, 421);
+            this.ClientSize = new System.Drawing.Size(538, 380);
             this.Controls.Add(this.buttonBersihkan);
             this.Controls.Add(this.panelTambahBarang);
             this.Controls.Add(this.buttonTambah);
@@ -250,9 +227,7 @@ namespace OnlineMart_Ndase
         private System.Windows.Forms.TextBox textBoxHarga;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button buttonBersihkan;
-        private System.Windows.Forms.ComboBox comboBoxCabang;
         private System.Windows.Forms.ComboBox comboBoxKategori;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBoxID;
         private System.Windows.Forms.Label label2;
     }

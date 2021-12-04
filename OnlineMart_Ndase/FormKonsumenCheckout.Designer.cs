@@ -48,8 +48,7 @@ namespace OnlineMart_Ndase
             this.label7 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.labelOngkosKirim = new System.Windows.Forms.Label();
-            this.labelKodePromo = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
+            this.labelPotonganHarga = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.panelAlamat.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBarang)).BeginInit();
@@ -153,15 +152,18 @@ namespace OnlineMart_Ndase
             // 
             // linkLabelKodePromo
             // 
-            this.linkLabelKodePromo.AutoSize = true;
             this.linkLabelKodePromo.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabelKodePromo.LinkArea = new System.Windows.Forms.LinkArea(0, 50);
             this.linkLabelKodePromo.LinkColor = System.Drawing.Color.OrangeRed;
-            this.linkLabelKodePromo.Location = new System.Drawing.Point(559, 503);
+            this.linkLabelKodePromo.Location = new System.Drawing.Point(527, 503);
             this.linkLabelKodePromo.Name = "linkLabelKodePromo";
-            this.linkLabelKodePromo.Size = new System.Drawing.Size(210, 24);
+            this.linkLabelKodePromo.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.linkLabelKodePromo.Size = new System.Drawing.Size(242, 24);
             this.linkLabelKodePromo.TabIndex = 16;
             this.linkLabelKodePromo.TabStop = true;
             this.linkLabelKodePromo.Text = "Masukkan kode promo";
+            this.linkLabelKodePromo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.linkLabelKodePromo.UseCompatibleTextRendering = true;
             this.linkLabelKodePromo.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelKodePromo_LinkClicked);
             // 
             // label5
@@ -194,13 +196,12 @@ namespace OnlineMart_Ndase
             this.comboBoxMetodePembayaran.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxMetodePembayaran.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxMetodePembayaran.FormattingEnabled = true;
-            this.comboBoxMetodePembayaran.Items.AddRange(new object[] {
-            "OMA Payments"});
             this.comboBoxMetodePembayaran.Location = new System.Drawing.Point(471, 597);
             this.comboBoxMetodePembayaran.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboBoxMetodePembayaran.Name = "comboBoxMetodePembayaran";
             this.comboBoxMetodePembayaran.Size = new System.Drawing.Size(298, 30);
             this.comboBoxMetodePembayaran.TabIndex = 20;
+            this.comboBoxMetodePembayaran.SelectedValueChanged += new System.EventHandler(this.comboBoxMetodePembayaran_SelectedValueChanged);
             // 
             // label6
             // 
@@ -227,6 +228,7 @@ namespace OnlineMart_Ndase
             this.buttonBayar.TabIndex = 21;
             this.buttonBayar.Text = "&Bayar";
             this.buttonBayar.UseVisualStyleBackColor = false;
+            this.buttonBayar.Click += new System.EventHandler(this.buttonBayar_Click);
             // 
             // panelCheckout
             // 
@@ -286,33 +288,20 @@ namespace OnlineMart_Ndase
             this.labelOngkosKirim.Name = "labelOngkosKirim";
             this.labelOngkosKirim.Size = new System.Drawing.Size(200, 24);
             this.labelOngkosKirim.TabIndex = 24;
-            this.labelOngkosKirim.Text = "Rp 0";
+            this.labelOngkosKirim.Text = "Rp 20.000,-";
             this.labelOngkosKirim.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
-            // labelKodePromo
+            // labelPotonganHarga
             // 
-            this.labelKodePromo.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelKodePromo.ForeColor = System.Drawing.Color.Black;
-            this.labelKodePromo.Location = new System.Drawing.Point(569, 503);
-            this.labelKodePromo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelKodePromo.Name = "labelKodePromo";
-            this.labelKodePromo.Size = new System.Drawing.Size(200, 24);
-            this.labelKodePromo.TabIndex = 25;
-            this.labelKodePromo.Text = "Kode Promo";
-            this.labelKodePromo.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            this.labelKodePromo.Visible = false;
-            // 
-            // label10
-            // 
-            this.label10.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.Black;
-            this.label10.Location = new System.Drawing.Point(569, 628);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(200, 24);
-            this.label10.TabIndex = 27;
-            this.label10.Text = "- Rp 0";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.labelPotonganHarga.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPotonganHarga.ForeColor = System.Drawing.Color.Black;
+            this.labelPotonganHarga.Location = new System.Drawing.Point(569, 628);
+            this.labelPotonganHarga.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelPotonganHarga.Name = "labelPotonganHarga";
+            this.labelPotonganHarga.Size = new System.Drawing.Size(200, 24);
+            this.labelPotonganHarga.TabIndex = 27;
+            this.labelPotonganHarga.Text = "- Rp 0";
+            this.labelPotonganHarga.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // label11
             // 
@@ -331,9 +320,8 @@ namespace OnlineMart_Ndase
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(827, 867);
-            this.Controls.Add(this.label10);
+            this.Controls.Add(this.labelPotonganHarga);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.labelKodePromo);
             this.Controls.Add(this.labelOngkosKirim);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.panelCheckout);
@@ -370,19 +358,18 @@ namespace OnlineMart_Ndase
         private System.Windows.Forms.DataGridView dataGridViewBarang;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.LinkLabel linkLabelKodePromo;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox comboBoxKurir;
         private System.Windows.Forms.ComboBox comboBoxMetodePembayaran;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button buttonBayar;
         private System.Windows.Forms.Panel panelCheckout;
         private System.Windows.Forms.Label labelTotalPembayaran;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label labelOngkosKirim;
-        private System.Windows.Forms.Label labelKodePromo;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
+        public System.Windows.Forms.Label labelPotonganHarga;
+        public System.Windows.Forms.Button buttonBayar;
+        public System.Windows.Forms.LinkLabel linkLabelKodePromo;
     }
 }

@@ -54,6 +54,7 @@ namespace OnlineMart_Ndase
             this.panelUbahKategori.Name = "panelUbahKategori";
             this.panelUbahKategori.Size = new System.Drawing.Size(502, 137);
             this.panelUbahKategori.TabIndex = 1;
+            this.panelUbahKategori.Paint += new System.Windows.Forms.PaintEventHandler(this.panelUbahKategori_Paint);
             // 
             // textBoxNama
             // 
@@ -62,6 +63,7 @@ namespace OnlineMart_Ndase
             this.textBoxNama.Name = "textBoxNama";
             this.textBoxNama.Size = new System.Drawing.Size(298, 31);
             this.textBoxNama.TabIndex = 3;
+            this.textBoxNama.TextChanged += new System.EventHandler(this.textBoxNama_TextChanged);
             // 
             // label6
             // 
@@ -72,6 +74,7 @@ namespace OnlineMart_Ndase
             this.label6.Size = new System.Drawing.Size(75, 24);
             this.label6.TabIndex = 2;
             this.label6.Text = "Nama :";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // textBoxID
             // 
@@ -81,6 +84,7 @@ namespace OnlineMart_Ndase
             this.textBoxID.Name = "textBoxID";
             this.textBoxID.Size = new System.Drawing.Size(148, 31);
             this.textBoxID.TabIndex = 1;
+            this.textBoxID.TextChanged += new System.EventHandler(this.textBoxID_TextChanged);
             // 
             // label2
             // 
@@ -91,6 +95,7 @@ namespace OnlineMart_Ndase
             this.label2.Size = new System.Drawing.Size(44, 24);
             this.label2.TabIndex = 0;
             this.label2.Text = "ID :";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // buttonUbah
             // 
@@ -118,6 +123,7 @@ namespace OnlineMart_Ndase
             this.label1.TabIndex = 0;
             this.label1.Text = "     Ubah Kategori";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // buttonKeluar
             // 

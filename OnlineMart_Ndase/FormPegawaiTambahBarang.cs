@@ -14,7 +14,6 @@ namespace OnlineMart_Ndase
     public partial class FormPegawaiTambahBarang : Form
     {
         public List<Kategori> listKategori = new List<Kategori>();
-        public List<Cabang> listCabang = new List<Cabang>();
 
         public FormPegawaiTambahBarang()
         {
@@ -43,7 +42,6 @@ namespace OnlineMart_Ndase
             textBoxNama.Clear();
             textBoxHarga.Clear();
             comboBoxKategori.Text = "";
-            comboBoxCabang.Text = "";
             textBoxNama.Focus();
         }
 
@@ -58,13 +56,9 @@ namespace OnlineMart_Ndase
         private void FormPegawaiTambahBarang_Load(object sender, EventArgs e)
         {
             listKategori = Kategori.ReadData("", "");
-            listCabang = Cabang.ReadData("", "");
 
             comboBoxKategori.DataSource = listKategori;
             comboBoxKategori.DisplayMember = "nama";
-
-            comboBoxCabang.DataSource = listCabang;
-            comboBoxCabang.DisplayMember = "nama";
         }
     }
 }

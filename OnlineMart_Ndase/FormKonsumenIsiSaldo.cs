@@ -32,10 +32,17 @@ namespace OnlineMart_Ndase
             {
                 float nominal = float.Parse(textBoxNominal.Text);
 
-                if (Konsumen.UpdateSaldo(nominal, formUtama.ko))
+                if (Konsumen.UpdateSaldo("isi saldo", formUtama.ko.Id, nominal))
+                {
+                    formUtama.ko.Saldo += nominal;
                     MessageBox.Show("Isi saldo berhasil.");
+                }
                 else
-                    throw new ArgumentException("Isi saldo gagal.");
+                { 
+                    throw new ArgumentException("Isi saldo gagal."); 
+                }
+
+                FormKonsumenIsiSaldo_Load(sender, e);
             }
             catch (Exception ex)
             {

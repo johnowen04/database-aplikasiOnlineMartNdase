@@ -19,6 +19,15 @@ namespace OnlineMart_LIB
         #endregion
 
         #region CONSTRUCTORS
+        public Kurir()
+        {
+            Id = 0;
+            Nama = "";
+            Email = "";
+            Username = "";
+            Password = "";
+            Telepon = "";
+        }
 
         public Kurir(int id, string nama, string email, string username, string password, string telepon)
         {

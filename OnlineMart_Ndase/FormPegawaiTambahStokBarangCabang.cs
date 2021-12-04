@@ -33,12 +33,16 @@ namespace OnlineMart_Ndase
                 int stok = int.Parse(textBoxTambahStok.Text);
 
                 StokBarang sb = form.cabang.ListStokBarang.Find(stokBarang => stokBarang.Barang.Id.ToString() == textBoxID.Text);
-                sb.Stok += stok;
-
-                if (StokBarang.UpdateStok(sb))
+ 
+                if (StokBarang.UpdateStok("pembelian", new StokBarang(sb.Cabang, sb.Barang, stok)))
+                {
+                    sb.Stok += stok;
                     MessageBox.Show("Stok barang " + sb.Barang.Nama + " berhasil ditambahkan.", "Informasi");
+                }
                 else
+                {
                     MessageBox.Show("Terjadi kesalahan saat menambahkan stok.");
+                }
             }
             catch (Exception ex)
             {

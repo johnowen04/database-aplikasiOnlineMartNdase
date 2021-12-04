@@ -264,6 +264,12 @@
     <Compile Include="FormPegawaiUbahKategori.Designer.cs">
       <DependentUpon>FormPegawaiUbahKategori.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormPegawaiUbahMetodePembayaran.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPegawaiUbahMetodePembayaran.Designer.cs">
+      <DependentUpon>FormPegawaiUbahMetodePembayaran.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormUtama.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -376,6 +382,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormPegawaiUbahKategori.resx">
       <DependentUpon>FormPegawaiUbahKategori.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPegawaiUbahMetodePembayaran.resx">
+      <DependentUpon>FormPegawaiUbahMetodePembayaran.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormUtama.resx">
       <DependentUpon>FormUtama.cs</DependentUpon>

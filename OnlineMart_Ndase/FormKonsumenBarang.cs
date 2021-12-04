@@ -84,7 +84,7 @@ namespace OnlineMart_Ndase
         {
             formUtama = (FormUtama)this.MdiParent;
             FormatDataGrid();
-            listCabang = Cabang.ReadData("", "");
+            listCabang = Cabang.ReadData("c.id", formUtama.cabang.Id.ToString());
             TampilDataGrid();
         }
 
@@ -99,19 +99,14 @@ namespace OnlineMart_Ndase
 
                 if (e.ColumnIndex == dataGridViewBarang.Columns["btnKeranjangGrid"].Index && e.RowIndex >= 0)
                 {
-                    Boolean confirmation = false;
+                    StokBarang stokBarangDipilih = formUtama.cabang.ListStokBarang.Find(stokBarang => stokBarang.Barang.Nama == pNamaBarang);
 
-                    Cabang cabangDipilih = listCabang.Find(cabang => cabang.Nama == pCabang);
-                    StokBarang stokBarangDipilih = cabangDipilih.ListStokBarang.Find(stokBarang => stokBarang.Barang.Nama == pNamaBarang);
-
-                    KeranjangBarang keranjangBarang = new KeranjangBarang(formUtama.ko, cabangDipilih, stokBarangDipilih.Barang, 1);
+                    KeranjangBarang keranjangBarang = new KeranjangBarang(formUtama.ko, stokBarangDipilih.Barang, 1);
 
                     if (formUtama.ko.CheckDuplicate(keranjangBarang))
                     {
-                        keranjangBarang = formUtama.ko.ListKeranjangBarang.Find(kb => kb.Cabang.Nama == keranjangBarang.Cabang.Nama && kb.Barang.Nama == keranjangBarang.Barang.Nama);
+                        keranjangBarang = formUtama.ko.ListKeranjangBarang.Find(kb => kb.Barang.Nama == keranjangBarang.Barang.Nama);
                         keranjangBarang.Quantity += 1;
-
-                        confirmation = KeranjangBarang.UpdateQuantity(keranjangBarang);
 
                         //MessageBox.Show("Quantity barang berhasil ditambahkan nama barang:"
                         //            + stokBarangDipilih.Barang.Nama
@@ -120,16 +115,12 @@ namespace OnlineMart_Ndase
                     else
                     {
                         formUtama.ko.TambahBarangKeKeranjang(keranjangBarang);
-                        confirmation = KeranjangBarang.CreateData(keranjangBarang);
-                            
+
                         //MessageBox.Show("Barang dimasukkan ke keranjang nama barang:"
                         //            + stokBarangDipilih.Barang.Nama);
                     }
-
-                    if (confirmation)
-                        MessageBox.Show("Barang telah dimasukkan ke keranjang.", "Informasi");
-                    else
-                        MessageBox.Show("Terjadi kesalahan saat memasukkan barang ke keranjang.", "Kesalahan");
+                    
+                    MessageBox.Show("Barang telah dimasukkan ke keranjang.", "Informasi");
                 }
             }
             catch (Exception ex)

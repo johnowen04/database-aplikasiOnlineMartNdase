@@ -50,11 +50,17 @@ namespace OnlineMart_LIB
 
             return false;
         }
-
-        public static Boolean UpdateStok(StokBarang sb)
+       
+        public static Boolean UpdateStok(string jenisTransaksi, StokBarang sb)
         {
-            string sql = "update cabangs_barangs set stok=" + sb.Stok 
-                + " where cabangs_id='" + sb.Cabang.Id + "' and barangs_id='" + sb.Barang.Id + "'";
+            string sql = "update cabangs_barangs set stok=";
+
+            if (jenisTransaksi == "pembelian")
+                sql += "stok+" + sb.Stok;
+            else if (jenisTransaksi == "penjualan")
+                sql += "stok-" + sb.Stok;
+
+            sql += " where cabangs_id=" + sb.Cabang.Id + " and barangs_id=" + sb.Barang.Id + "";
 
             return Koneksi.JalankanPerintahDML(sql) != 0;
         }

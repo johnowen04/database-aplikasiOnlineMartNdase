@@ -53,6 +53,8 @@ namespace OnlineMart_Ndase
             this.penjualanBarangToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.penjualanOMASaldoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.keluarSistemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.labelTextCabang = new System.Windows.Forms.Label();
+            this.labelCabang = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -88,21 +90,21 @@ namespace OnlineMart_Ndase
             // barangToolStripMenuItem1
             // 
             this.barangToolStripMenuItem1.Name = "barangToolStripMenuItem1";
-            this.barangToolStripMenuItem1.Size = new System.Drawing.Size(270, 34);
+            this.barangToolStripMenuItem1.Size = new System.Drawing.Size(201, 34);
             this.barangToolStripMenuItem1.Text = "Barang";
             this.barangToolStripMenuItem1.Click += new System.EventHandler(this.barangToolStripMenuItem1_Click);
             // 
             // dealsToolStripMenuItem1
             // 
             this.dealsToolStripMenuItem1.Name = "dealsToolStripMenuItem1";
-            this.dealsToolStripMenuItem1.Size = new System.Drawing.Size(270, 34);
+            this.dealsToolStripMenuItem1.Size = new System.Drawing.Size(201, 34);
             this.dealsToolStripMenuItem1.Text = "Deals";
             this.dealsToolStripMenuItem1.Click += new System.EventHandler(this.dealsToolStripMenuItem1_Click);
             // 
             // keranjangToolStripMenuItem1
             // 
             this.keranjangToolStripMenuItem1.Name = "keranjangToolStripMenuItem1";
-            this.keranjangToolStripMenuItem1.Size = new System.Drawing.Size(270, 34);
+            this.keranjangToolStripMenuItem1.Size = new System.Drawing.Size(201, 34);
             this.keranjangToolStripMenuItem1.Text = "Keranjang";
             this.keranjangToolStripMenuItem1.Click += new System.EventHandler(this.keranjangToolStripMenuItem1_Click);
             // 
@@ -257,11 +259,35 @@ namespace OnlineMart_Ndase
             this.keluarSistemToolStripMenuItem.Text = "Keluar Sistem";
             this.keluarSistemToolStripMenuItem.Click += new System.EventHandler(this.keluarSistemToolStripMenuItem_Click);
             // 
+            // labelTextCabang
+            // 
+            this.labelTextCabang.AutoSize = true;
+            this.labelTextCabang.Location = new System.Drawing.Point(958, 6);
+            this.labelTextCabang.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelTextCabang.Name = "labelTextCabang";
+            this.labelTextCabang.Size = new System.Drawing.Size(73, 20);
+            this.labelTextCabang.TabIndex = 13;
+            this.labelTextCabang.Text = "Cabang :";
+            this.labelTextCabang.Visible = false;
+            // 
+            // labelCabang
+            // 
+            this.labelCabang.AutoSize = true;
+            this.labelCabang.Location = new System.Drawing.Point(1032, 6);
+            this.labelCabang.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelCabang.Name = "labelCabang";
+            this.labelCabang.Size = new System.Drawing.Size(111, 20);
+            this.labelCabang.TabIndex = 14;
+            this.labelCabang.Text = "Nama Cabang";
+            this.labelCabang.Visible = false;
+            // 
             // FormUtama
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1200, 692);
+            this.Controls.Add(this.labelCabang);
+            this.Controls.Add(this.labelTextCabang);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -300,5 +326,7 @@ namespace OnlineMart_Ndase
         private System.Windows.Forms.ToolStripMenuItem penjualanBarangToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem penjualanOMASaldoToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem keluarSistemToolStripMenuItem;
+        public System.Windows.Forms.Label labelCabang;
+        public System.Windows.Forms.Label labelTextCabang;
     }
 }

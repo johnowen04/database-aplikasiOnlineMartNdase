@@ -55,7 +55,7 @@ namespace OnlineMart_Ndase
                 foreach (KeranjangBarang kb in formUtama.ko.ListKeranjangBarang)
                 {
                     dataGridViewKeranjang.Rows.Add(kb.Barang.Nama, kb.Barang.Harga,
-                        kb.Barang.Kategori.Nama, kb.Cabang.Nama, kb.Quantity);
+                        kb.Barang.Kategori.Nama, formUtama.cabang.Nama, kb.Quantity);
                 }
             }
             else
@@ -85,6 +85,9 @@ namespace OnlineMart_Ndase
             {
                 FormKonsumenCheckout formKonsumenCheckout = new FormKonsumenCheckout();
                 formKonsumenCheckout.Owner = this;
+                //formKonsumenCheckout.labelKodePromo.Visible = false;
+                //formKonsumenCheckout.labelKodePromo.Enabled = false;
+                formKonsumenCheckout.buttonBayar.Enabled = false;
                 formKonsumenCheckout.ShowDialog();
             }
             else

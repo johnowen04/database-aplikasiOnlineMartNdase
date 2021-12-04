@@ -73,11 +73,12 @@ namespace OnlineMart_LIB
         #region METHODS
         public Boolean CheckDuplicate(KeranjangBarang kb)
         {
-            if (ListKeranjangBarang.Find(keranjangBarang => keranjangBarang.Cabang.Nama == kb.Cabang.Nama && keranjangBarang.Barang.Nama == kb.Barang.Nama) != null)
+            if (ListKeranjangBarang.Find(keranjangBarang => keranjangBarang.Barang.Nama == kb.Barang.Nama) != null)
                 return true;
 
             return false;
         }
+
         public static Konsumen CekLogin(string email, string password)
         {
             string sql;
@@ -132,17 +133,17 @@ namespace OnlineMart_LIB
                     hasil.GetString(2), hasil.GetString(3), hasil.GetString(4),
                     hasil.GetFloat(5), hasil.GetInt32(6));
 
-                string sqlKeranjangBarang = "select cabangs_id, barangs_id, quantity from keranjangs_barangs where pelanggans_id='" + hasil.GetInt32(0) + "'";
+                //string sqlKeranjangBarang = "select cabangs_id, barangs_id, quantity from keranjangs_barangs where pelanggans_id='" + hasil.GetInt32(0) + "'";
 
-                MySqlDataReader hasilQueryKeranjang = Koneksi.JalankanPerintahQuery(sqlKeranjangBarang);
-                while (hasilQueryKeranjang.Read())
-                {
-                    List<Cabang> listCabang = Cabang.ReadData("c.id", hasilQueryKeranjang.GetInt32(0).ToString());
-                    List<Barang> listBarang = Barang.ReadData("b.id", hasilQueryKeranjang.GetInt32(1).ToString());
-                    int quantity = hasilQueryKeranjang.GetInt32(2);
+                //MySqlDataReader hasilQueryKeranjang = Koneksi.JalankanPerintahQuery(sqlKeranjangBarang);
+                //while (hasilQueryKeranjang.Read())
+                //{
+                //    List<Cabang> listCabang = Cabang.ReadData("c.id", hasilQueryKeranjang.GetInt32(0).ToString());
+                //    List<Barang> listBarang = Barang.ReadData("b.id", hasilQueryKeranjang.GetInt32(1).ToString());
+                //    int quantity = hasilQueryKeranjang.GetInt32(2);
 
-                    k.TambahBarangKeKeranjang(listCabang[0], listBarang[0], quantity);
-                }
+                //    k.TambahBarangKeKeranjang(listCabang[0], listBarang[0], quantity);
+                //}
 
                 listKonsumen.Add(k);
             }
@@ -157,22 +158,28 @@ namespace OnlineMart_LIB
             return Koneksi.JalankanPerintahDML(sql) != 0;
         }
 
-        public static Boolean UpdateSaldo(float jumlahSaldo, Konsumen k)
+        public static Boolean UpdateSaldo(string jenisTransaksi, int id, float jumlah)
         {
-            string sql = "update pelanggans set saldo=saldo+" + jumlahSaldo +
-                "where id=" + k.Id;
+            string sql = "update pelanggans set saldo=";
+            
+            if (jenisTransaksi == "isi saldo")
+                sql += "saldo+" + jumlah;
+            else if (jenisTransaksi == "transaksi")
+                sql += "saldo-" + jumlah;
+
+            sql += " where id=" + id;
 
             if (Koneksi.JalankanPerintahDML(sql) != 0)
-                return RiwayatIsiSaldo.CreateData(new RiwayatIsiSaldo(DateTime.Now, jumlahSaldo, k));
-            
+                return RiwayatIsiSaldo.CreateData(new RiwayatIsiSaldo(DateTime.Now, jumlah, new Konsumen() { Id = id }));
+
             return false;
         }
 
         public void TambahBarangKeKeranjang(KeranjangBarang kb) => ListKeranjangBarang.Add(kb);
 
-        public void TambahBarangKeKeranjang(Cabang cabang, Barang barang, int quantity)
+        public void TambahBarangKeKeranjang(Barang barang, int quantity)
         {
-            ListKeranjangBarang.Add(new KeranjangBarang(this, cabang, barang, quantity));
+            ListKeranjangBarang.Add(new KeranjangBarang(this, barang, quantity));
         }
         #endregion
     }

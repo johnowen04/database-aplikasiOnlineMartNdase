@@ -42,8 +42,8 @@ namespace OnlineMart_LIB
         #region METHODS
         public static Boolean CreateData(Promo p)
         {
-            string sql = "insert into promos (tipe, nama, diskon, diskon_max, minimal_belanja) " +
-                "values ('" + p.Tipe.Replace("'", "\\'") + "','" + p.Nama.Replace("'", "\\'") + "'," + p.Diskon+ "," + p.MaxDiskon + "," + p.MinBelanja + ")";
+            string sql = "insert into promos (id, tipe, nama, diskon, diskon_max, minimal_belanja) " +
+                "values (" + p.Id + ", '" + p.Tipe.Replace("'", "\\'") + "','" + p.Nama.Replace("'", "\\'") + "'," + p.Diskon+ "," + p.MaxDiskon + "," + p.MinBelanja + ")";
 
             int jumlahDataBerubah = Koneksi.JalankanPerintahDML(sql);
 
@@ -105,6 +105,25 @@ namespace OnlineMart_LIB
                 return false;
             else
                 return true;
+        }
+
+        public static Promo CekPromo(int id)
+        {
+            string sql;
+            sql = "select id, tipe, nama, diskon, diskon_max, minimal_belanja from promos " +
+                    " where id=" + id;
+
+            MySqlDataReader hasil = Koneksi.JalankanPerintahQuery(sql);
+
+            while (hasil.Read() == true)
+            {
+                Promo p = new Promo(int.Parse(hasil.GetString(0)), hasil.GetString(1), hasil.GetString(2),
+                    int.Parse(hasil.GetString(3)), int.Parse(hasil.GetString(4)), float.Parse(hasil.GetString(5)));
+
+                return p;
+            }
+
+            return null;
         }
         #endregion
     }

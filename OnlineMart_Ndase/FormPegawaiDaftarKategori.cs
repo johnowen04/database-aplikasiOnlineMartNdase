@@ -96,6 +96,7 @@ namespace OnlineMart_Ndase
                 form.textBoxID.Text = pId;
                 form.textBoxNama.Text = pNama;
                 form.ShowDialog();
+                FormPegawaiDaftarKategori_Load(sender, e);
             }
         }
 
