@@ -199,6 +199,7 @@ namespace OnlineMart_Ndase
             if (form == null)
             {
                 FormKonsumenIsiSaldo formKonsumenIsiSaldo = new FormKonsumenIsiSaldo();
+                formKonsumenIsiSaldo.labelSaldoSekarang.Text = ko.Saldo.ToString();
                 formKonsumenIsiSaldo.MdiParent = this;
                 formKonsumenIsiSaldo.Show();
             }

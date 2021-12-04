@@ -47,14 +47,11 @@ namespace OnlineMart_LIB
                 b.Nama.Replace("'", "\\'") + "','" + b.Harga + "','" + b.Kategori.Id + "')";
 
             int jumlahDataBerubah = Koneksi.JalankanPerintahDML(sql);
+
             if (jumlahDataBerubah == 0)
-            {
                 return false;
-            }
             else
-            {
                 return true;
-            }
         }
 
         public static List<Barang> ReadData(string kriteria, string nilaiKriteria)
@@ -94,14 +91,11 @@ namespace OnlineMart_LIB
 
             int jumlahDataBerubah = Koneksi.JalankanPerintahDML(sql);
 
+
             if (jumlahDataBerubah == 0)
-            {
                 return false;
-            }
             else
-            {
                 return true;
-            }
         }
 
         public static Boolean DeleteData(string id)
@@ -109,14 +103,11 @@ namespace OnlineMart_LIB
             string sql = "delete from barangs where id='" + id + "'";
 
             int jumlahDataBerubah = Koneksi.JalankanPerintahDML(sql);
+
             if (jumlahDataBerubah == 0)
-            {
                 return false;
-            }
             else
-            {
                 return true;
-            }
         }
         #endregion
     }

@@ -71,7 +71,7 @@ namespace OnlineMart_Ndase
             this.labelSaldoSekarang.AutoSize = true;
             this.labelSaldoSekarang.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelSaldoSekarang.ForeColor = System.Drawing.Color.OrangeRed;
-            this.labelSaldoSekarang.Location = new System.Drawing.Point(139, 19);
+            this.labelSaldoSekarang.Location = new System.Drawing.Point(139, 21);
             this.labelSaldoSekarang.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelSaldoSekarang.Name = "labelSaldoSekarang";
             this.labelSaldoSekarang.Size = new System.Drawing.Size(58, 19);
@@ -80,7 +80,7 @@ namespace OnlineMart_Ndase
             // 
             // textBoxNominal
             // 
-            this.textBoxNominal.Location = new System.Drawing.Point(143, 54);
+            this.textBoxNominal.Location = new System.Drawing.Point(143, 53);
             this.textBoxNominal.Name = "textBoxNominal";
             this.textBoxNominal.Size = new System.Drawing.Size(200, 23);
             this.textBoxNominal.TabIndex = 20;
@@ -89,7 +89,7 @@ namespace OnlineMart_Ndase
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(29, 23);
+            this.label1.Location = new System.Drawing.Point(29, 22);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(109, 17);
@@ -165,7 +165,7 @@ namespace OnlineMart_Ndase
             this.Controls.Add(this.buttonIsi);
             this.Controls.Add(this.buttonKeluar);
             this.Controls.Add(this.label7);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormKonsumenIsiSaldo";
             this.Text = "Isi Saldo";
             this.Load += new System.EventHandler(this.FormKonsumenIsiSaldo_Load);
@@ -184,8 +184,8 @@ namespace OnlineMart_Ndase
         private System.Windows.Forms.Button buttonIsi;
         private System.Windows.Forms.Button buttonKeluar;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label labelSaldoSekarang;
         private System.Windows.Forms.TextBox textBoxNominal;
         private System.Windows.Forms.ComboBox comboBoxKategori;
+        public System.Windows.Forms.Label labelSaldoSekarang;
     }
 }

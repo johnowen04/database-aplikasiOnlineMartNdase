@@ -93,6 +93,7 @@ namespace OnlineMart_LIB
                 return true;
             }
         }
+
         public static Boolean UpdateData(Konsumen k)
         {
             string sql = "update pelanggans set nama='" + k.Nama.Replace("'", "\\'") + "', email='" + k.Email + "', telepon='" + 

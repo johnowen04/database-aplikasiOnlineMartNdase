@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using OnlineMart_LIB;
 
 namespace OnlineMart_Ndase
 {
     public partial class FormKonsumenIsiSaldo : Form
     {
+        FormUtama formUtama;
         public FormKonsumenIsiSaldo()
         {
             InitializeComponent();
@@ -19,12 +21,32 @@ namespace OnlineMart_Ndase
 
         private void FormKonsumenIsiSaldo_Load(object sender, EventArgs e)
         {
-            // Select data from DB
+            formUtama = (FormUtama)this.MdiParent;
+            labelSaldoSekarang.Text = formUtama.ko.Saldo.ToString();
         }
 
         private void buttonIsi_Click(object sender, EventArgs e)
         {
-            // Add data to DB
+            try
+            {
+                RiwayatIsiSaldo ris = new RiwayatIsiSaldo(DateTime.Now, int.Parse(textBoxNominal.Text), formUtama.ko);
+
+                Boolean hasil = RiwayatIsiSaldo.CreateData(ris);
+
+                if (hasil)
+                {
+                    MessageBox.Show("Isi saldo berhasil.");
+                    formUtama.ko.Saldo += ris.Saldo;
+                }
+                else
+                {
+                    MessageBox.Show("Isi saldo gagal.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Terjadi kesalahan. Pesan kesalahan: " + ex.Message, "Kesalahan");
+            }
         }
 
         private void buttonKeluar_Click(object sender, EventArgs e)

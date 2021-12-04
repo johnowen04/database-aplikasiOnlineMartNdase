@@ -207,9 +207,10 @@ namespace OnlineMart_Ndase
             this.Controls.Add(this.buttonTambah);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonKeluar);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormPegawaiTambahPromo";
             this.Text = "Tambah Promo";
+            this.Load += new System.EventHandler(this.FormPegawaiTambahPromo_Load);
             this.panelTambahPromo.ResumeLayout(false);
             this.panelTambahPromo.PerformLayout();
             this.ResumeLayout(false);

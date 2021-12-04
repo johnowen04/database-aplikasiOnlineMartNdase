@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using OnlineMart_LIB;
 
 namespace OnlineMart_Ndase
 {
@@ -17,9 +18,28 @@ namespace OnlineMart_Ndase
             InitializeComponent();
         }
 
+        private void FormPegawaiTambahPromo_Load(object sender, EventArgs e)
+        {
+
+        }
+
         private void buttonTambah_Click(object sender, EventArgs e)
         {
-            // Add data to DB
+            try
+            {
+                Promo p = new Promo(textBoxTipe.Text, textBoxNama.Text, int.Parse(textBoxDiskon.Text), int.Parse(textBoxMaksimalDiskon.Text), float.Parse(textBoxMinimalPembelian.Text));
+
+                Boolean hasil = Promo.CreateData(p);
+
+                if (hasil)
+                    MessageBox.Show("Data Promo telah tersimpan", "Informasi");
+                else
+                    MessageBox.Show("Penyimpanan data gagal.", "Informasi");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Terjadi kesalahan. Pesan kesalahan: " + ex.Message, "Kesalahan");
+            }
         }
 
         private void buttonBersihkan_Click(object sender, EventArgs e)

@@ -135,7 +135,7 @@ namespace OnlineMart_Ndase
             this.Controls.Add(this.buttonTambah);
             this.Controls.Add(this.buttonKeluar);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormPegawaiDaftarPromo";
             this.Text = "Daftar Promo";
             this.Load += new System.EventHandler(this.FormPegawaiDaftarPromo_Load);

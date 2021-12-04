@@ -19,6 +19,7 @@ namespace OnlineMart_LIB
         #endregion
 
         #region CONSTRUCTORS
+
         public Kurir(int id, string nama, string email, string username, string password, string telepon)
         {
             Id = id;
@@ -28,6 +29,7 @@ namespace OnlineMart_LIB
             Password = password;
             Telepon = telepon;
         }
+
         public Kurir(string nama, string email, string username, string password, string telepon)
         {
             Nama = nama;
@@ -61,7 +63,7 @@ namespace OnlineMart_LIB
             while (hasil.Read() == true)
             {
                 Kurir k = new Kurir(int.Parse(hasil.GetValue(0).ToString()), hasil.GetValue(1).ToString(),
-                    hasil.GetValue(2).ToString(), hasil.GetValue(3).ToString(), hasil.GetValue(4).ToString(), 
+                    hasil.GetValue(2).ToString(), hasil.GetValue(3).ToString(), hasil.GetValue(4).ToString(),
                     hasil.GetValue(5).ToString());
 
                 return k;

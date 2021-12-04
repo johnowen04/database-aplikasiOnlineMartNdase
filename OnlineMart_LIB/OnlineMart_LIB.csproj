@@ -45,12 +45,16 @@
   <ItemGroup>
     <Compile Include="Barang.cs" />
     <Compile Include="Cabang.cs" />
+    <Compile Include="Hadiah.cs" />
     <Compile Include="Kategori.cs" />
     <Compile Include="Koneksi.cs" />
     <Compile Include="Konsumen.cs" />
     <Compile Include="Kurir.cs" />
+    <Compile Include="Pengiriman.cs" />
+    <Compile Include="Promo.cs" />
     <Compile Include="Pegawai.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RiwayatIsiSaldo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
