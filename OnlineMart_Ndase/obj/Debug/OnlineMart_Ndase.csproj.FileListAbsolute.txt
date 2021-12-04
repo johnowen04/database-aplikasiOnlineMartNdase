@@ -156,7 +156,6 @@ K:\.lain\.c#\database\proj\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMar
 K:\.lain\.c#\database\proj\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormKonsumenBarang.resources
 K:\.lain\.c#\database\proj\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormKonsumenCetakNota.resources
 K:\.lain\.c#\database\proj\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormKonsumenCheckout.resources
-K:\.lain\.c#\database\proj\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormKonsumenDeals.resources
 K:\.lain\.c#\database\proj\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormKonsumenKeranjang.resources
 K:\.lain\.c#\database\proj\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormKonsumenKodePromo.resources
 K:\.lain\.c#\database\proj\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormPegawaiUbahBarang.resources
@@ -347,3 +346,5 @@ C:\Users\Mariana Junita\Downloads\OnlineMart_Ndase (2)\OnlineMart_Ndase\OnlineMa
 C:\Users\Mariana Junita\Downloads\OnlineMart_Ndase (2)\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.pdb
 C:\Users\Mariana Junita\Downloads\OnlineMart_Ndase (2)\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormPegawaiUbahPromo.resources
 C:\Users\Mariana Junita\Downloads\OnlineMart_Ndase (2)\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormPegawaiUbahHadiah.resources
+K:\.lain\.c#\database\proj\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormPegawaiUbahPromo.resources
+K:\.lain\.c#\database\proj\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormPegawaiUbahHadiah.resources
