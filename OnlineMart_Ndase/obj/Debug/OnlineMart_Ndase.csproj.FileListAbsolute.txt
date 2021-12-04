@@ -12,3 +12,15 @@ C:\Users\Mariana Junita\OneDrive\Documents\KULIAH TEKNIK INFORMATIKA\Semester 3\
 C:\Users\Mariana Junita\OneDrive\Documents\KULIAH TEKNIK INFORMATIKA\Semester 3\Database\Tugas\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormUtamaKonsumen.resources
 C:\Users\Mariana Junita\OneDrive\Documents\KULIAH TEKNIK INFORMATIKA\Semester 3\Database\Tugas\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormUtamaKurir.resources
 C:\Users\Mariana Junita\OneDrive\Documents\KULIAH TEKNIK INFORMATIKA\Semester 3\Database\Tugas\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormUtamaPegawai.resources
+K:\.lain\.c#\database\proj\OnlineMart_Ndase\OnlineMart_Ndase\bin\Debug\OnlineMart_Ndase.exe.config
+K:\.lain\.c#\database\proj\OnlineMart_Ndase\OnlineMart_Ndase\bin\Debug\OnlineMart_Ndase.exe
+K:\.lain\.c#\database\proj\OnlineMart_Ndase\OnlineMart_Ndase\bin\Debug\OnlineMart_Ndase.pdb
+K:\.lain\.c#\database\proj\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.csprojAssemblyReference.cache
+K:\.lain\.c#\database\proj\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormDaftar.resources
+K:\.lain\.c#\database\proj\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormMasuk.resources
+K:\.lain\.c#\database\proj\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.Properties.Resources.resources
+K:\.lain\.c#\database\proj\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.csproj.GenerateResource.cache
+K:\.lain\.c#\database\proj\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.csproj.CoreCompileInputs.cache
+K:\.lain\.c#\database\proj\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.exe
+K:\.lain\.c#\database\proj\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.pdb
+K:\.lain\.c#\database\proj\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormUtama.resources

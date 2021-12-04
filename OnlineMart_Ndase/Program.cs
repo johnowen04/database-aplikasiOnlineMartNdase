@@ -16,7 +16,7 @@ namespace OnlineMart_Ndase
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormMasuk());
+            Application.Run(new FormUtama());
         }
     }
 }

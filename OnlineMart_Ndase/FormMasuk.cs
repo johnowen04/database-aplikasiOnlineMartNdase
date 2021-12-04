@@ -12,82 +12,66 @@ namespace OnlineMart_Ndase
 {
     public partial class FormMasuk : Form
     {
-        FormDaftar formDaftar;
-        string email, username, password;
-
         public FormMasuk()
         {
             InitializeComponent();
         }
 
-        private void FormMasuk_Load(object sender, EventArgs e)
+        public void FormMasuk_Load(object sender, EventArgs e)
         {
-            radioButtonKonsumen.Checked = true;
-            radioButtonKurir.Checked = false;
-            radioButtonPegawai.Checked = false;
-            panelKonsumen.Visible = true;
-            panelKurirPegawai.Visible = false;
-            panelKonsumen.Enabled = true;
-            panelKurirPegawai.Enabled = false;
-            textBoxEmailKonsumen.Focus();
+            this.Show();
         }
 
         private void radioButtonKonsumen_CheckedChanged(object sender, EventArgs e)
         {
-            panelKonsumen.Visible = true;
-            panelKonsumen.Enabled = true;
-            panelKurirPegawai.Visible = false;
-            panelKurirPegawai.Enabled = false;
-            textBoxEmailKonsumen.Focus();
+            labelLoginInfo.Text = "Email :";
+            textBoxPassword.MaxLength = 8;
         }
 
         private void radioButtonKurir_CheckedChanged(object sender, EventArgs e)
         {
-            panelKonsumen.Visible = false;
-            panelKonsumen.Enabled = false;
-            panelKurirPegawai.Visible = true;
-            panelKurirPegawai.Enabled = true;
-            textBoxUsernameKurirPegawai.Focus();
+            labelLoginInfo.Text = "Username :";
         }
 
         private void radioButtonPegawai_CheckedChanged(object sender, EventArgs e)
         {
-            panelKonsumen.Visible = false;
-            panelKonsumen.Enabled = false;
-            panelKurirPegawai.Visible = true;
-            panelKurirPegawai.Enabled = true;
-            textBoxUsernameKurirPegawai.Focus();
+            labelLoginInfo.Text = "Username :";
         }
 
         private void buttonMasuk_Click(object sender, EventArgs e)
         {
-            //if (radioButtonKonsumen.Checked)
-            //{
-            //    email = textBoxEmailKonsumen.Text;
+            try
+            {
+                FormUtama formUtama = (FormUtama)this.MdiParent;
 
-            //    FormUtamaKonsumen formUtamaKonsumen = new FormUtamaKonsumen();
-            //    formUtamaKonsumen.Owner = this;
-            //    formUtamaKonsumen.ShowDialog();
-            //}
-            //else if (radioButtonKurir.Checked)
-            //{
-            //    FormUtamaKurir formUtamaKurir = new FormUtamaKurir();
-            //    formUtamaKurir.Owner = this;
-            //    formUtamaKurir.ShowDialog();
-            //}
+                if (radioButtonKonsumen.Checked)
+                {
+                    // Konsumen
+                    formUtama.menuStripKonsumen.Visible = true;
+                }
+                else if (radioButtonKurir.Checked)
+                {
+                    // Kurir
+                    formUtama.menuStripKurir.Visible = true;
+                }
+                else
+                {
+                    // Pegawai
+                    formUtama.menuStripPegawai.Visible = true;
+                }
 
-            //else
-            //{
-            //    FormUtamaPegawai formUtamaPegawai = new FormUtamaPegawai();
-            //    formUtamaPegawai.Owner = this;
-            //    formUtamaPegawai.ShowDialog();
-            //}
-
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Login gagal. Pesan error: " + ex.Message, "Info");
+            }
         }
 
         private void linkLabelDaftar_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             FormDaftar formDaftar = new FormDaftar();
+            formDaftar.Owner = this;
             formDaftar.Show();
             this.Hide();
         }
