@@ -48,6 +48,7 @@
     <Compile Include="BarangOrder.cs" />
     <Compile Include="Cabang.cs" />
     <Compile Include="Cetak.cs" />
+    <Compile Include="Chat.cs" />
     <Compile Include="Hadiah.cs" />
     <Compile Include="Kategori.cs" />
     <Compile Include="KeranjangBarang.cs" />

@@ -1,17 +1,16 @@
 
-Ndase OMA Onlen Mart
-Jl. Karangpilang
-No. Order = 20211112001
-Tanggal = 12/11/2021 09:54:54
-Pembeli = test - 0
+OMA Bandung
+Jl. Siliwangi
+No. Order = 20211113003
+Tanggal = 9/13/2021 10:14:39 AM
+Pembeli = Ayam - 6
 No. Telepon = 81263172381
-Kurir = John
+Kurir = Cella
 --------------------------------------------------
 Nama Barang               Jumlah   Harga  Sub Total 
-Handphone                   7 3.500.000 24.500.000 
-Ayam Goreng                10  15.000    150.000 
+Handphone                   1 3,500,000  3,500,000 
 --------------------------------------------------
-Total = 24.650.000
+Total = 3,500,000 
 --------------------------------------------------
-JANGAN KEMBALI BELANJA AJA DI SOPI
+TERIMA KASIH
 ==================================================

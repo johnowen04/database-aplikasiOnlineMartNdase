@@ -31,12 +31,12 @@ namespace OnlineMart_Ndase
             {
                 Order.CetakDaftarOrder("o.id", noOrder, "daftarnota.txt", new Font("Courier New", 10));
 
-                MessageBox.Show("Nota berhasil dicetak terserah wes kata-katanya");
+                MessageBox.Show("Nota berhasil dicetak.");
             }
 
             catch (Exception ex)
             {
-                MessageBox.Show("Cetak Nota gagal MAKA E BELI PRINTER SENG MAHAL DASAR KISMIN. \nPesan kesalahan : " + ex.Message);
+                MessageBox.Show("Cetak Nota gagal. \nPesan kesalahan : " + ex.Message);
             }
         }
 

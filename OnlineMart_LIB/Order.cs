@@ -152,7 +152,7 @@ namespace OnlineMart_LIB
             string sql;
             if (kriteria == "")
             {
-                sql = "select o.id, o.tanggal_waktu, o.alamat_tujuan, o.ongkos_kirim, o.total_bayar, c.nama, d.nama, pe.id, pe.nama, pe.telepon, p.id, p.nama, o.status, mp.nama " +
+                sql = "select o.id, o.tanggal_waktu, o.alamat_tujuan, o.ongkos_kirim, o.total_bayar, c.nama, c.alamat, d.nama, pe.id, pe.nama, pe.telepon, p.id, p.nama, o.status, mp.nama " +
                     "from orders as o " +
                     "inner join cabangs as c on o.cabangs_id = c.id " +
                     "inner join drivers as d on o.drivers_id = d.id " +
@@ -162,7 +162,7 @@ namespace OnlineMart_LIB
             }
             else
             {
-                sql = "select o.id, o.tanggal_waktu, o.alamat_tujuan, o.ongkos_kirim, o.total_bayar, c.nama, d.nama, pe.id, pe.nama, pe.telepon, p.id, p.nama, o.status, mp.nama " +
+                sql = "select o.id, o.tanggal_waktu, o.alamat_tujuan, o.ongkos_kirim, o.total_bayar, c.nama, c.alamat, d.nama, pe.id, pe.nama, pe.telepon, p.id, p.nama, o.status, mp.nama " +
                     "from orders as o " +
                     "inner join cabangs as c on o.cabangs_id = c.id " +
                     "inner join drivers as d on o.drivers_id = d.id " +
@@ -186,23 +186,24 @@ namespace OnlineMart_LIB
 
                 Cabang c = new Cabang();
                 c.Nama = hasil.GetString(5);
+                c.Alamat = hasil.GetString(6);
 
                 Kurir ku = new Kurir();
-                ku.Nama = hasil.GetString(6);
+                ku.Nama = hasil.GetString(7);
 
                 Konsumen ko = new Konsumen();
-                ko.Id = hasil.GetInt32(7);
-                ko.Nama = hasil.GetString(8);
-                ko.Telepon = hasil.GetString(9);
+                ko.Id = hasil.GetInt32(8);
+                ko.Nama = hasil.GetString(9);
+                ko.Telepon = hasil.GetString(10);
 
                 Promo p = new Promo();
-                p.Id = int.Parse(hasil.GetString(10));
-                p.Nama = hasil.GetString(11);
+                p.Id = int.Parse(hasil.GetString(11));
+                p.Nama = hasil.GetString(12);
 
-                o.Status = hasil.GetString(12);
+                o.Status = hasil.GetString(13);
 
                 MetodePembayaran mp = new MetodePembayaran();
-                mp.Nama = hasil.GetString(13);
+                mp.Nama = hasil.GetString(14);
 
                 o.Cabang = c;
                 o.Kurir = ku;
@@ -296,12 +297,12 @@ namespace OnlineMart_LIB
 
             file.WriteLine("");
 
-            file.WriteLine("Ndase OMA Onlen Mart"); //nama toko ter estetok
-
-            file.WriteLine("Jl. Karangpilang"); // alamat junjun
-
             foreach (Order o in listOrder)
             {
+                file.WriteLine(o.Cabang.Nama);
+
+                file.WriteLine(o.Cabang.Alamat);
+
                 file.WriteLine("No. Order = " + o.Id);
                 file.WriteLine("Tanggal = " + o.Tanggal_Waktu);
                 file.WriteLine("Pembeli = " + o.Konsumen.Nama + " - " + o.Konsumen.Id);
@@ -317,7 +318,6 @@ namespace OnlineMart_LIB
                 file.Write("Sub Total".PadLeft(10, ' ') + " ");
                 file.WriteLine("");
 
-                //TO JONO : KALO LILIANA ADA NOTA JUAL DETAIL KITA ADA APA.DARI CELLA KETON
                 foreach (BarangOrder bo in o.ListBarangOrder)
                 {
                     double subtotal = bo.Harga * bo.Jumlah;
@@ -337,7 +337,7 @@ namespace OnlineMart_LIB
                 file.WriteLine("-".PadRight(50, pemisah));
                 file.WriteLine("Total = " + total.ToString("#,###").PadRight(10, ' '));
                 file.WriteLine("-".PadRight(50, pemisah));
-                file.WriteLine("JANGAN KEMBALI BELANJA AJA DI SOPI");
+                file.WriteLine("TERIMA KASIH");
                 file.WriteLine("=".PadRight(50, '='));
             }
 
