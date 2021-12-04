@@ -43,7 +43,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Barang.cs" />
+    <Compile Include="Cabang.cs" />
+    <Compile Include="Kategori.cs" />
     <Compile Include="Koneksi.cs" />
+    <Compile Include="Konsumen.cs" />
+    <Compile Include="Kurir.cs" />
+    <Compile Include="Pegawai.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

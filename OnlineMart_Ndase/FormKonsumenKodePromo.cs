@@ -16,5 +16,10 @@ namespace OnlineMart_Ndase
         {
             InitializeComponent();
         }
+
+        private void buttonBatal_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

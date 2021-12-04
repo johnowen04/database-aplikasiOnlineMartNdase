@@ -174,18 +174,6 @@
     <Compile Include="FormMasuk.Designer.cs">
       <DependentUpon>FormMasuk.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormPegawaiHapusCabang.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormPegawaiHapusCabang.Designer.cs">
-      <DependentUpon>FormPegawaiHapusCabang.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormPegawaiHapusKategori.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormPegawaiHapusKategori.Designer.cs">
-      <DependentUpon>FormPegawaiHapusKategori.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormPegawaiRekapPenjualanBarang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -239,6 +227,12 @@
     </Compile>
     <Compile Include="FormPegawaiTambahPromo.Designer.cs">
       <DependentUpon>FormPegawaiTambahPromo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPegawaiUbahBarang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPegawaiUbahBarang.Designer.cs">
+      <DependentUpon>FormPegawaiUbahBarang.cs</DependentUpon>
     </Compile>
     <Compile Include="FormPegawaiUbahCabang.cs">
       <SubType>Form</SubType>
@@ -320,12 +314,6 @@
     <EmbeddedResource Include="FormPegawaiDaftarPromo.resx">
       <DependentUpon>FormPegawaiDaftarPromo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormPegawaiHapusCabang.resx">
-      <DependentUpon>FormPegawaiHapusCabang.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormPegawaiHapusKategori.resx">
-      <DependentUpon>FormPegawaiHapusKategori.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FormPegawaiRekapPenjualanBarang.resx">
       <DependentUpon>FormPegawaiRekapPenjualanBarang.cs</DependentUpon>
     </EmbeddedResource>
@@ -352,6 +340,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormPegawaiTambahPromo.resx">
       <DependentUpon>FormPegawaiTambahPromo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPegawaiUbahBarang.resx">
+      <DependentUpon>FormPegawaiUbahBarang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormPegawaiUbahCabang.resx">
       <DependentUpon>FormPegawaiUbahCabang.cs</DependentUpon>

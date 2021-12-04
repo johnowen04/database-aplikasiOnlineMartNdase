@@ -30,10 +30,10 @@ namespace OnlineMart_Ndase
         private void InitializeComponent()
         {
             this.panelAlamat = new System.Windows.Forms.Panel();
+            this.textBoxAlamat = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.buttonKeluar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBoxAlamat = new System.Windows.Forms.TextBox();
             this.dataGridViewBarang = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -44,8 +44,8 @@ namespace OnlineMart_Ndase
             this.label6 = new System.Windows.Forms.Label();
             this.buttonBayar = new System.Windows.Forms.Button();
             this.panelCheckout = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
             this.labelTotalPembayaran = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.labelOngkosKirim = new System.Windows.Forms.Label();
             this.labelKodePromo = new System.Windows.Forms.Label();
@@ -65,8 +65,18 @@ namespace OnlineMart_Ndase
             this.panelAlamat.Location = new System.Drawing.Point(13, 70);
             this.panelAlamat.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelAlamat.Name = "panelAlamat";
-            this.panelAlamat.Size = new System.Drawing.Size(802, 150);
+            this.panelAlamat.Size = new System.Drawing.Size(802, 115);
             this.panelAlamat.TabIndex = 11;
+            // 
+            // textBoxAlamat
+            // 
+            this.textBoxAlamat.Location = new System.Drawing.Point(46, 56);
+            this.textBoxAlamat.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textBoxAlamat.Multiline = true;
+            this.textBoxAlamat.Name = "textBoxAlamat";
+            this.textBoxAlamat.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBoxAlamat.Size = new System.Drawing.Size(711, 37);
+            this.textBoxAlamat.TabIndex = 6;
             // 
             // label2
             // 
@@ -85,13 +95,14 @@ namespace OnlineMart_Ndase
             this.buttonKeluar.BackColor = System.Drawing.Color.WhiteSmoke;
             this.buttonKeluar.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonKeluar.ForeColor = System.Drawing.Color.OrangeRed;
-            this.buttonKeluar.Location = new System.Drawing.Point(620, 894);
+            this.buttonKeluar.Location = new System.Drawing.Point(665, 797);
             this.buttonKeluar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonKeluar.Name = "buttonKeluar";
             this.buttonKeluar.Size = new System.Drawing.Size(150, 57);
             this.buttonKeluar.TabIndex = 13;
             this.buttonKeluar.Text = "&Keluar";
             this.buttonKeluar.UseVisualStyleBackColor = false;
+            this.buttonKeluar.Click += new System.EventHandler(this.buttonKeluar_Click);
             // 
             // label1
             // 
@@ -106,24 +117,14 @@ namespace OnlineMart_Ndase
             this.label1.Text = "     Checkout";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // textBoxAlamat
-            // 
-            this.textBoxAlamat.Location = new System.Drawing.Point(46, 56);
-            this.textBoxAlamat.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBoxAlamat.Multiline = true;
-            this.textBoxAlamat.Name = "textBoxAlamat";
-            this.textBoxAlamat.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBoxAlamat.Size = new System.Drawing.Size(711, 69);
-            this.textBoxAlamat.TabIndex = 6;
-            // 
             // dataGridViewBarang
             // 
             this.dataGridViewBarang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewBarang.Location = new System.Drawing.Point(13, 269);
+            this.dataGridViewBarang.Location = new System.Drawing.Point(12, 230);
             this.dataGridViewBarang.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataGridViewBarang.Name = "dataGridViewBarang";
             this.dataGridViewBarang.RowHeadersWidth = 62;
-            this.dataGridViewBarang.Size = new System.Drawing.Size(802, 308);
+            this.dataGridViewBarang.Size = new System.Drawing.Size(802, 250);
             this.dataGridViewBarang.TabIndex = 14;
             // 
             // label3
@@ -131,7 +132,7 @@ namespace OnlineMart_Ndase
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(55, 242);
+            this.label3.Location = new System.Drawing.Point(54, 203);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(133, 22);
@@ -143,7 +144,7 @@ namespace OnlineMart_Ndase
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(55, 600);
+            this.label4.Location = new System.Drawing.Point(54, 503);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(118, 24);
@@ -155,19 +156,20 @@ namespace OnlineMart_Ndase
             this.linkLabelKodePromo.AutoSize = true;
             this.linkLabelKodePromo.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabelKodePromo.LinkColor = System.Drawing.Color.OrangeRed;
-            this.linkLabelKodePromo.Location = new System.Drawing.Point(560, 600);
+            this.linkLabelKodePromo.Location = new System.Drawing.Point(559, 503);
             this.linkLabelKodePromo.Name = "linkLabelKodePromo";
             this.linkLabelKodePromo.Size = new System.Drawing.Size(210, 24);
             this.linkLabelKodePromo.TabIndex = 16;
             this.linkLabelKodePromo.TabStop = true;
             this.linkLabelKodePromo.Text = "Masukkan kode promo";
+            this.linkLabelKodePromo.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelKodePromo_LinkClicked);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(55, 631);
+            this.label5.Location = new System.Drawing.Point(54, 534);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(52, 24);
@@ -177,21 +179,27 @@ namespace OnlineMart_Ndase
             // comboBoxKurir
             // 
             this.comboBoxKurir.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxKurir.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxKurir.FormattingEnabled = true;
-            this.comboBoxKurir.Location = new System.Drawing.Point(472, 632);
+            this.comboBoxKurir.Items.AddRange(new object[] {
+            "OMA Delivery"});
+            this.comboBoxKurir.Location = new System.Drawing.Point(471, 535);
             this.comboBoxKurir.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboBoxKurir.Name = "comboBoxKurir";
-            this.comboBoxKurir.Size = new System.Drawing.Size(298, 28);
+            this.comboBoxKurir.Size = new System.Drawing.Size(298, 30);
             this.comboBoxKurir.TabIndex = 18;
             // 
             // comboBoxMetodePembayaran
             // 
             this.comboBoxMetodePembayaran.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxMetodePembayaran.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxMetodePembayaran.FormattingEnabled = true;
-            this.comboBoxMetodePembayaran.Location = new System.Drawing.Point(472, 694);
+            this.comboBoxMetodePembayaran.Items.AddRange(new object[] {
+            "OMA Payments"});
+            this.comboBoxMetodePembayaran.Location = new System.Drawing.Point(471, 597);
             this.comboBoxMetodePembayaran.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboBoxMetodePembayaran.Name = "comboBoxMetodePembayaran";
-            this.comboBoxMetodePembayaran.Size = new System.Drawing.Size(298, 28);
+            this.comboBoxMetodePembayaran.Size = new System.Drawing.Size(298, 30);
             this.comboBoxMetodePembayaran.TabIndex = 20;
             // 
             // label6
@@ -199,7 +207,7 @@ namespace OnlineMart_Ndase
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(55, 693);
+            this.label6.Location = new System.Drawing.Point(54, 596);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(193, 24);
@@ -227,23 +235,11 @@ namespace OnlineMart_Ndase
             this.panelCheckout.Controls.Add(this.label7);
             this.panelCheckout.Controls.Add(this.buttonBayar);
             this.panelCheckout.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panelCheckout.Location = new System.Drawing.Point(13, 773);
+            this.panelCheckout.Location = new System.Drawing.Point(12, 676);
             this.panelCheckout.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelCheckout.Name = "panelCheckout";
             this.panelCheckout.Size = new System.Drawing.Size(802, 111);
             this.panelCheckout.TabIndex = 22;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(42, 25);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(152, 22);
-            this.label7.TabIndex = 8;
-            this.label7.Text = "Total Pembayaran";
             // 
             // labelTotalPembayaran
             // 
@@ -257,12 +253,24 @@ namespace OnlineMart_Ndase
             this.labelTotalPembayaran.TabIndex = 9;
             this.labelTotalPembayaran.Text = "Rp 0";
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Black;
+            this.label7.Location = new System.Drawing.Point(42, 25);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(152, 22);
+            this.label7.TabIndex = 8;
+            this.label7.Text = "Total Pembayaran";
+            // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(55, 663);
+            this.label9.Location = new System.Drawing.Point(54, 566);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(128, 24);
@@ -273,7 +281,7 @@ namespace OnlineMart_Ndase
             // 
             this.labelOngkosKirim.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelOngkosKirim.ForeColor = System.Drawing.Color.Black;
-            this.labelOngkosKirim.Location = new System.Drawing.Point(570, 663);
+            this.labelOngkosKirim.Location = new System.Drawing.Point(569, 566);
             this.labelOngkosKirim.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelOngkosKirim.Name = "labelOngkosKirim";
             this.labelOngkosKirim.Size = new System.Drawing.Size(200, 24);
@@ -285,7 +293,7 @@ namespace OnlineMart_Ndase
             // 
             this.labelKodePromo.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelKodePromo.ForeColor = System.Drawing.Color.Black;
-            this.labelKodePromo.Location = new System.Drawing.Point(570, 600);
+            this.labelKodePromo.Location = new System.Drawing.Point(569, 503);
             this.labelKodePromo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelKodePromo.Name = "labelKodePromo";
             this.labelKodePromo.Size = new System.Drawing.Size(200, 24);
@@ -298,7 +306,7 @@ namespace OnlineMart_Ndase
             // 
             this.label10.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.Black;
-            this.label10.Location = new System.Drawing.Point(570, 725);
+            this.label10.Location = new System.Drawing.Point(569, 628);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(200, 24);
@@ -311,7 +319,7 @@ namespace OnlineMart_Ndase
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.Black;
-            this.label11.Location = new System.Drawing.Point(55, 725);
+            this.label11.Location = new System.Drawing.Point(54, 628);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(154, 24);
@@ -322,7 +330,7 @@ namespace OnlineMart_Ndase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(827, 964);
+            this.ClientSize = new System.Drawing.Size(827, 867);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.labelKodePromo);
@@ -342,6 +350,7 @@ namespace OnlineMart_Ndase
             this.Controls.Add(this.label1);
             this.Name = "FormKonsumenCheckout";
             this.Text = "Checkout";
+            this.Load += new System.EventHandler(this.FormKonsumenCheckout_Load);
             this.panelAlamat.ResumeLayout(false);
             this.panelAlamat.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBarang)).EndInit();

@@ -93,9 +93,9 @@ namespace OnlineMart_Ndase
             // 
             // buttonKeluar
             // 
-            this.buttonKeluar.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.buttonKeluar.BackColor = System.Drawing.Color.OrangeRed;
             this.buttonKeluar.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonKeluar.ForeColor = System.Drawing.Color.OrangeRed;
+            this.buttonKeluar.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.buttonKeluar.Location = new System.Drawing.Point(665, 484);
             this.buttonKeluar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonKeluar.Name = "buttonKeluar";
@@ -103,6 +103,7 @@ namespace OnlineMart_Ndase
             this.buttonKeluar.TabIndex = 9;
             this.buttonKeluar.Text = "&Keluar";
             this.buttonKeluar.UseVisualStyleBackColor = false;
+            this.buttonKeluar.Click += new System.EventHandler(this.buttonKeluar_Click);
             // 
             // label1
             // 

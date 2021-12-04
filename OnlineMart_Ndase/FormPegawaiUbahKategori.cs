@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using OnlineMart_LIB;
 
 namespace OnlineMart_Ndase
 {
@@ -20,23 +21,35 @@ namespace OnlineMart_Ndase
         private void FormPegawaiUbahKategori_Load(object sender, EventArgs e)
         {
             textBoxID.Enabled = false;
-            // Select data from DB
         }
 
         private void buttonUbah_Click(object sender, EventArgs e)
         {
-            // Add data from DB
+            try
+            {
+                Kategori k = new Kategori(int.Parse(textBoxID.Text), textBoxNama.Text);
+
+                Kategori.UpdateData(k);
+
+                MessageBox.Show("Berhasil mengubah data kategori.", "Informasi");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Gagal mengubah data kategori. \nPesan kesalahan : " + ex.Message, "Informasi");
+            }
         }
 
         private void buttonBersihkan_Click(object sender, EventArgs e)
         {
-            textBoxNama.Text = "";
+            textBoxNama.Clear();
             textBoxNama.Focus();
         }
 
         private void buttonKeluar_Click(object sender, EventArgs e)
         {
-            // Need more implementation
+            FormPegawaiDaftarKategori formDaftarKategori = (FormPegawaiDaftarKategori)this.Owner;
+            formDaftarKategori.FormPegawaiDaftarKategori_Load(sender, e);
+
             this.Close();
         }
     }

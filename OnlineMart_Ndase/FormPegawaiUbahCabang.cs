@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OnlineMart_LIB;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -25,7 +26,19 @@ namespace OnlineMart_Ndase
 
         private void buttonUbah_Click(object sender, EventArgs e)
         {
-            // Add data to DB
+            try
+            {
+                //Pegawai p = (Pegawai)textBoxIdPegawai.;
+                //Cabang c = new Cabang(int.Parse(textBoxID.Text), textBoxNama.Text, textBoxAlamat.Text, int.Parse(textBoxIdPegawai.Text));
+
+                //Cabang.UpdateData(c);
+
+                MessageBox.Show("Berhasil mengubah data Cabang.", "Informasi");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Gagal mengubah data Cabang. \nPesan kesalahan : " + ex.Message, "Informasi");
+            }
         }
 
         private void buttonBersihkan_Click(object sender, EventArgs e)

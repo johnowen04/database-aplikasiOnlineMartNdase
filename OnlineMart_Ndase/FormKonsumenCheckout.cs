@@ -16,5 +16,25 @@ namespace OnlineMart_Ndase
         {
             InitializeComponent();
         }
+
+        private void buttonKeluar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void linkLabelKodePromo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            FormKonsumenKodePromo formKonsumenKodePromo = new FormKonsumenKodePromo();
+            formKonsumenKodePromo.Owner = this;
+            formKonsumenKodePromo.ShowDialog();
+        }
+
+        private void FormKonsumenCheckout_Load(object sender, EventArgs e)
+        {
+            labelKodePromo.Visible = false;
+            labelKodePromo.Enabled = false;
+
+            buttonBayar.Enabled = false;
+        }
     }
 }

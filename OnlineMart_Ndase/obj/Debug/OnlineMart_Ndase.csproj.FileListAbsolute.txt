@@ -135,8 +135,6 @@ C:\Users\Mariana Junita\Downloads\OnlineMart_Ndase v1.1.2\OnlineMart_Ndase\Onlin
 C:\Users\Mariana Junita\Downloads\OnlineMart_Ndase v1.1.2\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormKurirRekapPendapatan.resources
 C:\Users\Mariana Junita\Downloads\OnlineMart_Ndase v1.1.2\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormMasuk.resources
 C:\Users\Mariana Junita\Downloads\OnlineMart_Ndase v1.1.2\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormPegawaiDaftarPromo.resources
-C:\Users\Mariana Junita\Downloads\OnlineMart_Ndase v1.1.2\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormPegawaiHapusCabang.resources
-C:\Users\Mariana Junita\Downloads\OnlineMart_Ndase v1.1.2\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormPegawaiHapusKategori.resources
 C:\Users\Mariana Junita\Downloads\OnlineMart_Ndase v1.1.2\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormPegawaiRekapPenjualanBarang.resources
 C:\Users\Mariana Junita\Downloads\OnlineMart_Ndase v1.1.2\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormPegawaiRekapPenjualanOMASaldo.resources
 C:\Users\Mariana Junita\Downloads\OnlineMart_Ndase v1.1.2\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormPegawaiTambahCabang.resources
@@ -155,3 +153,4 @@ C:\Users\Mariana Junita\Downloads\OnlineMart_Ndase v1.1.2\OnlineMart_Ndase\Onlin
 C:\Users\Mariana Junita\Downloads\OnlineMart_Ndase v1.1.2\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.csproj.CopyComplete
 C:\Users\Mariana Junita\Downloads\OnlineMart_Ndase v1.1.2\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.exe
 C:\Users\Mariana Junita\Downloads\OnlineMart_Ndase v1.1.2\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.pdb
+C:\Users\Mariana Junita\Downloads\OnlineMart_Ndase v1.1.2\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormPegawaiUbahBarang.resources

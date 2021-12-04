@@ -120,6 +120,7 @@ namespace OnlineMart_Ndase
             this.buttonBatal.TabIndex = 9;
             this.buttonBatal.Text = "&Batal";
             this.buttonBatal.UseVisualStyleBackColor = false;
+            this.buttonBatal.Click += new System.EventHandler(this.buttonBatal_Click);
             // 
             // FormKonsumenKodePromo
             // 

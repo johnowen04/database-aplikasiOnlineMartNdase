@@ -13,6 +13,12 @@ namespace OnlineMart_Ndase
 {
     public partial class FormUtama : Form
     {
+        public Konsumen ko;
+        public Kurir ku;
+        public Pegawai pe;
+        public string pengguna = "";
+        FormMasuk formMasuk;
+
         public FormUtama()
         {
             InitializeComponent();
@@ -23,14 +29,22 @@ namespace OnlineMart_Ndase
             this.WindowState = FormWindowState.Maximized;
             this.IsMdiContainer = true;
 
-            FormMasuk formMasuk = new FormMasuk();
-            formMasuk.MdiParent = this;
-            formMasuk.Show();
+            formMasuk = new FormMasuk();
+            formMasuk.Owner = this;
 
             try
             {
                 Koneksi koneksi = new Koneksi();
-                MessageBox.Show("Koneksi Berhasil");
+
+                if(formMasuk.ShowDialog() == DialogResult.OK)
+                {
+                    SetHakAkses();
+                }
+                else
+                {
+                    
+                }
+
             }
             catch (Exception ex)
             {
@@ -38,21 +52,36 @@ namespace OnlineMart_Ndase
             }
         }
 
-        #region Pegawai
-        private void keluarToolStripMenuItemPegawai_Click(object sender, EventArgs e)
+        public void SetHakAkses()
         {
-            this.Close();
+            switch(pengguna)
+            {
+                case "ko":
+                    belanjaToolStripMenuItem1.Visible = true;
+                    akunToolStripMenuItem1.Visible = true;
+                    break;
+                case "ku":
+                    daftarPengirimanToolStripMenuItem1.Visible = true;
+                    rekapPendapatanToolStripMenuItem1.Visible = true;
+                    break;
+                case "pe":
+                    pengaturanToolStripMenuItem1.Visible = true;
+                    rekapToolStripMenuItem1.Visible = true;
+                    break;
+            }
         }
 
-        private void barangToolStripMenuItem_Click(object sender, EventArgs e)
+        #region Menu Strip
+        #region Konsumen
+        private void barangToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            Form form = Application.OpenForms["FormPegawaiDaftarBarang"];
+            Form form = Application.OpenForms["FormKonsumenBarang"];
 
             if (form == null)
             {
-                FormPegawaiDaftarBarang formPegawaiDaftarBarang = new FormPegawaiDaftarBarang();
-                formPegawaiDaftarBarang.MdiParent = this;
-                formPegawaiDaftarBarang.Show();
+                FormKonsumenBarang formKonsumenBarang = new FormKonsumenBarang();
+                formKonsumenBarang.MdiParent = this;
+                formKonsumenBarang.Show();
             }
             else
             {
@@ -61,7 +90,181 @@ namespace OnlineMart_Ndase
             }
         }
 
-        private void cabangToolStripMenuItem_Click(object sender, EventArgs e)
+        private void dealsToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Form form = Application.OpenForms["FormKonsumenDeals"];
+
+            if (form == null)
+            {
+                FormKonsumenDeals formKonsumenDeals = new FormKonsumenDeals();
+                formKonsumenDeals.MdiParent = this;
+                formKonsumenDeals.Show();
+            }
+            else
+            {
+                form.Show();
+                form.BringToFront();
+            }
+        }
+
+        private void keranjangToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Form form = Application.OpenForms["FormKonsumenKeranjang"];
+
+            if (form == null)
+            {
+                FormKonsumenKeranjang formKonsumenKeranjang = new FormKonsumenKeranjang();
+                formKonsumenKeranjang.MdiParent = this;
+                formKonsumenKeranjang.Show();
+            }
+            else
+            {
+                form.Show();
+                form.BringToFront();
+            }
+        }
+
+        private void checkoutToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Form form = Application.OpenForms["FormKonsumenCheckout"];
+
+            if (form == null)
+            {
+                FormKonsumenCheckout formKonsumenCheckout = new FormKonsumenCheckout();
+                formKonsumenCheckout.MdiParent = this;
+                formKonsumenCheckout.Show();
+            }
+            else
+            {
+                form.Show();
+                form.BringToFront();
+            }
+        }
+
+        private void riwayatTransaksiToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Form form = Application.OpenForms["FormKonsumenRiwayatTransaksi"];
+
+            if (form == null)
+            {
+                FormKonsumenRiwayatTransaksi formKonsumenRiwayatTransaksi = new FormKonsumenRiwayatTransaksi();
+                formKonsumenRiwayatTransaksi.MdiParent = this;
+                formKonsumenRiwayatTransaksi.Show();
+            }
+            else
+            {
+                form.Show();
+                form.BringToFront();
+            }
+        }
+
+        private void cekPesananToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Form form = Application.OpenForms["FormKonsumenCekPesanan"];
+
+            if (form == null)
+            {
+                FormKonsumenCekPesanan formKonsumenCekPesanan = new FormKonsumenCekPesanan();
+                formKonsumenCekPesanan.MdiParent = this;
+                formKonsumenCekPesanan.Show();
+            }
+            else
+            {
+                form.Show();
+                form.BringToFront();
+            }
+        }
+
+        private void cetakNotaToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Form form = Application.OpenForms["FormKonsumenCetakNota"];
+
+            if (form == null)
+            {
+                FormKonsumenCetakNota formKonsumenCetakNota = new FormKonsumenCetakNota();
+                formKonsumenCetakNota.MdiParent = this;
+                formKonsumenCetakNota.Show();
+            }
+            else
+            {
+                form.Show();
+                form.BringToFront();
+            }
+        }
+
+        private void isiSaldoToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Form form = Application.OpenForms["FormKonsumenIsiSaldo"];
+
+            if (form == null)
+            {
+                FormKonsumenIsiSaldo formKonsumenIsiSaldo = new FormKonsumenIsiSaldo();
+                formKonsumenIsiSaldo.MdiParent = this;
+                formKonsumenIsiSaldo.Show();
+            }
+            else
+            {
+                form.Show();
+                form.BringToFront();
+            }
+        }
+
+        private void profilToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Form form = Application.OpenForms["FormKonsumenProfil"];
+
+            if (form == null)
+            {
+                FormKonsumenProfil formKonsumenProfil = new FormKonsumenProfil();
+                formKonsumenProfil.MdiParent = this;
+                formKonsumenProfil.Show();
+            }
+            else
+            {
+                form.Show();
+                form.BringToFront();
+            }
+        }
+        #endregion
+
+        #region Kurir
+        private void daftarPengirimanToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Form form = Application.OpenForms["FormKurirDaftarPengiriman"];
+
+            if (form == null)
+            {
+                FormKurirDaftarPengiriman formKurirDaftarPengiriman = new FormKurirDaftarPengiriman();
+                formKurirDaftarPengiriman.MdiParent = this;
+                formKurirDaftarPengiriman.Show();
+            }
+            else
+            {
+                form.Show();
+                form.BringToFront();
+            }
+        }
+
+        private void rekapPendapatanToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Form form = Application.OpenForms["FormKurirRekapPendapatan"];
+
+            if (form == null)
+            {
+                FormKurirRekapPendapatan formKurirRekapPendapatan = new FormKurirRekapPendapatan();
+                formKurirRekapPendapatan.MdiParent = this;
+                formKurirRekapPendapatan.Show();
+            }
+            else
+            {
+                form.Show();
+                form.BringToFront();
+            }
+        }
+        #endregion
+
+        #region Pegawai
+        private void cabangToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             Form form = Application.OpenForms["FormPegawaiDaftarCabang"];
 
@@ -78,24 +281,7 @@ namespace OnlineMart_Ndase
             }
         }
 
-        private void hadiahToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Form form = Application.OpenForms["FormPegawaiDaftarHadiah"];
-
-            if (form == null)
-            {
-                FormPegawaiDaftarHadiah formPegawaiDaftarHadiah = new FormPegawaiDaftarHadiah();
-                formPegawaiDaftarHadiah.MdiParent = this;
-                formPegawaiDaftarHadiah.Show();
-            }
-            else
-            {
-                form.Show();
-                form.BringToFront();
-            }
-        }
-
-        private void kategoriToolStripMenuItem_Click(object sender, EventArgs e)
+        private void kategoriToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             Form form = Application.OpenForms["FormPegawaiDaftarKategori"];
 
@@ -112,7 +298,24 @@ namespace OnlineMart_Ndase
             }
         }
 
-        private void metodePembayaranToolStripMenuItem_Click(object sender, EventArgs e)
+        private void barangToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            Form form = Application.OpenForms["FormPegawaiDaftarBarang"];
+
+            if (form == null)
+            {
+                FormPegawaiDaftarBarang formPegawaiDaftarBarang = new FormPegawaiDaftarBarang();
+                formPegawaiDaftarBarang.MdiParent = this;
+                formPegawaiDaftarBarang.Show();
+            }
+            else
+            {
+                form.Show();
+                form.BringToFront();
+            }
+        }
+
+        private void metodePembayaranToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             Form form = Application.OpenForms["FormPegawaiDaftarMetodePembayaran"];
 
@@ -129,7 +332,7 @@ namespace OnlineMart_Ndase
             }
         }
 
-        private void promoToolStripMenuItem_Click(object sender, EventArgs e)
+        private void promoToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             Form form = Application.OpenForms["FormPegawaiDaftarPromo"];
 
@@ -146,7 +349,24 @@ namespace OnlineMart_Ndase
             }
         }
 
-        private void penjualanBarangToolStripMenuItem_Click(object sender, EventArgs e)
+        private void hadiahToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Form form = Application.OpenForms["FormPegawaiDaftarHadiah"];
+
+            if (form == null)
+            {
+                FormPegawaiDaftarHadiah formPegawaiDaftarHadiah = new FormPegawaiDaftarHadiah();
+                formPegawaiDaftarHadiah.MdiParent = this;
+                formPegawaiDaftarHadiah.Show();
+            }
+            else
+            {
+                form.Show();
+                form.BringToFront();
+            }
+        }
+
+        private void penjualanBarangToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             Form form = Application.OpenForms["FormPegawaiRekapPenjualanBarang"];
 
@@ -163,7 +383,7 @@ namespace OnlineMart_Ndase
             }
         }
 
-        private void penjualanOMASaldoToolStripMenuItem_Click(object sender, EventArgs e)
+        private void penjualanOMASaldoToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             Form form = Application.OpenForms["FormPegawaiRekapPenjualanOMASaldo"];
 
@@ -181,202 +401,7 @@ namespace OnlineMart_Ndase
         }
         #endregion
 
-        #region Kurir
-        private void daftarPengirimanToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Form form = Application.OpenForms["FormKurirDaftarPengiriman"];
-
-            if (form == null)
-            {
-                FormKurirDaftarPengiriman formKurirDaftarPengiriman = new FormKurirDaftarPengiriman();
-                formKurirDaftarPengiriman.MdiParent = this;
-                formKurirDaftarPengiriman.Show();
-            }
-            else
-            {
-                form.Show();
-                form.BringToFront();
-            }
-        }
-
-        private void rekapPendapatanToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Form form = Application.OpenForms["FormKurirRekapPendapatan"];
-
-            if (form == null)
-            {
-                FormKurirRekapPendapatan formKurirRekapPendapatan = new FormKurirRekapPendapatan();
-                formKurirRekapPendapatan.MdiParent = this;
-                formKurirRekapPendapatan.Show();
-            }
-            else
-            {
-                form.Show();
-                form.BringToFront();
-            }
-        }
-
-        private void keluarToolStripMenuItemKurir_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-        #endregion
-
-        #region Konsumen
-        private void barangKonsumenToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Form form = Application.OpenForms["FormKonsumenBarang"];
-
-            if (form == null)
-            {
-                FormKonsumenBarang formKonsumenBarang = new FormKonsumenBarang();
-                formKonsumenBarang.MdiParent = this;
-                formKonsumenBarang.Show();
-            }
-            else
-            {
-                form.Show();
-                form.BringToFront();
-            }
-        }
-
-        private void dealsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Form form = Application.OpenForms["FormKonsumenDeals"];
-
-            if (form == null)
-            {
-                FormKonsumenDeals formKonsumenDeals = new FormKonsumenDeals();
-                formKonsumenDeals.MdiParent = this;
-                formKonsumenDeals.Show();
-            }
-            else
-            {
-                form.Show();
-                form.BringToFront();
-            }
-        }
-
-        private void keranjangToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Form form = Application.OpenForms["FormKonsumenKeranjang"];
-
-            if (form == null)
-            {
-                FormKonsumenKeranjang formKonsumenKeranjang = new FormKonsumenKeranjang();
-                formKonsumenKeranjang.MdiParent = this;
-                formKonsumenKeranjang.Show();
-            }
-            else
-            {
-                form.Show();
-                form.BringToFront();
-            }
-        }
-
-        private void checkoutToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Form form = Application.OpenForms["FormKonsumenCheckout"];
-
-            if (form == null)
-            {
-                FormKonsumenCheckout formKonsumenCheckout = new FormKonsumenCheckout();
-                formKonsumenCheckout.MdiParent = this;
-                formKonsumenCheckout.Show();
-            }
-            else
-            {
-                form.Show();
-                form.BringToFront();
-            }
-        }
-
-        private void riwayatTransaksiToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Form form = Application.OpenForms["FormKonsumenRiwayatTransaksi"];
-
-            if (form == null)
-            {
-                FormKonsumenRiwayatTransaksi formKonsumenRiwayatTransaksi = new FormKonsumenRiwayatTransaksi();
-                formKonsumenRiwayatTransaksi.MdiParent = this;
-                formKonsumenRiwayatTransaksi.Show();
-            }
-            else
-            {
-                form.Show();
-                form.BringToFront();
-            }
-        }
-
-        private void cekPesananToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Form form = Application.OpenForms["FormKonsumenCekPesanan"];
-
-            if (form == null)
-            {
-                FormKonsumenCekPesanan formKonsumenCekPesanan = new FormKonsumenCekPesanan();
-                formKonsumenCekPesanan.MdiParent = this;
-                formKonsumenCekPesanan.Show();
-            }
-            else
-            {
-                form.Show();
-                form.BringToFront();
-            }
-        }
-
-        private void cetakNotaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Form form = Application.OpenForms["FormKonsumenCetakNota"];
-
-            if (form == null)
-            {
-                FormKonsumenCetakNota formKonsumenCetakNota = new FormKonsumenCetakNota();
-                formKonsumenCetakNota.MdiParent = this;
-                formKonsumenCetakNota.Show();
-            }
-            else
-            {
-                form.Show();
-                form.BringToFront();
-            }
-        }
-
-        private void isiSaldoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Form form = Application.OpenForms["FormKonsumenIsiSaldo"];
-
-            if (form == null)
-            {
-                FormKonsumenIsiSaldo formKonsumenIsiSaldo = new FormKonsumenIsiSaldo();
-                formKonsumenIsiSaldo.MdiParent = this;
-                formKonsumenIsiSaldo.Show();
-            }
-            else
-            {
-                form.Show();
-                form.BringToFront();
-            }
-        }
-
-        private void profilToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Form form = Application.OpenForms["FormKonsumenProfil"];
-
-            if (form == null)
-            {
-                FormKonsumenProfil formKonsumenProfil = new FormKonsumenProfil();
-                formKonsumenProfil.MdiParent = this;
-                formKonsumenProfil.Show();
-            }
-            else
-            {
-                form.Show();
-                form.BringToFront();
-            }
-        }
-
-        private void keluarToolStripMenuItemKonsumen_Click(object sender, EventArgs e)
+        private void keluarSistemToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
         }
