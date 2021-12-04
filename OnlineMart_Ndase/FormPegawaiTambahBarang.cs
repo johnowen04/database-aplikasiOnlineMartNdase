@@ -26,7 +26,7 @@ namespace OnlineMart_Ndase
             try
             {
                 Kategori kategoriDipilih = (Kategori)comboBoxKategori.SelectedItem;
-                Barang b = new Barang(int.Parse(textBoxID.Text), textBoxNama.Text, textBoxHarga.Text, kategoriDipilih);
+                Barang b = new Barang(textBoxNama.Text, textBoxHarga.Text, kategoriDipilih);
 
                 Barang.CreateData(b);
 

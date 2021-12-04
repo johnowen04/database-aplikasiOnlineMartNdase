@@ -20,20 +20,56 @@ namespace OnlineMart_Ndase
 
         private void FormPegawaiUbahCabang_Load(object sender, EventArgs e)
         {
-            textBoxID.Enabled = false;
-            // Select data from DB
+            try
+            {
+                textBoxID.Enabled = false;
+
+                List<Pegawai> listPegawai = Pegawai.ReadData("", "");
+                comboBoxPegawai.DataSource = listPegawai;
+                comboBoxPegawai.DisplayMember = "Nama";
+
+                List<Cabang> listCabang = Cabang.ReadData("c.id", textBoxID.Text);
+                Pegawai p;
+
+                if (listCabang.Count > 0)
+                    p = listCabang[0].Pegawai;
+                else
+                    throw new ArgumentException("Cabang tidak ditemukan.");
+
+                int idx = 0;
+                foreach (Pegawai pegawai in listPegawai)
+                {
+                    if (pegawai.Id == p.Id)
+                    {
+                        idx = listPegawai.IndexOf(pegawai);
+                    }
+                }
+
+                comboBoxPegawai.SelectedIndex = idx;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Kesalahan");
+            }
         }
 
         private void buttonUbah_Click(object sender, EventArgs e)
         {
             try
             {
-                //Pegawai p = (Pegawai)textBoxIdPegawai.;
-                //Cabang c = new Cabang(int.Parse(textBoxID.Text), textBoxNama.Text, textBoxAlamat.Text, int.Parse(textBoxIdPegawai.Text));
+                Pegawai p = (Pegawai)comboBoxPegawai.SelectedItem;
+                Cabang c = new Cabang(int.Parse(textBoxID.Text), textBoxNama.Text, textBoxAlamat.Text, p);
 
-                //Cabang.UpdateData(c);
+                Boolean hasil = Cabang.UpdateData(c);
 
-                MessageBox.Show("Berhasil mengubah data Cabang.", "Informasi");
+                if (hasil)
+                {
+                    MessageBox.Show("Berhasil mengubah data Cabang.", "Informasi");
+                }
+                else
+                {
+                    MessageBox.Show("Ubah data gagal.", "Kesalahan");
+                }
             }
             catch (Exception ex)
             {
@@ -45,13 +81,15 @@ namespace OnlineMart_Ndase
         {
             textBoxNama.Text = "";
             textBoxAlamat.Text = "";
-            textBoxIdPegawai.Text = "";
+            comboBoxPegawai.Text = "";
             textBoxNama.Focus();
         }
 
         private void buttonKeluar_Click(object sender, EventArgs e)
         {
-            // Need more implementation
+            FormPegawaiDaftarCabang form = (FormPegawaiDaftarCabang)this.Owner;
+            form.FormPegawaiDaftarCabang_Load(sender, e);
+
             this.Close();
         }
     }

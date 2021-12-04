@@ -19,63 +19,44 @@ namespace OnlineMart_Ndase
         {
             InitializeComponent();
         }
-
-        public void FormPegawaiDaftarKategori_Load(object sender, EventArgs e)
+        private void FormatDataGrid()
         {
-            listKategori = Kategori.ReadData("", textBoxCari.Text);
+            dataGridViewDaftarKategori.Columns.Clear();
 
-            if(listKategori.Count >0)
-            {
-                dataGridViewDaftarKategori.DataSource = listKategori;
-                if(dataGridViewDaftarKategori.ColumnCount == 2)
-                {
-                    DataGridViewButtonColumn bcol = new DataGridViewButtonColumn();
-                    bcol.HeaderText = "Aksi";
-                    bcol.Text = "Ubah";
-                    bcol.Name = "buttonUbah";
-                    bcol.UseColumnTextForButtonValue = true;
-                    dataGridViewDaftarKategori.Columns.Add(bcol);
+            dataGridViewDaftarKategori.Columns.Add("Id", "Id Kategori");
+            dataGridViewDaftarKategori.Columns.Add("Nama", "Nama Kategori");
 
-                    DataGridViewButtonColumn bcol2 = new DataGridViewButtonColumn();
-                    bcol2.HeaderText = "Aksi";
-                    bcol2.Text = "Hapus";
-                    bcol2.Name = "buttonHapus";
-                    bcol2.UseColumnTextForButtonValue = true;
-                    dataGridViewDaftarKategori.Columns.Add(bcol2);
-                }
-            }
-            else
-            {
-                dataGridViewDaftarKategori.DataSource = null;
-            }
+            DataGridViewButtonColumn buttonColumnUbah = new DataGridViewButtonColumn();
+            buttonColumnUbah.HeaderText = "Aksi";
+            buttonColumnUbah.Text = "Ubah";
+            buttonColumnUbah.Name = "btnUbahGrid";
+            buttonColumnUbah.UseColumnTextForButtonValue = true;
+            dataGridViewDaftarKategori.Columns.Add(buttonColumnUbah);
+
+            DataGridViewButtonColumn buttonColumnHapus = new DataGridViewButtonColumn();
+            buttonColumnHapus.HeaderText = "Aksi";
+            buttonColumnHapus.Text = "Hapus";
+            buttonColumnHapus.Name = "btnHapusGrid";
+            buttonColumnHapus.UseColumnTextForButtonValue = true;
+            dataGridViewDaftarKategori.Columns.Add(buttonColumnHapus);
+
+            dataGridViewDaftarKategori.Columns["Id"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewDaftarKategori.Columns["Nama"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+
+            dataGridViewDaftarKategori.AllowUserToAddRows = false;
+            dataGridViewDaftarKategori.ReadOnly = true;
         }
 
-        private void buttonTambah_Click(object sender, EventArgs e)
+        private void TampilDataGrid()
         {
-            FormPegawaiTambahKategori formPegawaiTambahKategori = new FormPegawaiTambahKategori();
-            formPegawaiTambahKategori.Owner = this;
-            formPegawaiTambahKategori.Show();
-        }
-
-        private void buttonKeluar_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void textBoxCari_TextChanged(object sender, EventArgs e)
-        {
-            if (comboBoxCari.Text == "ID Kategori")
-            {
-                listKategori = Kategori.ReadData("id", textBoxCari.Text);
-            }
-            else if (comboBoxCari.Text == "Nama Kategori")
-            {
-                listKategori = Kategori.ReadData("nama", textBoxCari.Text);
-            }
+            dataGridViewDaftarKategori.Rows.Clear();
 
             if (listKategori.Count > 0)
             {
-                dataGridViewDaftarKategori.DataSource = listKategori;
+                foreach (Kategori k in listKategori)
+                {
+                    dataGridViewDaftarKategori.Rows.Add(k.Id, k.Nama);
+                }
             }
             else
             {
@@ -88,7 +69,7 @@ namespace OnlineMart_Ndase
             string pId = dataGridViewDaftarKategori.CurrentRow.Cells["id"].Value.ToString();
             string pNama = dataGridViewDaftarKategori.CurrentRow.Cells["nama"].Value.ToString();
 
-            if (e.ColumnIndex == dataGridViewDaftarKategori.Columns["buttonHapus"].Index && e.RowIndex >= 0)
+            if (e.ColumnIndex == dataGridViewDaftarKategori.Columns["btnHapusGrid"].Index && e.RowIndex >= 0)
             {
                 DialogResult hasil = MessageBox.Show(this, "Apakah anda yakin ingin menghapus " + pId + "-" + pNama + "?",
                     "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -116,6 +97,44 @@ namespace OnlineMart_Ndase
                 form.textBoxNama.Text = pNama;
                 form.ShowDialog();
             }
+        }
+
+        public void FormPegawaiDaftarKategori_Load(object sender, EventArgs e)
+        {
+            FormatDataGrid();
+            listKategori = Kategori.ReadData("", textBoxCari.Text);
+            TampilDataGrid();
+        }
+
+        private void buttonTambah_Click(object sender, EventArgs e)
+        {
+            FormPegawaiTambahKategori formPegawaiTambahKategori = new FormPegawaiTambahKategori();
+            formPegawaiTambahKategori.Owner = this;
+            formPegawaiTambahKategori.Show();
+        }
+
+        private void buttonKeluar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void textBoxCari_TextChanged(object sender, EventArgs e)
+        {
+            string kriteria = "";
+
+            switch (comboBoxCari.Text)
+            {
+                case "ID Kategori":
+                    kriteria = "id";
+                    break;
+                case "Nama Kategori":
+                    kriteria = "nama";
+                    break;
+            }
+
+            listKategori = Kategori.ReadData(kriteria, textBoxCari.Text);
+
+            TampilDataGrid();
         }
     }
 }

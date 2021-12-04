@@ -20,34 +20,100 @@ namespace OnlineMart_Ndase
             InitializeComponent();
         }
 
-        public void FormPegawaiDaftarCabang_Load(object sender, EventArgs e)
+        private void FormatDataGrid()
         {
-            listCabang = Cabang.ReadData("", textBoxCari.Text);
+            dataGridViewDaftarCabang.Columns.Clear();
+
+            dataGridViewDaftarCabang.Columns.Add("Id", "Id Cabang");
+            dataGridViewDaftarCabang.Columns.Add("Nama", "Nama Cabang");
+            dataGridViewDaftarCabang.Columns.Add("Alamat", "Alamat");
+            dataGridViewDaftarCabang.Columns.Add("Pegawai", "Pegawai");
+
+            DataGridViewButtonColumn buttonColumnUbah = new DataGridViewButtonColumn();
+            buttonColumnUbah.HeaderText = "Aksi";
+            buttonColumnUbah.Text = "Ubah";
+            buttonColumnUbah.Name = "btnUbahGrid";
+            buttonColumnUbah.UseColumnTextForButtonValue = true;
+            dataGridViewDaftarCabang.Columns.Add(buttonColumnUbah);
+
+            DataGridViewButtonColumn buttonColumnHapus = new DataGridViewButtonColumn();
+            buttonColumnHapus.HeaderText = "Aksi";
+            buttonColumnHapus.Text = "Hapus";
+            buttonColumnHapus.Name = "btnHapusGrid";
+            buttonColumnHapus.UseColumnTextForButtonValue = true;
+            dataGridViewDaftarCabang.Columns.Add(buttonColumnHapus);
+
+            dataGridViewDaftarCabang.Columns["Id"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewDaftarCabang.Columns["Nama"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewDaftarCabang.Columns["Alamat"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewDaftarCabang.Columns["Pegawai"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+
+            dataGridViewDaftarCabang.AllowUserToAddRows = false;
+            dataGridViewDaftarCabang.ReadOnly = true;
+        }
+
+        private void TampilDataGrid()
+        {
+            dataGridViewDaftarCabang.Rows.Clear();
 
             if (listCabang.Count > 0)
             {
-                dataGridViewDaftarCabang.DataSource = listCabang;
-                if (dataGridViewDaftarCabang.ColumnCount == 4)
+                foreach (Cabang c in listCabang)
                 {
-                    DataGridViewButtonColumn bcol = new DataGridViewButtonColumn();
-                    bcol.HeaderText = "Aksi";
-                    bcol.Text = "Ubah";
-                    bcol.Name = "buttonUbah";
-                    bcol.UseColumnTextForButtonValue = true;
-                    dataGridViewDaftarCabang.Columns.Add(bcol);
-
-                    DataGridViewButtonColumn bcol2 = new DataGridViewButtonColumn();
-                    bcol2.HeaderText = "Aksi";
-                    bcol2.Text = "Hapus";
-                    bcol2.Name = "buttonHapus";
-                    bcol2.UseColumnTextForButtonValue = true;
-                    dataGridViewDaftarCabang.Columns.Add(bcol2);
+                    dataGridViewDaftarCabang.Rows.Add(c.Id, c.Nama,
+                        c.Alamat, c.Pegawai.Nama);
                 }
             }
             else
             {
                 dataGridViewDaftarCabang.DataSource = null;
             }
+        }
+
+        private void dataGridViewDaftarCabang_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string pId = dataGridViewDaftarCabang.CurrentRow.Cells["id"].Value.ToString();
+            string pNama = dataGridViewDaftarCabang.CurrentRow.Cells["nama"].Value.ToString();
+            string pAlamat = dataGridViewDaftarCabang.CurrentRow.Cells["alamat"].Value.ToString();
+            string pNamaPegawai = dataGridViewDaftarCabang.CurrentRow.Cells["pegawai"].Value.ToString();
+
+            if (e.ColumnIndex == dataGridViewDaftarCabang.Columns["btnHapusGrid"].Index && e.RowIndex >= 0)
+            {
+                DialogResult hasil = MessageBox.Show(this, "Apakah anda yakin ingin menghapus " + pId + "-" + pNama + "-" + pAlamat + "-" + pNamaPegawai + "?",
+                    "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (hasil == DialogResult.Yes)
+                {
+                    Boolean hapus = Cabang.DeleteData(pId);
+                    if (hapus == true)
+                    {
+                        MessageBox.Show("Berhasil hapus data", "Informasi");
+
+                        FormPegawaiDaftarCabang_Load(sender, e);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Gagal hapus data", "Kesalahan");
+                    }
+                }
+            }
+            else
+            {
+                FormPegawaiUbahCabang form = new FormPegawaiUbahCabang();
+                form.Owner = this;
+                form.textBoxID.Text = pId;
+                form.textBoxNama.Text = pNama;
+                form.textBoxAlamat.Text = pAlamat;
+                form.comboBoxPegawai.Text = pNamaPegawai;
+                form.ShowDialog();
+            }
+        }
+
+        public void FormPegawaiDaftarCabang_Load(object sender, EventArgs e)
+        {
+            FormatDataGrid();
+            listCabang = Cabang.ReadData("", textBoxCari.Text);
+            TampilDataGrid();
         }
 
         private void buttonTambah_Click(object sender, EventArgs e)
@@ -64,70 +130,27 @@ namespace OnlineMart_Ndase
 
         private void textBoxCari_TextChanged(object sender, EventArgs e)
         {
-            if (comboBoxCari.Text == "ID Cabang")
+            string kriteria = "";
+
+            switch(comboBoxCari.Text)
             {
-                listCabang = Cabang.ReadData("id", textBoxCari.Text);
-            }
-            else if (comboBoxCari.Text == "Nama Cabang")
-            {
-                listCabang = Cabang.ReadData("nama", textBoxCari.Text);
-            }
-            else if (comboBoxCari.Text == "Alamat Cabang")
-            {
-                listCabang = Cabang.ReadData("alamat", textBoxCari.Text);
-            }
-            else if (comboBoxCari.Text == "ID Pegawai")
-            {
-                listCabang = Cabang.ReadData("pegawais_id", textBoxCari.Text);
+                case "ID Cabang":
+                    kriteria = "c.id";
+                    break;
+                case "Nama Cabang":
+                    kriteria = "C.nama";
+                    break;
+                case "Alamat Cabang":
+                    kriteria = "c.alamat";
+                    break;
+                case "Nama Pegawai":
+                    kriteria = "p.nama";
+                    break;
             }
 
-            if (listCabang.Count > 0)
-            {
-                dataGridViewDaftarCabang.DataSource = listCabang;
-            }
-            else
-            {
-                dataGridViewDaftarCabang.DataSource = null;
-            }
-        }
+            listCabang = Cabang.ReadData(kriteria, textBoxCari.Text);
 
-        private void dataGridViewDaftarCabang_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            string pId = dataGridViewDaftarCabang.CurrentRow.Cells["id"].Value.ToString();
-            string pNama = dataGridViewDaftarCabang.CurrentRow.Cells["nama"].Value.ToString();
-            string pAlamat = dataGridViewDaftarCabang.CurrentRow.Cells["alamat"].Value.ToString();
-            string pIdPegawai = dataGridViewDaftarCabang.CurrentRow.Cells["pegawai"].Value.ToString();
-
-            if (e.ColumnIndex == dataGridViewDaftarCabang.Columns["buttonHapus"].Index && e.RowIndex >= 0)
-            {
-                DialogResult hasil = MessageBox.Show(this, "Apakah anda yakin ingin menghapus " + pId + "-" + pNama + "-" + pAlamat + "-" + pIdPegawai + "?",
-                    "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-                if (hasil == DialogResult.Yes)
-                {
-                    Boolean hapus = Cabang.DeleteData(pId);
-                    if (hapus == true)
-                    {
-                        MessageBox.Show("Berhasil hapus data", "Informasi");
-
-                        FormPegawaiDaftarCabang_Load(sender, e);
-                    }
-                    else
-                    {
-                        MessageBox.Show("Gagal hapus data", "Informasi");
-                    }
-                }
-            }
-            else
-            {
-                FormPegawaiUbahCabang form = new FormPegawaiUbahCabang();
-                form.Owner = this;
-                form.textBoxID.Text = pId;
-                form.textBoxNama.Text = pNama;
-                form.textBoxAlamat.Text = pAlamat;
-                form.textBoxIdPegawai.Text = pIdPegawai;
-                form.ShowDialog();
-            }
+            TampilDataGrid();
         }
     }
 }

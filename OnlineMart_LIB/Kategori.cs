@@ -99,7 +99,7 @@ namespace OnlineMart_LIB
 
         public override string ToString()
         {
-            return Id.ToString();
+            return Nama;
         }
         #endregion
 

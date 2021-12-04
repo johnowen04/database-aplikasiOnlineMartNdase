@@ -41,7 +41,7 @@ namespace OnlineMart_Ndase
             this.label6 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.buttonBersihkan = new System.Windows.Forms.Button();
-            this.buttonTambah = new System.Windows.Forms.Button();
+            this.buttonUbah = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.buttonKeluar = new System.Windows.Forms.Button();
             this.panelTambahBarang.SuspendLayout();
@@ -89,6 +89,7 @@ namespace OnlineMart_Ndase
             // comboBoxCabang
             // 
             this.comboBoxCabang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxCabang.Enabled = false;
             this.comboBoxCabang.FormattingEnabled = true;
             this.comboBoxCabang.Location = new System.Drawing.Point(150, 203);
             this.comboBoxCabang.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -175,19 +176,21 @@ namespace OnlineMart_Ndase
             this.buttonBersihkan.TabIndex = 13;
             this.buttonBersihkan.Text = "&Bersihkan";
             this.buttonBersihkan.UseVisualStyleBackColor = false;
+            this.buttonBersihkan.Click += new System.EventHandler(this.buttonBersihkan_Click);
             // 
-            // buttonTambah
+            // buttonUbah
             // 
-            this.buttonTambah.BackColor = System.Drawing.Color.OrangeRed;
-            this.buttonTambah.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonTambah.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.buttonTambah.Location = new System.Drawing.Point(13, 351);
-            this.buttonTambah.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.buttonTambah.Name = "buttonTambah";
-            this.buttonTambah.Size = new System.Drawing.Size(150, 57);
-            this.buttonTambah.TabIndex = 11;
-            this.buttonTambah.Text = "&Tambah";
-            this.buttonTambah.UseVisualStyleBackColor = false;
+            this.buttonUbah.BackColor = System.Drawing.Color.OrangeRed;
+            this.buttonUbah.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonUbah.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.buttonUbah.Location = new System.Drawing.Point(13, 351);
+            this.buttonUbah.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.buttonUbah.Name = "buttonUbah";
+            this.buttonUbah.Size = new System.Drawing.Size(150, 57);
+            this.buttonUbah.TabIndex = 11;
+            this.buttonUbah.Text = "&Ubah";
+            this.buttonUbah.UseVisualStyleBackColor = false;
+            this.buttonUbah.Click += new System.EventHandler(this.buttonUbah_Click);
             // 
             // label1
             // 
@@ -199,7 +202,7 @@ namespace OnlineMart_Ndase
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(502, 57);
             this.label1.TabIndex = 9;
-            this.label1.Text = "     Tambah Barang";
+            this.label1.Text = "     Ubah Barang";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // buttonKeluar
@@ -214,6 +217,7 @@ namespace OnlineMart_Ndase
             this.buttonKeluar.TabIndex = 12;
             this.buttonKeluar.Text = "&Keluar";
             this.buttonKeluar.UseVisualStyleBackColor = false;
+            this.buttonKeluar.Click += new System.EventHandler(this.buttonKeluar_Click);
             // 
             // FormPegawaiUbahBarang
             // 
@@ -222,11 +226,12 @@ namespace OnlineMart_Ndase
             this.ClientSize = new System.Drawing.Size(529, 423);
             this.Controls.Add(this.panelTambahBarang);
             this.Controls.Add(this.buttonBersihkan);
-            this.Controls.Add(this.buttonTambah);
+            this.Controls.Add(this.buttonUbah);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonKeluar);
             this.Name = "FormPegawaiUbahBarang";
             this.Text = "Ubah Barang";
+            this.Load += new System.EventHandler(this.FormPegawaiUbahBarang_Load);
             this.panelTambahBarang.ResumeLayout(false);
             this.panelTambahBarang.PerformLayout();
             this.ResumeLayout(false);
@@ -234,21 +239,20 @@ namespace OnlineMart_Ndase
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox textBoxId;
         private System.Windows.Forms.Panel panelTambahBarang;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox comboBoxCabang;
         private System.Windows.Forms.ComboBox comboBoxKategori;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBoxHarga;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBoxNama;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button buttonBersihkan;
-        private System.Windows.Forms.Button buttonTambah;
+        private System.Windows.Forms.Button buttonUbah;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button buttonKeluar;
+        public System.Windows.Forms.TextBox textBoxId;
+        public System.Windows.Forms.TextBox textBoxHarga;
+        public System.Windows.Forms.TextBox textBoxNama;
     }
 }

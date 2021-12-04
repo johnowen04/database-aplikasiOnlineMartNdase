@@ -1,0 +1,383 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B7FCAB7B-6815-4EE9-ABA6-43469933F2D5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>OnlineMart_Ndase</RootNamespace>
+    <AssemblyName>OnlineMart_Ndase</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="OnlineMart_LIB">
+      <HintPath>..\OnlineMart_LIB\bin\Debug\OnlineMart_LIB.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="db.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>db.settings</DependentUpon>
+    </Compile>
+    <Compile Include="FormKonsumenCekPesanan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormKonsumenCekPesanan.Designer.cs">
+      <DependentUpon>FormKonsumenCekPesanan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDaftar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDaftar.Designer.cs">
+      <DependentUpon>FormDaftar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormKonsumenBarang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormKonsumenBarang.Designer.cs">
+      <DependentUpon>FormKonsumenBarang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormKonsumenCetakNota.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormKonsumenCetakNota.Designer.cs">
+      <DependentUpon>FormKonsumenCetakNota.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormKonsumenCheckout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormKonsumenCheckout.Designer.cs">
+      <DependentUpon>FormKonsumenCheckout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormKonsumenDeals.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormKonsumenDeals.Designer.cs">
+      <DependentUpon>FormKonsumenDeals.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormKonsumenIsiSaldo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormKonsumenIsiSaldo.Designer.cs">
+      <DependentUpon>FormKonsumenIsiSaldo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormKonsumenKeranjang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormKonsumenKeranjang.Designer.cs">
+      <DependentUpon>FormKonsumenKeranjang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormKonsumenKodePromo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormKonsumenKodePromo.Designer.cs">
+      <DependentUpon>FormKonsumenKodePromo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormKonsumenProfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormKonsumenProfil.Designer.cs">
+      <DependentUpon>FormKonsumenProfil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormKonsumenUbahProfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormKonsumenUbahProfil.Designer.cs">
+      <DependentUpon>FormKonsumenUbahProfil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPegawaiDaftarHadiah.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPegawaiDaftarHadiah.Designer.cs">
+      <DependentUpon>FormPegawaiDaftarHadiah.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPegawaiDaftarPromo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPegawaiDaftarPromo.Designer.cs">
+      <DependentUpon>FormPegawaiDaftarPromo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPegawaiDaftarMetodePembayaran.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPegawaiDaftarMetodePembayaran.Designer.cs">
+      <DependentUpon>FormPegawaiDaftarMetodePembayaran.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormKonsumenRiwayatTransaksi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormKonsumenRiwayatTransaksi.Designer.cs">
+      <DependentUpon>FormKonsumenRiwayatTransaksi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPegawaiDaftarBarang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPegawaiDaftarBarang.Designer.cs">
+      <DependentUpon>FormPegawaiDaftarBarang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPegawaiDaftarCabang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPegawaiDaftarCabang.Designer.cs">
+      <DependentUpon>FormPegawaiDaftarCabang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormKurirDaftarPengiriman.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormKurirDaftarPengiriman.Designer.cs">
+      <DependentUpon>FormKurirDaftarPengiriman.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormKurirRekapPendapatan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormKurirRekapPendapatan.Designer.cs">
+      <DependentUpon>FormKurirRekapPendapatan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMasuk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMasuk.Designer.cs">
+      <DependentUpon>FormMasuk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPegawaiRekapPenjualanBarang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPegawaiRekapPenjualanBarang.Designer.cs">
+      <DependentUpon>FormPegawaiRekapPenjualanBarang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPegawaiRekapPenjualanOMASaldo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPegawaiRekapPenjualanOMASaldo.Designer.cs">
+      <DependentUpon>FormPegawaiRekapPenjualanOMASaldo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPegawaiTambahCabang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPegawaiTambahCabang.Designer.cs">
+      <DependentUpon>FormPegawaiTambahCabang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPegawaiDaftarKategori.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPegawaiDaftarKategori.Designer.cs">
+      <DependentUpon>FormPegawaiDaftarKategori.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPegawaiTambahHadiah.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPegawaiTambahHadiah.Designer.cs">
+      <DependentUpon>FormPegawaiTambahHadiah.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPegawaiTambahKategori.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPegawaiTambahKategori.Designer.cs">
+      <DependentUpon>FormPegawaiTambahKategori.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPegawaiTambahBarang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPegawaiTambahBarang.Designer.cs">
+      <DependentUpon>FormPegawaiTambahBarang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPegawaiTambahMetodePembayaran.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPegawaiTambahMetodePembayaran.Designer.cs">
+      <DependentUpon>FormPegawaiTambahMetodePembayaran.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPegawaiTambahPromo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPegawaiTambahPromo.Designer.cs">
+      <DependentUpon>FormPegawaiTambahPromo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPegawaiUbahBarang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPegawaiUbahBarang.Designer.cs">
+      <DependentUpon>FormPegawaiUbahBarang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPegawaiUbahCabang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPegawaiUbahCabang.Designer.cs">
+      <DependentUpon>FormPegawaiUbahCabang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPegawaiUbahKategori.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPegawaiUbahKategori.Designer.cs">
+      <DependentUpon>FormPegawaiUbahKategori.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormUtama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUtama.Designer.cs">
+      <DependentUpon>FormUtama.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormKonsumenCekPesanan.resx">
+      <DependentUpon>FormKonsumenCekPesanan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDaftar.resx">
+      <DependentUpon>FormDaftar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormKonsumenBarang.resx">
+      <DependentUpon>FormKonsumenBarang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormKonsumenCetakNota.resx">
+      <DependentUpon>FormKonsumenCetakNota.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormKonsumenCheckout.resx">
+      <DependentUpon>FormKonsumenCheckout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormKonsumenDeals.resx">
+      <DependentUpon>FormKonsumenDeals.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormKonsumenIsiSaldo.resx">
+      <DependentUpon>FormKonsumenIsiSaldo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormKonsumenKeranjang.resx">
+      <DependentUpon>FormKonsumenKeranjang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormKonsumenKodePromo.resx">
+      <DependentUpon>FormKonsumenKodePromo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormKonsumenProfil.resx">
+      <DependentUpon>FormKonsumenProfil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormKonsumenUbahProfil.resx">
+      <DependentUpon>FormKonsumenUbahProfil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPegawaiDaftarHadiah.resx">
+      <DependentUpon>FormPegawaiDaftarHadiah.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPegawaiDaftarMetodePembayaran.resx">
+      <DependentUpon>FormPegawaiDaftarMetodePembayaran.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormKonsumenRiwayatTransaksi.resx">
+      <DependentUpon>FormKonsumenRiwayatTransaksi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPegawaiDaftarBarang.resx">
+      <DependentUpon>FormPegawaiDaftarBarang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPegawaiDaftarCabang.resx">
+      <DependentUpon>FormPegawaiDaftarCabang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormKurirDaftarPengiriman.resx">
+      <DependentUpon>FormKurirDaftarPengiriman.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormKurirRekapPendapatan.resx">
+      <DependentUpon>FormKurirRekapPendapatan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMasuk.resx">
+      <DependentUpon>FormMasuk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPegawaiDaftarPromo.resx">
+      <DependentUpon>FormPegawaiDaftarPromo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPegawaiRekapPenjualanBarang.resx">
+      <DependentUpon>FormPegawaiRekapPenjualanBarang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPegawaiRekapPenjualanOMASaldo.resx">
+      <DependentUpon>FormPegawaiRekapPenjualanOMASaldo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPegawaiTambahCabang.resx">
+      <DependentUpon>FormPegawaiTambahCabang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPegawaiDaftarKategori.resx">
+      <DependentUpon>FormPegawaiDaftarKategori.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPegawaiTambahHadiah.resx">
+      <DependentUpon>FormPegawaiTambahHadiah.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPegawaiTambahKategori.resx">
+      <DependentUpon>FormPegawaiTambahKategori.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPegawaiTambahBarang.resx">
+      <DependentUpon>FormPegawaiTambahBarang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPegawaiTambahMetodePembayaran.resx">
+      <DependentUpon>FormPegawaiTambahMetodePembayaran.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPegawaiTambahPromo.resx">
+      <DependentUpon>FormPegawaiTambahPromo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPegawaiUbahBarang.resx">
+      <DependentUpon>FormPegawaiUbahBarang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPegawaiUbahCabang.resx">
+      <DependentUpon>FormPegawaiUbahCabang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPegawaiUbahKategori.resx">
+      <DependentUpon>FormPegawaiUbahKategori.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUtama.resx">
+      <DependentUpon>FormUtama.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="db.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>db.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

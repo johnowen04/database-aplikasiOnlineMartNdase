@@ -1,0 +1,162 @@
+C:\Users\Mariana Junita\OneDrive\Documents\KULIAH TEKNIK INFORMATIKA\Semester 3\Database\Tugas\OnlineMart_Ndase\OnlineMart_Ndase\bin\Debug\OnlineMart_Ndase.exe.config
+C:\Users\Mariana Junita\OneDrive\Documents\KULIAH TEKNIK INFORMATIKA\Semester 3\Database\Tugas\OnlineMart_Ndase\OnlineMart_Ndase\bin\Debug\OnlineMart_Ndase.exe
+C:\Users\Mariana Junita\OneDrive\Documents\KULIAH TEKNIK INFORMATIKA\Semester 3\Database\Tugas\OnlineMart_Ndase\OnlineMart_Ndase\bin\Debug\OnlineMart_Ndase.pdb
+C:\Users\Mariana Junita\OneDrive\Documents\KULIAH TEKNIK INFORMATIKA\Semester 3\Database\Tugas\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.csproj.AssemblyReference.cache
+C:\Users\Mariana Junita\OneDrive\Documents\KULIAH TEKNIK INFORMATIKA\Semester 3\Database\Tugas\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormMasuk.resources
+C:\Users\Mariana Junita\OneDrive\Documents\KULIAH TEKNIK INFORMATIKA\Semester 3\Database\Tugas\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.Properties.Resources.resources
+C:\Users\Mariana Junita\OneDrive\Documents\KULIAH TEKNIK INFORMATIKA\Semester 3\Database\Tugas\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.csproj.GenerateResource.cache
+C:\Users\Mariana Junita\OneDrive\Documents\KULIAH TEKNIK INFORMATIKA\Semester 3\Database\Tugas\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.csproj.CoreCompileInputs.cache
+C:\Users\Mariana Junita\OneDrive\Documents\KULIAH TEKNIK INFORMATIKA\Semester 3\Database\Tugas\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.exe
+C:\Users\Mariana Junita\OneDrive\Documents\KULIAH TEKNIK INFORMATIKA\Semester 3\Database\Tugas\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.pdb
+C:\Users\Mariana Junita\OneDrive\Documents\KULIAH TEKNIK INFORMATIKA\Semester 3\Database\Tugas\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormDaftar.resources
+C:\Users\Mariana Junita\OneDrive\Documents\KULIAH TEKNIK INFORMATIKA\Semester 3\Database\Tugas\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormUtamaKonsumen.resources
+C:\Users\Mariana Junita\OneDrive\Documents\KULIAH TEKNIK INFORMATIKA\Semester 3\Database\Tugas\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormUtamaKurir.resources
+C:\Users\Mariana Junita\OneDrive\Documents\KULIAH TEKNIK INFORMATIKA\Semester 3\Database\Tugas\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormUtamaPegawai.resources
+K:\.lain\.c#\database\proj\OnlineMart_Ndase\OnlineMart_Ndase\bin\Debug\OnlineMart_Ndase.exe.config
+K:\.lain\.c#\database\proj\OnlineMart_Ndase\OnlineMart_Ndase\bin\Debug\OnlineMart_Ndase.exe
+K:\.lain\.c#\database\proj\OnlineMart_Ndase\OnlineMart_Ndase\bin\Debug\OnlineMart_Ndase.pdb
+K:\.lain\.c#\database\proj\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.csprojAssemblyReference.cache
+K:\.lain\.c#\database\proj\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormDaftar.resources
+K:\.lain\.c#\database\proj\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormMasuk.resources
+K:\.lain\.c#\database\proj\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.Properties.Resources.resources
+K:\.lain\.c#\database\proj\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.csproj.GenerateResource.cache
+K:\.lain\.c#\database\proj\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.csproj.CoreCompileInputs.cache
+K:\.lain\.c#\database\proj\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.exe
+K:\.lain\.c#\database\proj\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.pdb
+K:\.lain\.c#\database\proj\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormUtama.resources
+C:\Users\Katheryn Natasia\Documents\Tugas Kuliah\SEM 3\Database\OnlineMart_Ndase\OnlineMart_Ndase\bin\Debug\OnlineMart_Ndase.exe.config
+C:\Users\Katheryn Natasia\Documents\Tugas Kuliah\SEM 3\Database\OnlineMart_Ndase\OnlineMart_Ndase\bin\Debug\OnlineMart_Ndase.exe
+C:\Users\Katheryn Natasia\Documents\Tugas Kuliah\SEM 3\Database\OnlineMart_Ndase\OnlineMart_Ndase\bin\Debug\OnlineMart_Ndase.pdb
+C:\Users\Katheryn Natasia\Documents\Tugas Kuliah\SEM 3\Database\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.csproj.AssemblyReference.cache
+C:\Users\Katheryn Natasia\Documents\Tugas Kuliah\SEM 3\Database\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormDaftar.resources
+C:\Users\Katheryn Natasia\Documents\Tugas Kuliah\SEM 3\Database\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormMasuk.resources
+C:\Users\Katheryn Natasia\Documents\Tugas Kuliah\SEM 3\Database\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormUtama.resources
+C:\Users\Katheryn Natasia\Documents\Tugas Kuliah\SEM 3\Database\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.Properties.Resources.resources
+C:\Users\Katheryn Natasia\Documents\Tugas Kuliah\SEM 3\Database\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.csproj.GenerateResource.cache
+C:\Users\Katheryn Natasia\Documents\Tugas Kuliah\SEM 3\Database\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.csproj.CoreCompileInputs.cache
+C:\Users\Katheryn Natasia\Documents\Tugas Kuliah\SEM 3\Database\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.exe
+C:\Users\Katheryn Natasia\Documents\Tugas Kuliah\SEM 3\Database\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.pdb
+E:\UBAYA\Kelas\Semester 3\2. Database - KP C\9\A\OnlineMart_Ndase\OnlineMart_Ndase\OnlineMart_Ndase\bin\Debug\OnlineMart_Ndase.exe.config
+E:\UBAYA\Kelas\Semester 3\2. Database - KP C\9\A\OnlineMart_Ndase\OnlineMart_Ndase\OnlineMart_Ndase\bin\Debug\OnlineMart_Ndase.exe
+E:\UBAYA\Kelas\Semester 3\2. Database - KP C\9\A\OnlineMart_Ndase\OnlineMart_Ndase\OnlineMart_Ndase\bin\Debug\OnlineMart_Ndase.pdb
+E:\UBAYA\Kelas\Semester 3\2. Database - KP C\9\A\OnlineMart_Ndase\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.csproj.AssemblyReference.cache
+E:\UBAYA\Kelas\Semester 3\2. Database - KP C\9\A\OnlineMart_Ndase\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormDaftar.resources
+E:\UBAYA\Kelas\Semester 3\2. Database - KP C\9\A\OnlineMart_Ndase\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormPegawaiDaftarMetodePembayaran.resources
+E:\UBAYA\Kelas\Semester 3\2. Database - KP C\9\A\OnlineMart_Ndase\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormKonsumenRiwayatTransaksi.resources
+E:\UBAYA\Kelas\Semester 3\2. Database - KP C\9\A\OnlineMart_Ndase\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormPegawaiDaftarBarang.resources
+E:\UBAYA\Kelas\Semester 3\2. Database - KP C\9\A\OnlineMart_Ndase\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormPegawaiDaftarCabang.resources
+E:\UBAYA\Kelas\Semester 3\2. Database - KP C\9\A\OnlineMart_Ndase\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormKurirDaftarPengiriman.resources
+E:\UBAYA\Kelas\Semester 3\2. Database - KP C\9\A\OnlineMart_Ndase\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormKurirRekapPendapatan.resources
+E:\UBAYA\Kelas\Semester 3\2. Database - KP C\9\A\OnlineMart_Ndase\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormMasuk.resources
+E:\UBAYA\Kelas\Semester 3\2. Database - KP C\9\A\OnlineMart_Ndase\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormPegawaiBuatCabang.resources
+E:\UBAYA\Kelas\Semester 3\2. Database - KP C\9\A\OnlineMart_Ndase\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormPegawaiDaftarKategori.resources
+E:\UBAYA\Kelas\Semester 3\2. Database - KP C\9\A\OnlineMart_Ndase\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormUtama.resources
+E:\UBAYA\Kelas\Semester 3\2. Database - KP C\9\A\OnlineMart_Ndase\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.Properties.Resources.resources
+E:\UBAYA\Kelas\Semester 3\2. Database - KP C\9\A\OnlineMart_Ndase\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.csproj.GenerateResource.cache
+E:\UBAYA\Kelas\Semester 3\2. Database - KP C\9\A\OnlineMart_Ndase\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.csproj.CoreCompileInputs.cache
+E:\UBAYA\Kelas\Semester 3\2. Database - KP C\9\A\OnlineMart_Ndase\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.exe
+E:\UBAYA\Kelas\Semester 3\2. Database - KP C\9\A\OnlineMart_Ndase\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.pdb
+K:\.lain\.c#\database\proj\OnlineMart_Ndase\OnlineMart_Ndase\bin\Debug\OnlineMart_LIB.dll
+K:\.lain\.c#\database\proj\OnlineMart_Ndase\OnlineMart_Ndase\bin\Debug\MySql.Data.dll
+K:\.lain\.c#\database\proj\OnlineMart_Ndase\OnlineMart_Ndase\bin\Debug\Google.Protobuf.dll
+K:\.lain\.c#\database\proj\OnlineMart_Ndase\OnlineMart_Ndase\bin\Debug\Zstandard.Net.dll
+K:\.lain\.c#\database\proj\OnlineMart_Ndase\OnlineMart_Ndase\bin\Debug\K4os.Compression.LZ4.Streams.dll
+K:\.lain\.c#\database\proj\OnlineMart_Ndase\OnlineMart_Ndase\bin\Debug\BouncyCastle.Crypto.dll
+K:\.lain\.c#\database\proj\OnlineMart_Ndase\OnlineMart_Ndase\bin\Debug\Ubiety.Dns.Core.dll
+K:\.lain\.c#\database\proj\OnlineMart_Ndase\OnlineMart_Ndase\bin\Debug\System.Memory.dll
+K:\.lain\.c#\database\proj\OnlineMart_Ndase\OnlineMart_Ndase\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+K:\.lain\.c#\database\proj\OnlineMart_Ndase\OnlineMart_Ndase\bin\Debug\System.Buffers.dll
+K:\.lain\.c#\database\proj\OnlineMart_Ndase\OnlineMart_Ndase\bin\Debug\K4os.Compression.LZ4.dll
+K:\.lain\.c#\database\proj\OnlineMart_Ndase\OnlineMart_Ndase\bin\Debug\K4os.Hash.xxHash.dll
+K:\.lain\.c#\database\proj\OnlineMart_Ndase\OnlineMart_Ndase\bin\Debug\System.Numerics.Vectors.dll
+K:\.lain\.c#\database\proj\OnlineMart_Ndase\OnlineMart_Ndase\bin\Debug\OnlineMart_LIB.pdb
+K:\.lain\.c#\database\proj\OnlineMart_Ndase\OnlineMart_Ndase\bin\Debug\MySql.Data.xml
+K:\.lain\.c#\database\proj\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormKonsumenIsiSaldo.resources
+K:\.lain\.c#\database\proj\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormKonsumenProfil.resources
+K:\.lain\.c#\database\proj\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormKonsumenUbahProfil.resources
+K:\.lain\.c#\database\proj\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormPegawaiDaftarHadiah.resources
+K:\.lain\.c#\database\proj\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormPegawaiDaftarMetodePembayaran.resources
+K:\.lain\.c#\database\proj\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormKonsumenRiwayatTransaksi.resources
+K:\.lain\.c#\database\proj\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormPegawaiDaftarBarang.resources
+K:\.lain\.c#\database\proj\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormPegawaiDaftarCabang.resources
+K:\.lain\.c#\database\proj\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormKurirDaftarPengiriman.resources
+K:\.lain\.c#\database\proj\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormKurirRekapPendapatan.resources
+K:\.lain\.c#\database\proj\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormPegawaiDaftarPromo.resources
+K:\.lain\.c#\database\proj\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormPegawaiRekapPenjualanBarang.resources
+K:\.lain\.c#\database\proj\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormPegawaiRekapPenjualanOMASaldo.resources
+K:\.lain\.c#\database\proj\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormPegawaiTambahCabang.resources
+K:\.lain\.c#\database\proj\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormPegawaiDaftarKategori.resources
+K:\.lain\.c#\database\proj\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormPegawaiTambahHadiah.resources
+K:\.lain\.c#\database\proj\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormPegawaiTambahKategori.resources
+K:\.lain\.c#\database\proj\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormPegawaiTambahBarang.resources
+K:\.lain\.c#\database\proj\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormPegawaiTambahMetodePembayaran.resources
+K:\.lain\.c#\database\proj\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormPegawaiTambahPromo.resources
+K:\.lain\.c#\database\proj\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormPegawaiUbahCabang.resources
+K:\.lain\.c#\database\proj\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormPegawaiUbahKategori.resources
+K:\.lain\.c#\database\proj\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.csproj.CopyComplete
+C:\Users\Mariana Junita\Downloads\OnlineMart_Ndase v1.1.2\OnlineMart_Ndase\OnlineMart_Ndase\bin\Debug\OnlineMart_Ndase.exe.config
+C:\Users\Mariana Junita\Downloads\OnlineMart_Ndase v1.1.2\OnlineMart_Ndase\OnlineMart_Ndase\bin\Debug\OnlineMart_Ndase.exe
+C:\Users\Mariana Junita\Downloads\OnlineMart_Ndase v1.1.2\OnlineMart_Ndase\OnlineMart_Ndase\bin\Debug\OnlineMart_Ndase.pdb
+C:\Users\Mariana Junita\Downloads\OnlineMart_Ndase v1.1.2\OnlineMart_Ndase\OnlineMart_Ndase\bin\Debug\OnlineMart_LIB.dll
+C:\Users\Mariana Junita\Downloads\OnlineMart_Ndase v1.1.2\OnlineMart_Ndase\OnlineMart_Ndase\bin\Debug\MySql.Data.dll
+C:\Users\Mariana Junita\Downloads\OnlineMart_Ndase v1.1.2\OnlineMart_Ndase\OnlineMart_Ndase\bin\Debug\Google.Protobuf.dll
+C:\Users\Mariana Junita\Downloads\OnlineMart_Ndase v1.1.2\OnlineMart_Ndase\OnlineMart_Ndase\bin\Debug\Zstandard.Net.dll
+C:\Users\Mariana Junita\Downloads\OnlineMart_Ndase v1.1.2\OnlineMart_Ndase\OnlineMart_Ndase\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\Mariana Junita\Downloads\OnlineMart_Ndase v1.1.2\OnlineMart_Ndase\OnlineMart_Ndase\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Mariana Junita\Downloads\OnlineMart_Ndase v1.1.2\OnlineMart_Ndase\OnlineMart_Ndase\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\Mariana Junita\Downloads\OnlineMart_Ndase v1.1.2\OnlineMart_Ndase\OnlineMart_Ndase\bin\Debug\System.Memory.dll
+C:\Users\Mariana Junita\Downloads\OnlineMart_Ndase v1.1.2\OnlineMart_Ndase\OnlineMart_Ndase\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Mariana Junita\Downloads\OnlineMart_Ndase v1.1.2\OnlineMart_Ndase\OnlineMart_Ndase\bin\Debug\System.Buffers.dll
+C:\Users\Mariana Junita\Downloads\OnlineMart_Ndase v1.1.2\OnlineMart_Ndase\OnlineMart_Ndase\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\Mariana Junita\Downloads\OnlineMart_Ndase v1.1.2\OnlineMart_Ndase\OnlineMart_Ndase\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\Mariana Junita\Downloads\OnlineMart_Ndase v1.1.2\OnlineMart_Ndase\OnlineMart_Ndase\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Mariana Junita\Downloads\OnlineMart_Ndase v1.1.2\OnlineMart_Ndase\OnlineMart_Ndase\bin\Debug\OnlineMart_LIB.pdb
+C:\Users\Mariana Junita\Downloads\OnlineMart_Ndase v1.1.2\OnlineMart_Ndase\OnlineMart_Ndase\bin\Debug\MySql.Data.xml
+C:\Users\Mariana Junita\Downloads\OnlineMart_Ndase v1.1.2\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.csproj.AssemblyReference.cache
+C:\Users\Mariana Junita\Downloads\OnlineMart_Ndase v1.1.2\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormKonsumenCekPesanan.resources
+C:\Users\Mariana Junita\Downloads\OnlineMart_Ndase v1.1.2\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormDaftar.resources
+C:\Users\Mariana Junita\Downloads\OnlineMart_Ndase v1.1.2\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormKonsumenBarang.resources
+C:\Users\Mariana Junita\Downloads\OnlineMart_Ndase v1.1.2\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormKonsumenCetakNota.resources
+C:\Users\Mariana Junita\Downloads\OnlineMart_Ndase v1.1.2\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormKonsumenCheckout.resources
+C:\Users\Mariana Junita\Downloads\OnlineMart_Ndase v1.1.2\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormKonsumenDeals.resources
+C:\Users\Mariana Junita\Downloads\OnlineMart_Ndase v1.1.2\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormKonsumenIsiSaldo.resources
+C:\Users\Mariana Junita\Downloads\OnlineMart_Ndase v1.1.2\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormKonsumenKeranjang.resources
+C:\Users\Mariana Junita\Downloads\OnlineMart_Ndase v1.1.2\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormKonsumenKodePromo.resources
+C:\Users\Mariana Junita\Downloads\OnlineMart_Ndase v1.1.2\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormKonsumenProfil.resources
+C:\Users\Mariana Junita\Downloads\OnlineMart_Ndase v1.1.2\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormKonsumenUbahProfil.resources
+C:\Users\Mariana Junita\Downloads\OnlineMart_Ndase v1.1.2\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormPegawaiDaftarHadiah.resources
+C:\Users\Mariana Junita\Downloads\OnlineMart_Ndase v1.1.2\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormPegawaiDaftarMetodePembayaran.resources
+C:\Users\Mariana Junita\Downloads\OnlineMart_Ndase v1.1.2\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormKonsumenRiwayatTransaksi.resources
+C:\Users\Mariana Junita\Downloads\OnlineMart_Ndase v1.1.2\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormPegawaiDaftarBarang.resources
+C:\Users\Mariana Junita\Downloads\OnlineMart_Ndase v1.1.2\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormPegawaiDaftarCabang.resources
+C:\Users\Mariana Junita\Downloads\OnlineMart_Ndase v1.1.2\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormKurirDaftarPengiriman.resources
+C:\Users\Mariana Junita\Downloads\OnlineMart_Ndase v1.1.2\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormKurirRekapPendapatan.resources
+C:\Users\Mariana Junita\Downloads\OnlineMart_Ndase v1.1.2\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormMasuk.resources
+C:\Users\Mariana Junita\Downloads\OnlineMart_Ndase v1.1.2\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormPegawaiDaftarPromo.resources
+C:\Users\Mariana Junita\Downloads\OnlineMart_Ndase v1.1.2\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormPegawaiRekapPenjualanBarang.resources
+C:\Users\Mariana Junita\Downloads\OnlineMart_Ndase v1.1.2\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormPegawaiRekapPenjualanOMASaldo.resources
+C:\Users\Mariana Junita\Downloads\OnlineMart_Ndase v1.1.2\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormPegawaiTambahCabang.resources
+C:\Users\Mariana Junita\Downloads\OnlineMart_Ndase v1.1.2\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormPegawaiDaftarKategori.resources
+C:\Users\Mariana Junita\Downloads\OnlineMart_Ndase v1.1.2\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormPegawaiTambahHadiah.resources
+C:\Users\Mariana Junita\Downloads\OnlineMart_Ndase v1.1.2\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormPegawaiTambahKategori.resources
+C:\Users\Mariana Junita\Downloads\OnlineMart_Ndase v1.1.2\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormPegawaiTambahBarang.resources
+C:\Users\Mariana Junita\Downloads\OnlineMart_Ndase v1.1.2\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormPegawaiTambahMetodePembayaran.resources
+C:\Users\Mariana Junita\Downloads\OnlineMart_Ndase v1.1.2\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormPegawaiTambahPromo.resources
+C:\Users\Mariana Junita\Downloads\OnlineMart_Ndase v1.1.2\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormPegawaiUbahCabang.resources
+C:\Users\Mariana Junita\Downloads\OnlineMart_Ndase v1.1.2\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormPegawaiUbahKategori.resources
+C:\Users\Mariana Junita\Downloads\OnlineMart_Ndase v1.1.2\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormUtama.resources
+C:\Users\Mariana Junita\Downloads\OnlineMart_Ndase v1.1.2\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.Properties.Resources.resources
+C:\Users\Mariana Junita\Downloads\OnlineMart_Ndase v1.1.2\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.csproj.GenerateResource.cache
+C:\Users\Mariana Junita\Downloads\OnlineMart_Ndase v1.1.2\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.csproj.CoreCompileInputs.cache
+C:\Users\Mariana Junita\Downloads\OnlineMart_Ndase v1.1.2\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.csproj.CopyComplete
+C:\Users\Mariana Junita\Downloads\OnlineMart_Ndase v1.1.2\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.exe
+C:\Users\Mariana Junita\Downloads\OnlineMart_Ndase v1.1.2\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.pdb
+C:\Users\Mariana Junita\Downloads\OnlineMart_Ndase v1.1.2\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormPegawaiUbahBarang.resources
+K:\.lain\.c#\database\proj\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormKonsumenCekPesanan.resources
+K:\.lain\.c#\database\proj\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormKonsumenBarang.resources
+K:\.lain\.c#\database\proj\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormKonsumenCetakNota.resources
+K:\.lain\.c#\database\proj\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormKonsumenCheckout.resources
+K:\.lain\.c#\database\proj\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormKonsumenDeals.resources
+K:\.lain\.c#\database\proj\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormKonsumenKeranjang.resources
+K:\.lain\.c#\database\proj\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormKonsumenKodePromo.resources
+K:\.lain\.c#\database\proj\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormPegawaiUbahBarang.resources

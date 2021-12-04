@@ -1,0 +1,14 @@
+C:\Users\Mariana Junita\OneDrive\Documents\KULIAH TEKNIK INFORMATIKA\Semester 3\Database\Tugas\OnlineMart_Ndase\OnlineMart_Ndase\bin\Debug\OnlineMart_Ndase.exe.config
+C:\Users\Mariana Junita\OneDrive\Documents\KULIAH TEKNIK INFORMATIKA\Semester 3\Database\Tugas\OnlineMart_Ndase\OnlineMart_Ndase\bin\Debug\OnlineMart_Ndase.exe
+C:\Users\Mariana Junita\OneDrive\Documents\KULIAH TEKNIK INFORMATIKA\Semester 3\Database\Tugas\OnlineMart_Ndase\OnlineMart_Ndase\bin\Debug\OnlineMart_Ndase.pdb
+C:\Users\Mariana Junita\OneDrive\Documents\KULIAH TEKNIK INFORMATIKA\Semester 3\Database\Tugas\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.csproj.AssemblyReference.cache
+C:\Users\Mariana Junita\OneDrive\Documents\KULIAH TEKNIK INFORMATIKA\Semester 3\Database\Tugas\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormMasuk.resources
+C:\Users\Mariana Junita\OneDrive\Documents\KULIAH TEKNIK INFORMATIKA\Semester 3\Database\Tugas\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.Properties.Resources.resources
+C:\Users\Mariana Junita\OneDrive\Documents\KULIAH TEKNIK INFORMATIKA\Semester 3\Database\Tugas\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.csproj.GenerateResource.cache
+C:\Users\Mariana Junita\OneDrive\Documents\KULIAH TEKNIK INFORMATIKA\Semester 3\Database\Tugas\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.csproj.CoreCompileInputs.cache
+C:\Users\Mariana Junita\OneDrive\Documents\KULIAH TEKNIK INFORMATIKA\Semester 3\Database\Tugas\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.exe
+C:\Users\Mariana Junita\OneDrive\Documents\KULIAH TEKNIK INFORMATIKA\Semester 3\Database\Tugas\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.pdb
+C:\Users\Mariana Junita\OneDrive\Documents\KULIAH TEKNIK INFORMATIKA\Semester 3\Database\Tugas\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormDaftar.resources
+C:\Users\Mariana Junita\OneDrive\Documents\KULIAH TEKNIK INFORMATIKA\Semester 3\Database\Tugas\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormUtamaKonsumen.resources
+C:\Users\Mariana Junita\OneDrive\Documents\KULIAH TEKNIK INFORMATIKA\Semester 3\Database\Tugas\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormUtamaKurir.resources
+C:\Users\Mariana Junita\OneDrive\Documents\KULIAH TEKNIK INFORMATIKA\Semester 3\Database\Tugas\OnlineMart_Ndase\OnlineMart_Ndase\obj\Debug\OnlineMart_Ndase.FormUtamaPegawai.resources

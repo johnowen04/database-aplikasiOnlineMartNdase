@@ -96,7 +96,7 @@ namespace OnlineMart_LIB
                 sql = "select c.id, c.nama, c.alamat, p.id as pegawai_id, p.nama as pegawai_nama, " +
                     "p.email as pegawai_email, p.password as pegawai_password, p.telepon as pegawai_telepon " +
                     "from cabangs as c inner join pegawais as p on c.pegawais_id = p.id " +
-                    "where c." + kriteria + " like '%" + nilaiKriteria + "%'";
+                    "where " + kriteria + " like '%" + nilaiKriteria + "%'";
             }
 
             MySqlDataReader hasil = Koneksi.JalankanPerintahQuery(sql);

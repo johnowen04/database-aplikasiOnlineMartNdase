@@ -34,7 +34,6 @@ namespace OnlineMart_Ndase
             this.label6 = new System.Windows.Forms.Label();
             this.textBoxAlamat = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBoxIdPegawai = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.textBoxID = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -42,17 +41,18 @@ namespace OnlineMart_Ndase
             this.buttonUbah = new System.Windows.Forms.Button();
             this.buttonKeluar = new System.Windows.Forms.Button();
             this.buttonBersihkan = new System.Windows.Forms.Button();
+            this.comboBoxPegawai = new System.Windows.Forms.ComboBox();
             this.panelUbahCabang.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelUbahCabang
             // 
             this.panelUbahCabang.BackColor = System.Drawing.Color.SeaShell;
+            this.panelUbahCabang.Controls.Add(this.comboBoxPegawai);
             this.panelUbahCabang.Controls.Add(this.textBoxNama);
             this.panelUbahCabang.Controls.Add(this.label6);
             this.panelUbahCabang.Controls.Add(this.textBoxAlamat);
             this.panelUbahCabang.Controls.Add(this.label5);
-            this.panelUbahCabang.Controls.Add(this.textBoxIdPegawai);
             this.panelUbahCabang.Controls.Add(this.label3);
             this.panelUbahCabang.Controls.Add(this.textBoxID);
             this.panelUbahCabang.Controls.Add(this.label2);
@@ -60,12 +60,12 @@ namespace OnlineMart_Ndase
             this.panelUbahCabang.Location = new System.Drawing.Point(18, 75);
             this.panelUbahCabang.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelUbahCabang.Name = "panelUbahCabang";
-            this.panelUbahCabang.Size = new System.Drawing.Size(502, 266);
+            this.panelUbahCabang.Size = new System.Drawing.Size(529, 266);
             this.panelUbahCabang.TabIndex = 1;
             // 
             // textBoxNama
             // 
-            this.textBoxNama.Location = new System.Drawing.Point(172, 74);
+            this.textBoxNama.Location = new System.Drawing.Point(204, 76);
             this.textBoxNama.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxNama.Name = "textBoxNama";
             this.textBoxNama.Size = new System.Drawing.Size(298, 31);
@@ -83,7 +83,7 @@ namespace OnlineMart_Ndase
             // 
             // textBoxAlamat
             // 
-            this.textBoxAlamat.Location = new System.Drawing.Point(172, 118);
+            this.textBoxAlamat.Location = new System.Drawing.Point(204, 120);
             this.textBoxAlamat.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxAlamat.Multiline = true;
             this.textBoxAlamat.Name = "textBoxAlamat";
@@ -101,27 +101,19 @@ namespace OnlineMart_Ndase
             this.label5.TabIndex = 4;
             this.label5.Text = "Alamat :";
             // 
-            // textBoxIdPegawai
-            // 
-            this.textBoxIdPegawai.Location = new System.Drawing.Point(172, 198);
-            this.textBoxIdPegawai.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBoxIdPegawai.Name = "textBoxIdPegawai";
-            this.textBoxIdPegawai.Size = new System.Drawing.Size(148, 31);
-            this.textBoxIdPegawai.TabIndex = 7;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(36, 203);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(131, 24);
+            this.label3.Size = new System.Drawing.Size(162, 24);
             this.label3.TabIndex = 6;
-            this.label3.Text = "ID Pegawai  :";
+            this.label3.Text = "Nama Pegawai  :";
             // 
             // textBoxID
             // 
-            this.textBoxID.Location = new System.Drawing.Point(172, 29);
+            this.textBoxID.Location = new System.Drawing.Point(204, 31);
             this.textBoxID.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxID.Name = "textBoxID";
             this.textBoxID.Size = new System.Drawing.Size(148, 31);
@@ -145,7 +137,7 @@ namespace OnlineMart_Ndase
             this.label1.Location = new System.Drawing.Point(18, 14);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(502, 57);
+            this.label1.Size = new System.Drawing.Size(529, 57);
             this.label1.TabIndex = 0;
             this.label1.Text = "     Ubah Cabang";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -169,7 +161,7 @@ namespace OnlineMart_Ndase
             this.buttonKeluar.BackColor = System.Drawing.Color.WhiteSmoke;
             this.buttonKeluar.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonKeluar.ForeColor = System.Drawing.Color.OrangeRed;
-            this.buttonKeluar.Location = new System.Drawing.Point(370, 351);
+            this.buttonKeluar.Location = new System.Drawing.Point(397, 351);
             this.buttonKeluar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonKeluar.Name = "buttonKeluar";
             this.buttonKeluar.Size = new System.Drawing.Size(150, 57);
@@ -192,11 +184,21 @@ namespace OnlineMart_Ndase
             this.buttonBersihkan.UseVisualStyleBackColor = false;
             this.buttonBersihkan.Click += new System.EventHandler(this.buttonBersihkan_Click);
             // 
+            // comboBoxPegawai
+            // 
+            this.comboBoxPegawai.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxPegawai.FormattingEnabled = true;
+            this.comboBoxPegawai.Location = new System.Drawing.Point(207, 205);
+            this.comboBoxPegawai.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.comboBoxPegawai.Name = "comboBoxPegawai";
+            this.comboBoxPegawai.Size = new System.Drawing.Size(295, 32);
+            this.comboBoxPegawai.TabIndex = 12;
+            // 
             // FormPegawaiUbahCabang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(540, 431);
+            this.ClientSize = new System.Drawing.Size(565, 431);
             this.Controls.Add(this.buttonBersihkan);
             this.Controls.Add(this.panelUbahCabang);
             this.Controls.Add(this.label1);
@@ -225,7 +227,7 @@ namespace OnlineMart_Ndase
         private System.Windows.Forms.Button buttonBersihkan;
         public System.Windows.Forms.TextBox textBoxNama;
         public System.Windows.Forms.TextBox textBoxAlamat;
-        public System.Windows.Forms.TextBox textBoxIdPegawai;
         public System.Windows.Forms.TextBox textBoxID;
+        public System.Windows.Forms.ComboBox comboBoxPegawai;
     }
 }

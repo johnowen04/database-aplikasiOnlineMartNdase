@@ -82,7 +82,7 @@ namespace OnlineMart_Ndase
             "ID Cabang",
             "Nama Cabang",
             "Alamat Cabang",
-            "ID Pegawai"});
+            "Nama Pegawai"});
             this.comboBoxCari.Location = new System.Drawing.Point(224, 25);
             this.comboBoxCari.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboBoxCari.Name = "comboBoxCari";

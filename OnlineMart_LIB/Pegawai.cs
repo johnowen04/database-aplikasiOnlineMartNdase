@@ -40,18 +40,15 @@ namespace OnlineMart_LIB
         #region METHODS
         public override string ToString()
         {
-            return Id.ToString();
+            return Nama;
         }
 
         public static Pegawai CekLogin(string email, string password)
         {
             string sql = "";
 
-            sql = "select id, nama, email, password, telepon " +
-                    " from pegawais " +
-                    " where email='" + email + "' AND password = '" + password + "'";
-
-            //" where email='" + email + "' AND password = SHA2('" + password + "', 512)";
+            sql = "select id, nama, email, password, telepon from pegawais " +
+                    " where email='" + email + "' AND password = SHA2('" + password + "', 512)";
 
             MySqlDataReader hasil = Koneksi.JalankanPerintahQuery(sql);
 
@@ -66,8 +63,32 @@ namespace OnlineMart_LIB
 
             return null;
         }
+
+        public static List<Pegawai> ReadData(string kriteria, string nilaiKriteria)
+        {
+            string sql = "";
+
+            if (kriteria == "")
+            {
+                sql = "select * from pegawais";
+            }
+            else
+            {
+                sql = "select * from pegawais where " + kriteria + " like '%" + nilaiKriteria + "%'";
+            }
+
+            MySqlDataReader hasil = Koneksi.JalankanPerintahQuery(sql);
+            List<Pegawai> listPegawai = new List<Pegawai>();
+
+            while (hasil.Read() == true)
+            {
+                Pegawai p = new Pegawai(int.Parse(hasil.GetValue(0).ToString()), hasil.GetValue(1).ToString(),
+                    hasil.GetValue(2).ToString(), hasil.GetValue(3).ToString(),
+                    hasil.GetValue(4).ToString());
+                listPegawai.Add(p);
+            }
+            return listPegawai;
+        }
         #endregion
-
-
     }
 }

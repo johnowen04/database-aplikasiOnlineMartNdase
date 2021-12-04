@@ -24,6 +24,13 @@ namespace OnlineMart_LIB
             Harga = harga;
             Kategori = kategori;
         }
+
+        public Barang(string nama, string harga, Kategori kategori)
+        {
+            Nama = nama;
+            Harga = harga;
+            Kategori = kategori;
+        }
         #endregion
 
         #region PROPERTIES
@@ -62,7 +69,7 @@ namespace OnlineMart_LIB
             else
             {
                 sql = "select b.id, b.nama, b.harga, k.id as kategori_id, k.nama as kategori_nama " +
-                    "from barangs as b inner join kategoris as k on b.kategoris_id = k.id" +
+                    "from barangs as b inner join kategoris as k on b.kategoris_id = k.id " +
                     "where " + kriteria + " like '%" + nilaiKriteria + "%'";
             }
 
@@ -80,21 +87,22 @@ namespace OnlineMart_LIB
             return listBarang;
         }
 
-        //public static Boolean UpdateData(Barang b)
-        //{
-        //    string sql = "update barangs set harga='" + b.Harga + "', kategoris_id='" + b.Kategori.Nama + "', cabangs_id='" + b.
-        //        "' where id='" + b.Id + "'";
+        public static Boolean UpdateData(Barang b)
+        {
+            string sql = "update barangs set harga=" + b.Harga + ", kategoris_id=" + b.Kategori.Id + 
+                " where id=" + b.Id;
 
-        //    int jumlahDataBerubah = Koneksi.JalankanPerintahDML(sql);
-        //    if (jumlahDataBerubah == 0)
-        //    {
-        //        return false;
-        //    }
-        //    else
-        //    {
-        //        return true;
-        //    }
-        //}
+            int jumlahDataBerubah = Koneksi.JalankanPerintahDML(sql);
+
+            if (jumlahDataBerubah == 0)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
 
         public static Boolean DeleteData(string id)
         {

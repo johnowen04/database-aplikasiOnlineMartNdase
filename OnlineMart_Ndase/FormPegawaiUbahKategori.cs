@@ -29,9 +29,16 @@ namespace OnlineMart_Ndase
             {
                 Kategori k = new Kategori(int.Parse(textBoxID.Text), textBoxNama.Text);
 
-                Kategori.UpdateData(k);
+                Boolean hasil = Kategori.UpdateData(k);
 
-                MessageBox.Show("Berhasil mengubah data kategori.", "Informasi");
+                if (hasil)
+                {
+                    MessageBox.Show("Berhasil mengubah data kategori.", "Informasi");
+                }
+                else
+                {
+                    MessageBox.Show("Ubah data gagal.", "Kesalahan");
+                }
             }
             catch (Exception ex)
             {

@@ -14,6 +14,7 @@ namespace OnlineMart_Ndase
     public partial class FormMasuk : Form
     {
         FormUtama formUtama;
+
         public FormMasuk()
         {
             InitializeComponent();
@@ -42,7 +43,7 @@ namespace OnlineMart_Ndase
 
         private void radioButtonPegawai_CheckedChanged(object sender, EventArgs e)
         {
-            labelLoginInfo.Text = "Username :";
+            labelLoginInfo.Text = "Email :";
             textBoxPassword.MaxLength = 0;
             linkLabelDaftar.ForeColor = Color.DarkGray;
             linkLabelDaftar.Enabled = false;
@@ -63,7 +64,6 @@ namespace OnlineMart_Ndase
 
                     if (!(ko is null))
                     {
-                        formUtama = (FormUtama)this.Owner;
                         formUtama.ko = ko;
                         formUtama.pengguna = "ko";
                         MessageBox.Show("Koneksi Berhasil.", "Informasi");
@@ -85,7 +85,6 @@ namespace OnlineMart_Ndase
 
                     if (!(ku is null))
                     {
-                        formUtama = (FormUtama)this.Owner;
                         formUtama.ku = ku;
                         formUtama.pengguna = "ku";
                         MessageBox.Show("Koneksi Berhasil.", "Informasi");
@@ -97,7 +96,7 @@ namespace OnlineMart_Ndase
 
                     else
                     {
-                        MessageBox.Show("Gagal masuk. Username atau Password yang dimasukkan salah.k", "Informasi");
+                        MessageBox.Show("Gagal masuk. Username atau Password yang dimasukkan salah.", "Informasi");
                     }
                 }
 
@@ -107,7 +106,6 @@ namespace OnlineMart_Ndase
 
                     if (!(p is null))
                     {
-                        formUtama = (FormUtama)this.Owner;
                         formUtama.pe = p;
                         formUtama.pengguna = "pe";
                         MessageBox.Show("Koneksi Berhasil.", "Informasi");
